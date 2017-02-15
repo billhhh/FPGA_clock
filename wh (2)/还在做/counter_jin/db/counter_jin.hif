@@ -1,0 +1,83 @@
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+33
+1707
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+# entity
+counter_jin
+# storage
+db|counter_jin.(0).cnf
+db|counter_jin.(0).cnf
+# case_insensitive
+# source_file
+counter_jin.bdf
+8c4a77e8a46e162df0cce29485d330e3
+23
+# hierarchies {
+|
+}
+# end
+# entity
+counter
+# storage
+db|counter_jin.(1).cnf
+db|counter_jin.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|counter|counter.vhd
+c4fd7523f665f434ba436b96243eb391
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+counter:inst2
+counter:inst1
+counter:inst
+}
+# end
+# entity
+sel
+# storage
+db|counter_jin.(2).cnf
+db|counter_jin.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+sel.vhd
+748f74bde2dcd419879de229ee7a2a
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+sel:inst3
+}
+# end
+# complete
+

@@ -1,0 +1,71 @@
+LIBRARY IEEE;
+USE IEEE.Std_Logic_1164.ALL;
+USE IEEE.Std_Logic_Arith.ALL;
+USE IEEE.Std_Logic_Unsigned.ALL;
+
+ENTITY xianshi IS
+	PORT
+	(
+		indata		: IN	integer range 0 to 99;
+		clk			: IN	STD_LOGIC;
+		led7: OUT	STD_LOGIC_vector(7 downto 0);
+		sel:  OUT	STD_LOGIC_vector(1 downto 0)
+		
+	);
+END xianshi;
+
+ARCHITECTURE a OF xianshi IS
+	SIGNAL shi,ge : integer range 0 to 9;
+	SIGNAL outdata : integer range 0 to 9;
+BEGIN
+
+shi <= 	9 WHEN	indata>89	ELSE
+		8 WHEN	indata>79	ELSE
+		7 WHEN	indata>69	ELSE
+		6 WHEN	indata>59	ELSE
+		5 WHEN	indata>49	ELSE
+		4 WHEN	indata>39	ELSE
+		3 WHEN	indata>29	ELSE
+		2 WHEN	indata>19	ELSE
+		1 WHEN	indata>9	ELSE
+		0 ;
+
+ge<= indata-90 WHEN	indata>89	ELSE
+	 indata-80 WHEN	indata>79	ELSE
+	 indata-70 WHEN	indata>69	ELSE
+         indata-60 WHEN	indata>59	ELSE
+	 indata-50 WHEN	indata>49	ELSE
+	 indata-40 WHEN	indata>39	ELSE
+	 indata-30 WHEN	indata>29	ELSE
+	 indata-20 WHEN	indata>19	ELSE
+	 indata-10 WHEN	indata>9	ELSE
+	 indata ;		
+
+scan:
+PROCESS (clk)
+	VARIABLE count: integer range 0 to 1;
+BEGIN
+	if (rising_edge(clk)) then
+	   CASE count IS
+	     WHEN 0 => outdata<=shi; sel<="10"; count:=1;
+	     WHEN 1 => outdata<=ge;  sel<="01"; count:=0;
+       END CASE;
+    end if;
+END PROCESS scan;
+
+WITH  outdata  SELECT
+LED7  	<=  "00111111"	WHEN 0,
+"00000110"	WHEN 1,
+"01011011"	WHEN 2,
+"01001111"	WHEN 3,
+"01100110"	WHEN 4,
+"01101101"	WHEN 5,
+"01111101"	WHEN 6,
+"00000111"	WHEN 7,
+"01111111"	WHEN 8,
+"01101111"	WHEN 9,
+"10000000" 	WHEN OTHERS;
+
+
+END a;
+

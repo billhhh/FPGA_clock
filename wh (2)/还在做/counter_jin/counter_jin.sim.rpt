@@ -1,0 +1,969 @@
+Simulator report for counter_jin
+Thu Apr 11 11:03:36 2013
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 252 nodes    ;
+; Simulation Coverage         ;      16.52 % ;
+; Total Number of Transitions ; 4856         ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                        ;
++-----------------------------------------------------------------+---------+---------------+
+; Option                                                          ; Setting ; Default Value ;
++-----------------------------------------------------------------+---------+---------------+
+; Simulation mode                                                 ; Timing  ; Timing        ;
+; Start time                                                      ; 0 ns    ; 0 ns          ;
+; Add pins automatically to simulation output waveforms           ; On      ; On            ;
+; Check outputs                                                   ; Off     ; Off           ;
+; Report simulation coverage                                      ; On      ; On            ;
+; Detect setup and hold time violations                           ; Off     ; Off           ;
+; Detect glitches                                                 ; Off     ; Off           ;
+; Automatically save/load simulation netlist                      ; Off     ; Off           ;
+; Disable timing delays in Timing Simulation                      ; Off     ; Off           ;
+; Generate Signal Activity File                                   ; Off     ; Off           ;
+; Group bus channels in simulation results                        ; Off     ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements ; On      ; On            ;
+; Overwrite Waveform Inputs With Simulation Outputs               ; Off     ;               ;
++-----------------------------------------------------------------+---------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      16.52 % ;
+; Total nodes checked                                 ; 252          ;
+; Total output ports checked                          ; 448          ;
+; Total output ports with complete 1/0-value coverage ; 74           ;
+; Total output ports with no 1/0-value coverage       ; 371          ;
+; Total output ports with no 1-value coverage         ; 371          ;
+; Total output ports with no 0-value coverage         ; 374          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                             ;
++----------------------------------------+---------------------------------------------+------------------+
+; Node Name                              ; Output Port Name                            ; Output Port Type ;
++----------------------------------------+---------------------------------------------+------------------+
+; |counter_jin|sel:inst3|LED[6]          ; |counter_jin|sel:inst3|LED[6]               ; regout           ;
+; |counter_jin|sel:inst3|LED[5]          ; |counter_jin|sel:inst3|LED[5]               ; regout           ;
+; |counter_jin|sel:inst3|LED[4]          ; |counter_jin|sel:inst3|LED[4]               ; regout           ;
+; |counter_jin|sel:inst3|LED[3]          ; |counter_jin|sel:inst3|LED[3]               ; regout           ;
+; |counter_jin|sel:inst3|LED[2]          ; |counter_jin|sel:inst3|LED[2]               ; regout           ;
+; |counter_jin|sel:inst3|LED[1]          ; |counter_jin|sel:inst3|LED[1]               ; regout           ;
+; |counter_jin|sel:inst3|LED[0]          ; |counter_jin|sel:inst3|LED[0]               ; regout           ;
+; |counter_jin|sel:inst3|n[0]            ; |counter_jin|sel:inst3|n[0]                 ; regout           ;
+; |counter_jin|sel:inst3|s[0]            ; |counter_jin|sel:inst3|s[0]                 ; regout           ;
+; |counter_jin|counter:inst|n[3]         ; |counter_jin|counter:inst|n[3]              ; regout           ;
+; |counter_jin|sel:inst3|Mux~732         ; |counter_jin|sel:inst3|Mux~732              ; combout          ;
+; |counter_jin|sel:inst3|Mux~732         ; |counter_jin|sel:inst3|s[1]                 ; regout           ;
+; |counter_jin|counter:inst1|n[1]        ; |counter_jin|counter:inst1|n[1]             ; regout           ;
+; |counter_jin|counter:inst|n[1]         ; |counter_jin|counter:inst|n[1]              ; regout           ;
+; |counter_jin|rtl~856                   ; |counter_jin|rtl~856                        ; combout          ;
+; |counter_jin|rtl~856                   ; |counter_jin|counter:inst|n[2]              ; regout           ;
+; |counter_jin|counter:inst|LED7[6]~149  ; |counter_jin|counter:inst|LED7[6]~149       ; combout          ;
+; |counter_jin|counter:inst1|LED7[6]~155 ; |counter_jin|counter:inst1|LED7[6]~155      ; combout          ;
+; |counter_jin|counter:inst|LED7[5]~150  ; |counter_jin|counter:inst|LED7[5]~150       ; combout          ;
+; |counter_jin|sel:inst3|Mux~735         ; |counter_jin|sel:inst3|Mux~735              ; combout          ;
+; |counter_jin|counter:inst1|LED7[5]~156 ; |counter_jin|counter:inst1|LED7[5]~156      ; combout          ;
+; |counter_jin|counter:inst|LED7[4]~151  ; |counter_jin|counter:inst|LED7[4]~151       ; combout          ;
+; |counter_jin|sel:inst3|Mux~737         ; |counter_jin|sel:inst3|Mux~737              ; combout          ;
+; |counter_jin|counter:inst1|LED7[4]~157 ; |counter_jin|counter:inst1|LED7[4]~157      ; combout          ;
+; |counter_jin|counter:inst|LED7[3]~152  ; |counter_jin|counter:inst|LED7[3]~152       ; combout          ;
+; |counter_jin|sel:inst3|Mux~739         ; |counter_jin|sel:inst3|Mux~739              ; combout          ;
+; |counter_jin|counter:inst1|LED7[3]~158 ; |counter_jin|counter:inst1|LED7[3]~158      ; combout          ;
+; |counter_jin|counter:inst|LED7[2]~153  ; |counter_jin|counter:inst|LED7[2]~153       ; combout          ;
+; |counter_jin|sel:inst3|Mux~741         ; |counter_jin|sel:inst3|Mux~741              ; combout          ;
+; |counter_jin|counter:inst1|LED7[2]~159 ; |counter_jin|counter:inst1|LED7[2]~159      ; combout          ;
+; |counter_jin|counter:inst|LED7[1]~154  ; |counter_jin|counter:inst|LED7[1]~154       ; combout          ;
+; |counter_jin|sel:inst3|Mux~743         ; |counter_jin|sel:inst3|Mux~743              ; combout          ;
+; |counter_jin|counter:inst1|LED7[1]~160 ; |counter_jin|counter:inst1|LED7[1]~160      ; combout          ;
+; |counter_jin|counter:inst|LED7[0]~155  ; |counter_jin|counter:inst|LED7[0]~155       ; combout          ;
+; |counter_jin|sel:inst3|Mux~745         ; |counter_jin|sel:inst3|Mux~745              ; combout          ;
+; |counter_jin|counter:inst1|LED7[0]~161 ; |counter_jin|counter:inst1|LED7[0]~161      ; combout          ;
+; |counter_jin|rtl~857                   ; |counter_jin|rtl~857                        ; combout          ;
+; |counter_jin|rtl~857                   ; |counter_jin|counter:inst1|n[2]             ; regout           ;
+; |counter_jin|rtl~859                   ; |counter_jin|counter:inst1|n[0]             ; regout           ;
+; |counter_jin|counter:inst|add~481      ; |counter_jin|counter:inst|add~481           ; combout          ;
+; |counter_jin|counter:inst|add~481      ; |counter_jin|counter:inst|add~483COUT1_644  ; cout1            ;
+; |counter_jin|rtl~868                   ; |counter_jin|rtl~868                        ; combout          ;
+; |counter_jin|rtl~868                   ; |counter_jin|counter:inst|n[0]              ; regout           ;
+; |counter_jin|rtl~2                     ; |counter_jin|rtl~2                          ; combout          ;
+; |counter_jin|rtl~2                     ; |counter_jin|counter:inst|clk_jinwei        ; regout           ;
+; |counter_jin|counter:inst1|add~481     ; |counter_jin|counter:inst1|add~481          ; combout          ;
+; |counter_jin|counter:inst1|add~481     ; |counter_jin|counter:inst1|add~483COUT1_643 ; cout1            ;
+; |counter_jin|counter:inst1|add~486     ; |counter_jin|counter:inst1|add~486          ; combout          ;
+; |counter_jin|counter:inst1|add~486     ; |counter_jin|counter:inst1|add~488COUT1_642 ; cout1            ;
+; |counter_jin|counter:inst1|add~491     ; |counter_jin|counter:inst1|add~491          ; combout          ;
+; |counter_jin|counter:inst1|add~491     ; |counter_jin|counter:inst1|add~493COUT1_644 ; cout1            ;
+; |counter_jin|counter:inst|add~486      ; |counter_jin|counter:inst|add~486           ; combout          ;
+; |counter_jin|counter:inst|add~486      ; |counter_jin|counter:inst|add~488COUT1_643  ; cout1            ;
+; |counter_jin|counter:inst|add~491      ; |counter_jin|counter:inst|add~491           ; combout          ;
+; |counter_jin|counter:inst|add~491      ; |counter_jin|counter:inst|add~493COUT1_642  ; cout1            ;
+; |counter_jin|counter:inst|add~496      ; |counter_jin|counter:inst|add~496           ; combout          ;
+; |counter_jin|counter:inst|add~496      ; |counter_jin|counter:inst|add~498           ; cout             ;
+; |counter_jin|counter:inst1|add~496     ; |counter_jin|counter:inst1|add~496          ; combout          ;
+; |counter_jin|counter:inst1|add~496     ; |counter_jin|counter:inst1|add~498          ; cout             ;
+; |counter_jin|counter:inst1|add~636     ; |counter_jin|counter:inst1|add~636          ; combout          ;
+; |counter_jin|counter:inst|add~636      ; |counter_jin|counter:inst|add~636           ; combout          ;
+; |counter_jin|sel:inst3|Mux~748         ; |counter_jin|sel:inst3|Mux~748              ; combout          ;
+; |counter_jin|scan_clk                  ; |counter_jin|scan_clk                       ; combout          ;
+; |counter_jin|clk                       ; |counter_jin|clk                            ; combout          ;
+; |counter_jin|led7[6]                   ; |counter_jin|led7[6]                        ; padio            ;
+; |counter_jin|led7[5]                   ; |counter_jin|led7[5]                        ; padio            ;
+; |counter_jin|led7[4]                   ; |counter_jin|led7[4]                        ; padio            ;
+; |counter_jin|led7[3]                   ; |counter_jin|led7[3]                        ; padio            ;
+; |counter_jin|led7[2]                   ; |counter_jin|led7[2]                        ; padio            ;
+; |counter_jin|led7[1]                   ; |counter_jin|led7[1]                        ; padio            ;
+; |counter_jin|led7[0]                   ; |counter_jin|led7[0]                        ; padio            ;
+; |counter_jin|s[2]                      ; |counter_jin|s[2]                           ; padio            ;
+; |counter_jin|s[1]                      ; |counter_jin|s[1]                           ; padio            ;
+; |counter_jin|s[0]                      ; |counter_jin|s[0]                           ; padio            ;
++----------------------------------------+---------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                ;
++----------------------------------------+---------------------------------------------+------------------+
+; Node Name                              ; Output Port Name                            ; Output Port Type ;
++----------------------------------------+---------------------------------------------+------------------+
+; |counter_jin|sel:inst3|LED[7]          ; |counter_jin|sel:inst3|LED[7]               ; regout           ;
+; |counter_jin|counter:inst2|n[1]        ; |counter_jin|counter:inst2|n[1]             ; regout           ;
+; |counter_jin|rtl~846                   ; |counter_jin|rtl~846                        ; combout          ;
+; |counter_jin|rtl~846                   ; |counter_jin|counter:inst2|n[2]             ; regout           ;
+; |counter_jin|counter:inst2|n[28]       ; |counter_jin|counter:inst2|n[28]            ; regout           ;
+; |counter_jin|counter:inst2|n[27]       ; |counter_jin|counter:inst2|n[27]            ; regout           ;
+; |counter_jin|counter:inst2|n[26]       ; |counter_jin|counter:inst2|n[26]            ; regout           ;
+; |counter_jin|rtl~847                   ; |counter_jin|rtl~847                        ; combout          ;
+; |counter_jin|rtl~847                   ; |counter_jin|counter:inst2|n[29]            ; regout           ;
+; |counter_jin|counter:inst2|n[30]       ; |counter_jin|counter:inst2|n[30]            ; regout           ;
+; |counter_jin|rtl~848                   ; |counter_jin|rtl~848                        ; combout          ;
+; |counter_jin|rtl~848                   ; |counter_jin|counter:inst2|n[31]            ; regout           ;
+; |counter_jin|counter:inst2|n[24]       ; |counter_jin|counter:inst2|n[24]            ; regout           ;
+; |counter_jin|counter:inst2|n[23]       ; |counter_jin|counter:inst2|n[23]            ; regout           ;
+; |counter_jin|counter:inst2|n[22]       ; |counter_jin|counter:inst2|n[22]            ; regout           ;
+; |counter_jin|rtl~849                   ; |counter_jin|rtl~849                        ; combout          ;
+; |counter_jin|rtl~849                   ; |counter_jin|counter:inst2|n[25]            ; regout           ;
+; |counter_jin|counter:inst2|n[20]       ; |counter_jin|counter:inst2|n[20]            ; regout           ;
+; |counter_jin|counter:inst2|n[19]       ; |counter_jin|counter:inst2|n[19]            ; regout           ;
+; |counter_jin|counter:inst2|n[18]       ; |counter_jin|counter:inst2|n[18]            ; regout           ;
+; |counter_jin|rtl~850                   ; |counter_jin|rtl~850                        ; combout          ;
+; |counter_jin|rtl~850                   ; |counter_jin|counter:inst2|n[21]            ; regout           ;
+; |counter_jin|counter:inst2|n[16]       ; |counter_jin|counter:inst2|n[16]            ; regout           ;
+; |counter_jin|counter:inst2|n[15]       ; |counter_jin|counter:inst2|n[15]            ; regout           ;
+; |counter_jin|counter:inst2|n[14]       ; |counter_jin|counter:inst2|n[14]            ; regout           ;
+; |counter_jin|rtl~851                   ; |counter_jin|rtl~851                        ; combout          ;
+; |counter_jin|rtl~851                   ; |counter_jin|counter:inst2|n[17]            ; regout           ;
+; |counter_jin|counter:inst2|n[12]       ; |counter_jin|counter:inst2|n[12]            ; regout           ;
+; |counter_jin|counter:inst2|n[11]       ; |counter_jin|counter:inst2|n[11]            ; regout           ;
+; |counter_jin|counter:inst2|n[10]       ; |counter_jin|counter:inst2|n[10]            ; regout           ;
+; |counter_jin|rtl~852                   ; |counter_jin|rtl~852                        ; combout          ;
+; |counter_jin|rtl~852                   ; |counter_jin|counter:inst2|n[13]            ; regout           ;
+; |counter_jin|counter:inst2|n[8]        ; |counter_jin|counter:inst2|n[8]             ; regout           ;
+; |counter_jin|counter:inst2|n[7]        ; |counter_jin|counter:inst2|n[7]             ; regout           ;
+; |counter_jin|counter:inst2|n[6]        ; |counter_jin|counter:inst2|n[6]             ; regout           ;
+; |counter_jin|rtl~853                   ; |counter_jin|rtl~853                        ; combout          ;
+; |counter_jin|rtl~853                   ; |counter_jin|counter:inst2|n[9]             ; regout           ;
+; |counter_jin|counter:inst2|n[3]        ; |counter_jin|counter:inst2|n[3]             ; regout           ;
+; |counter_jin|counter:inst2|n[5]        ; |counter_jin|counter:inst2|n[5]             ; regout           ;
+; |counter_jin|counter:inst2|n[4]        ; |counter_jin|counter:inst2|n[4]             ; regout           ;
+; |counter_jin|rtl~854                   ; |counter_jin|rtl~854                        ; combout          ;
+; |counter_jin|rtl~854                   ; |counter_jin|counter:inst2|n[0]             ; regout           ;
+; |counter_jin|rtl~855                   ; |counter_jin|rtl~855                        ; combout          ;
+; |counter_jin|rtl~0                     ; |counter_jin|rtl~0                          ; combout          ;
+; |counter_jin|rtl~0                     ; |counter_jin|counter:inst2|clk_jinwei       ; regout           ;
+; |counter_jin|sel:inst3|Mux~733         ; |counter_jin|sel:inst3|Mux~733              ; combout          ;
+; |counter_jin|counter:inst2|LED7[6]~149 ; |counter_jin|counter:inst2|LED7[6]~149      ; combout          ;
+; |counter_jin|counter:inst2|LED7[5]~150 ; |counter_jin|counter:inst2|LED7[5]~150      ; combout          ;
+; |counter_jin|counter:inst2|LED7[4]~151 ; |counter_jin|counter:inst2|LED7[4]~151      ; combout          ;
+; |counter_jin|counter:inst2|LED7[3]~152 ; |counter_jin|counter:inst2|LED7[3]~152      ; combout          ;
+; |counter_jin|counter:inst2|LED7[2]~153 ; |counter_jin|counter:inst2|LED7[2]~153      ; combout          ;
+; |counter_jin|counter:inst2|LED7[1]~154 ; |counter_jin|counter:inst2|LED7[1]~154      ; combout          ;
+; |counter_jin|counter:inst2|LED7[0]~155 ; |counter_jin|counter:inst2|LED7[0]~155      ; combout          ;
+; |counter_jin|counter:inst2|add~481     ; |counter_jin|counter:inst2|add~481          ; combout          ;
+; |counter_jin|counter:inst2|add~481     ; |counter_jin|counter:inst2|add~483          ; cout0            ;
+; |counter_jin|counter:inst2|add~481     ; |counter_jin|counter:inst2|add~483COUT1_643 ; cout1            ;
+; |counter_jin|counter:inst2|add~486     ; |counter_jin|counter:inst2|add~486          ; combout          ;
+; |counter_jin|counter:inst2|add~486     ; |counter_jin|counter:inst2|add~488          ; cout0            ;
+; |counter_jin|counter:inst2|add~486     ; |counter_jin|counter:inst2|add~488COUT1_642 ; cout1            ;
+; |counter_jin|counter:inst2|add~491     ; |counter_jin|counter:inst2|add~491          ; combout          ;
+; |counter_jin|counter:inst2|add~491     ; |counter_jin|counter:inst2|add~493          ; cout0            ;
+; |counter_jin|counter:inst2|add~491     ; |counter_jin|counter:inst2|add~493COUT1_665 ; cout1            ;
+; |counter_jin|counter:inst2|add~496     ; |counter_jin|counter:inst2|add~496          ; combout          ;
+; |counter_jin|counter:inst2|add~496     ; |counter_jin|counter:inst2|add~498          ; cout0            ;
+; |counter_jin|counter:inst2|add~496     ; |counter_jin|counter:inst2|add~498COUT1_664 ; cout1            ;
+; |counter_jin|counter:inst2|add~501     ; |counter_jin|counter:inst2|add~501          ; combout          ;
+; |counter_jin|counter:inst2|add~501     ; |counter_jin|counter:inst2|add~503          ; cout0            ;
+; |counter_jin|counter:inst2|add~501     ; |counter_jin|counter:inst2|add~503COUT1_663 ; cout1            ;
+; |counter_jin|counter:inst2|add~506     ; |counter_jin|counter:inst2|add~506          ; combout          ;
+; |counter_jin|counter:inst2|add~506     ; |counter_jin|counter:inst2|add~508          ; cout0            ;
+; |counter_jin|counter:inst2|add~506     ; |counter_jin|counter:inst2|add~508COUT1_662 ; cout1            ;
+; |counter_jin|counter:inst2|add~511     ; |counter_jin|counter:inst2|add~511          ; combout          ;
+; |counter_jin|counter:inst2|add~516     ; |counter_jin|counter:inst2|add~516          ; combout          ;
+; |counter_jin|counter:inst2|add~516     ; |counter_jin|counter:inst2|add~518          ; cout             ;
+; |counter_jin|counter:inst2|add~521     ; |counter_jin|counter:inst2|add~521          ; combout          ;
+; |counter_jin|counter:inst2|add~521     ; |counter_jin|counter:inst2|add~523          ; cout             ;
+; |counter_jin|counter:inst2|add~526     ; |counter_jin|counter:inst2|add~526          ; combout          ;
+; |counter_jin|counter:inst2|add~526     ; |counter_jin|counter:inst2|add~528          ; cout0            ;
+; |counter_jin|counter:inst2|add~526     ; |counter_jin|counter:inst2|add~528COUT1_661 ; cout1            ;
+; |counter_jin|counter:inst2|add~531     ; |counter_jin|counter:inst2|add~531          ; combout          ;
+; |counter_jin|counter:inst2|add~531     ; |counter_jin|counter:inst2|add~533          ; cout0            ;
+; |counter_jin|counter:inst2|add~531     ; |counter_jin|counter:inst2|add~533COUT1_660 ; cout1            ;
+; |counter_jin|counter:inst2|add~536     ; |counter_jin|counter:inst2|add~536          ; combout          ;
+; |counter_jin|counter:inst2|add~536     ; |counter_jin|counter:inst2|add~538          ; cout0            ;
+; |counter_jin|counter:inst2|add~536     ; |counter_jin|counter:inst2|add~538COUT1_659 ; cout1            ;
+; |counter_jin|counter:inst2|add~541     ; |counter_jin|counter:inst2|add~541          ; combout          ;
+; |counter_jin|counter:inst2|add~541     ; |counter_jin|counter:inst2|add~543          ; cout0            ;
+; |counter_jin|counter:inst2|add~541     ; |counter_jin|counter:inst2|add~543COUT1_658 ; cout1            ;
+; |counter_jin|counter:inst2|add~546     ; |counter_jin|counter:inst2|add~546          ; combout          ;
+; |counter_jin|counter:inst2|add~546     ; |counter_jin|counter:inst2|add~548          ; cout             ;
+; |counter_jin|counter:inst2|add~551     ; |counter_jin|counter:inst2|add~551          ; combout          ;
+; |counter_jin|counter:inst2|add~551     ; |counter_jin|counter:inst2|add~553          ; cout0            ;
+; |counter_jin|counter:inst2|add~551     ; |counter_jin|counter:inst2|add~553COUT1_657 ; cout1            ;
+; |counter_jin|counter:inst2|add~556     ; |counter_jin|counter:inst2|add~556          ; combout          ;
+; |counter_jin|counter:inst2|add~556     ; |counter_jin|counter:inst2|add~558          ; cout0            ;
+; |counter_jin|counter:inst2|add~556     ; |counter_jin|counter:inst2|add~558COUT1_656 ; cout1            ;
+; |counter_jin|counter:inst2|add~561     ; |counter_jin|counter:inst2|add~561          ; combout          ;
+; |counter_jin|counter:inst2|add~561     ; |counter_jin|counter:inst2|add~563          ; cout0            ;
+; |counter_jin|counter:inst2|add~561     ; |counter_jin|counter:inst2|add~563COUT1_655 ; cout1            ;
+; |counter_jin|counter:inst2|add~566     ; |counter_jin|counter:inst2|add~566          ; combout          ;
+; |counter_jin|counter:inst2|add~566     ; |counter_jin|counter:inst2|add~568          ; cout0            ;
+; |counter_jin|counter:inst2|add~566     ; |counter_jin|counter:inst2|add~568COUT1_654 ; cout1            ;
+; |counter_jin|counter:inst2|add~571     ; |counter_jin|counter:inst2|add~571          ; combout          ;
+; |counter_jin|counter:inst2|add~571     ; |counter_jin|counter:inst2|add~573          ; cout             ;
+; |counter_jin|counter:inst2|add~576     ; |counter_jin|counter:inst2|add~576          ; combout          ;
+; |counter_jin|counter:inst2|add~576     ; |counter_jin|counter:inst2|add~578          ; cout0            ;
+; |counter_jin|counter:inst2|add~576     ; |counter_jin|counter:inst2|add~578COUT1_653 ; cout1            ;
+; |counter_jin|counter:inst2|add~581     ; |counter_jin|counter:inst2|add~581          ; combout          ;
+; |counter_jin|counter:inst2|add~581     ; |counter_jin|counter:inst2|add~583          ; cout0            ;
+; |counter_jin|counter:inst2|add~581     ; |counter_jin|counter:inst2|add~583COUT1_652 ; cout1            ;
+; |counter_jin|counter:inst2|add~586     ; |counter_jin|counter:inst2|add~586          ; combout          ;
+; |counter_jin|counter:inst2|add~586     ; |counter_jin|counter:inst2|add~588          ; cout0            ;
+; |counter_jin|counter:inst2|add~586     ; |counter_jin|counter:inst2|add~588COUT1_651 ; cout1            ;
+; |counter_jin|counter:inst2|add~591     ; |counter_jin|counter:inst2|add~591          ; combout          ;
+; |counter_jin|counter:inst2|add~591     ; |counter_jin|counter:inst2|add~593          ; cout0            ;
+; |counter_jin|counter:inst2|add~591     ; |counter_jin|counter:inst2|add~593COUT1_650 ; cout1            ;
+; |counter_jin|counter:inst2|add~596     ; |counter_jin|counter:inst2|add~596          ; combout          ;
+; |counter_jin|counter:inst2|add~596     ; |counter_jin|counter:inst2|add~598          ; cout             ;
+; |counter_jin|counter:inst2|add~601     ; |counter_jin|counter:inst2|add~601          ; combout          ;
+; |counter_jin|counter:inst2|add~601     ; |counter_jin|counter:inst2|add~603          ; cout0            ;
+; |counter_jin|counter:inst2|add~601     ; |counter_jin|counter:inst2|add~603COUT1_649 ; cout1            ;
+; |counter_jin|counter:inst2|add~606     ; |counter_jin|counter:inst2|add~606          ; combout          ;
+; |counter_jin|counter:inst2|add~606     ; |counter_jin|counter:inst2|add~608          ; cout0            ;
+; |counter_jin|counter:inst2|add~606     ; |counter_jin|counter:inst2|add~608COUT1_648 ; cout1            ;
+; |counter_jin|counter:inst2|add~611     ; |counter_jin|counter:inst2|add~611          ; combout          ;
+; |counter_jin|counter:inst2|add~611     ; |counter_jin|counter:inst2|add~613          ; cout0            ;
+; |counter_jin|counter:inst2|add~611     ; |counter_jin|counter:inst2|add~613COUT1_647 ; cout1            ;
+; |counter_jin|counter:inst2|add~616     ; |counter_jin|counter:inst2|add~616          ; combout          ;
+; |counter_jin|counter:inst2|add~616     ; |counter_jin|counter:inst2|add~618          ; cout0            ;
+; |counter_jin|counter:inst2|add~616     ; |counter_jin|counter:inst2|add~618COUT1_646 ; cout1            ;
+; |counter_jin|counter:inst2|add~621     ; |counter_jin|counter:inst2|add~621          ; combout          ;
+; |counter_jin|counter:inst2|add~621     ; |counter_jin|counter:inst2|add~623          ; cout0            ;
+; |counter_jin|counter:inst2|add~621     ; |counter_jin|counter:inst2|add~623COUT1_644 ; cout1            ;
+; |counter_jin|counter:inst2|add~626     ; |counter_jin|counter:inst2|add~626          ; combout          ;
+; |counter_jin|counter:inst2|add~626     ; |counter_jin|counter:inst2|add~628          ; cout             ;
+; |counter_jin|counter:inst2|add~631     ; |counter_jin|counter:inst2|add~631          ; combout          ;
+; |counter_jin|counter:inst2|add~631     ; |counter_jin|counter:inst2|add~633          ; cout             ;
+; |counter_jin|counter:inst2|add~636     ; |counter_jin|counter:inst2|add~636          ; combout          ;
+; |counter_jin|counter:inst2|add~636     ; |counter_jin|counter:inst2|add~638          ; cout0            ;
+; |counter_jin|counter:inst2|add~636     ; |counter_jin|counter:inst2|add~638COUT1_645 ; cout1            ;
+; |counter_jin|counter:inst1|n[30]       ; |counter_jin|counter:inst1|n[30]            ; regout           ;
+; |counter_jin|counter:inst1|n[29]       ; |counter_jin|counter:inst1|n[29]            ; regout           ;
+; |counter_jin|counter:inst1|n[28]       ; |counter_jin|counter:inst1|n[28]            ; regout           ;
+; |counter_jin|rtl~858                   ; |counter_jin|rtl~858                        ; combout          ;
+; |counter_jin|rtl~858                   ; |counter_jin|counter:inst1|n[31]            ; regout           ;
+; |counter_jin|counter:inst1|n[26]       ; |counter_jin|counter:inst1|n[26]            ; regout           ;
+; |counter_jin|counter:inst1|n[25]       ; |counter_jin|counter:inst1|n[25]            ; regout           ;
+; |counter_jin|counter:inst1|n[24]       ; |counter_jin|counter:inst1|n[24]            ; regout           ;
+; |counter_jin|rtl~860                   ; |counter_jin|rtl~860                        ; combout          ;
+; |counter_jin|rtl~860                   ; |counter_jin|counter:inst1|n[27]            ; regout           ;
+; |counter_jin|counter:inst1|n[22]       ; |counter_jin|counter:inst1|n[22]            ; regout           ;
+; |counter_jin|counter:inst1|n[21]       ; |counter_jin|counter:inst1|n[21]            ; regout           ;
+; |counter_jin|counter:inst1|n[20]       ; |counter_jin|counter:inst1|n[20]            ; regout           ;
+; |counter_jin|rtl~861                   ; |counter_jin|rtl~861                        ; combout          ;
+; |counter_jin|rtl~861                   ; |counter_jin|counter:inst1|n[23]            ; regout           ;
+; |counter_jin|counter:inst1|n[18]       ; |counter_jin|counter:inst1|n[18]            ; regout           ;
+; |counter_jin|counter:inst1|n[17]       ; |counter_jin|counter:inst1|n[17]            ; regout           ;
+; |counter_jin|counter:inst1|n[16]       ; |counter_jin|counter:inst1|n[16]            ; regout           ;
+; |counter_jin|rtl~862                   ; |counter_jin|rtl~862                        ; combout          ;
+; |counter_jin|rtl~862                   ; |counter_jin|counter:inst1|n[19]            ; regout           ;
+; |counter_jin|counter:inst1|n[14]       ; |counter_jin|counter:inst1|n[14]            ; regout           ;
+; |counter_jin|counter:inst1|n[13]       ; |counter_jin|counter:inst1|n[13]            ; regout           ;
+; |counter_jin|counter:inst1|n[12]       ; |counter_jin|counter:inst1|n[12]            ; regout           ;
+; |counter_jin|rtl~863                   ; |counter_jin|rtl~863                        ; combout          ;
+; |counter_jin|rtl~863                   ; |counter_jin|counter:inst1|n[15]            ; regout           ;
+; |counter_jin|counter:inst1|n[10]       ; |counter_jin|counter:inst1|n[10]            ; regout           ;
+; |counter_jin|counter:inst1|n[9]        ; |counter_jin|counter:inst1|n[9]             ; regout           ;
+; |counter_jin|counter:inst1|n[8]        ; |counter_jin|counter:inst1|n[8]             ; regout           ;
+; |counter_jin|rtl~864                   ; |counter_jin|rtl~864                        ; combout          ;
+; |counter_jin|rtl~864                   ; |counter_jin|counter:inst1|n[11]            ; regout           ;
+; |counter_jin|counter:inst1|n[6]        ; |counter_jin|counter:inst1|n[6]             ; regout           ;
+; |counter_jin|counter:inst1|n[5]        ; |counter_jin|counter:inst1|n[5]             ; regout           ;
+; |counter_jin|counter:inst1|n[4]        ; |counter_jin|counter:inst1|n[4]             ; regout           ;
+; |counter_jin|rtl~865                   ; |counter_jin|rtl~865                        ; combout          ;
+; |counter_jin|rtl~865                   ; |counter_jin|counter:inst1|n[7]             ; regout           ;
+; |counter_jin|rtl~866                   ; |counter_jin|rtl~866                        ; combout          ;
+; |counter_jin|rtl~1                     ; |counter_jin|counter:inst1|clk_jinwei       ; regout           ;
+; |counter_jin|counter:inst|add~481      ; |counter_jin|counter:inst|add~483           ; cout0            ;
+; |counter_jin|counter:inst|n[30]        ; |counter_jin|counter:inst|n[30]             ; regout           ;
+; |counter_jin|counter:inst|n[29]        ; |counter_jin|counter:inst|n[29]             ; regout           ;
+; |counter_jin|counter:inst|n[28]        ; |counter_jin|counter:inst|n[28]             ; regout           ;
+; |counter_jin|rtl~867                   ; |counter_jin|rtl~867                        ; combout          ;
+; |counter_jin|rtl~867                   ; |counter_jin|counter:inst|n[31]             ; regout           ;
+; |counter_jin|counter:inst|n[26]        ; |counter_jin|counter:inst|n[26]             ; regout           ;
+; |counter_jin|counter:inst|n[25]        ; |counter_jin|counter:inst|n[25]             ; regout           ;
+; |counter_jin|counter:inst|n[24]        ; |counter_jin|counter:inst|n[24]             ; regout           ;
+; |counter_jin|rtl~869                   ; |counter_jin|rtl~869                        ; combout          ;
+; |counter_jin|rtl~869                   ; |counter_jin|counter:inst|n[27]             ; regout           ;
+; |counter_jin|counter:inst|n[22]        ; |counter_jin|counter:inst|n[22]             ; regout           ;
+; |counter_jin|counter:inst|n[21]        ; |counter_jin|counter:inst|n[21]             ; regout           ;
+; |counter_jin|counter:inst|n[20]        ; |counter_jin|counter:inst|n[20]             ; regout           ;
+; |counter_jin|rtl~870                   ; |counter_jin|rtl~870                        ; combout          ;
+; |counter_jin|rtl~870                   ; |counter_jin|counter:inst|n[23]             ; regout           ;
+; |counter_jin|counter:inst|n[18]        ; |counter_jin|counter:inst|n[18]             ; regout           ;
+; |counter_jin|counter:inst|n[17]        ; |counter_jin|counter:inst|n[17]             ; regout           ;
+; |counter_jin|counter:inst|n[16]        ; |counter_jin|counter:inst|n[16]             ; regout           ;
+; |counter_jin|rtl~871                   ; |counter_jin|rtl~871                        ; combout          ;
+; |counter_jin|rtl~871                   ; |counter_jin|counter:inst|n[19]             ; regout           ;
+; |counter_jin|counter:inst|n[14]        ; |counter_jin|counter:inst|n[14]             ; regout           ;
+; |counter_jin|counter:inst|n[13]        ; |counter_jin|counter:inst|n[13]             ; regout           ;
+; |counter_jin|counter:inst|n[12]        ; |counter_jin|counter:inst|n[12]             ; regout           ;
+; |counter_jin|rtl~872                   ; |counter_jin|rtl~872                        ; combout          ;
+; |counter_jin|rtl~872                   ; |counter_jin|counter:inst|n[15]             ; regout           ;
+; |counter_jin|counter:inst|n[10]        ; |counter_jin|counter:inst|n[10]             ; regout           ;
+; |counter_jin|counter:inst|n[9]         ; |counter_jin|counter:inst|n[9]              ; regout           ;
+; |counter_jin|counter:inst|n[8]         ; |counter_jin|counter:inst|n[8]              ; regout           ;
+; |counter_jin|rtl~873                   ; |counter_jin|rtl~873                        ; combout          ;
+; |counter_jin|rtl~873                   ; |counter_jin|counter:inst|n[11]             ; regout           ;
+; |counter_jin|counter:inst|n[6]         ; |counter_jin|counter:inst|n[6]              ; regout           ;
+; |counter_jin|counter:inst|n[5]         ; |counter_jin|counter:inst|n[5]              ; regout           ;
+; |counter_jin|counter:inst|n[4]         ; |counter_jin|counter:inst|n[4]              ; regout           ;
+; |counter_jin|rtl~874                   ; |counter_jin|rtl~874                        ; combout          ;
+; |counter_jin|rtl~874                   ; |counter_jin|counter:inst|n[7]              ; regout           ;
+; |counter_jin|rtl~875                   ; |counter_jin|rtl~875                        ; combout          ;
+; |counter_jin|counter:inst1|add~481     ; |counter_jin|counter:inst1|add~483          ; cout0            ;
+; |counter_jin|counter:inst1|add~486     ; |counter_jin|counter:inst1|add~488          ; cout0            ;
+; |counter_jin|counter:inst1|add~491     ; |counter_jin|counter:inst1|add~493          ; cout0            ;
+; |counter_jin|counter:inst|add~486      ; |counter_jin|counter:inst|add~488           ; cout0            ;
+; |counter_jin|counter:inst|add~491      ; |counter_jin|counter:inst|add~493           ; cout0            ;
+; |counter_jin|counter:inst1|add~501     ; |counter_jin|counter:inst1|add~501          ; combout          ;
+; |counter_jin|counter:inst1|add~506     ; |counter_jin|counter:inst1|add~506          ; combout          ;
+; |counter_jin|counter:inst1|add~506     ; |counter_jin|counter:inst1|add~508          ; cout             ;
+; |counter_jin|counter:inst1|add~511     ; |counter_jin|counter:inst1|add~511          ; combout          ;
+; |counter_jin|counter:inst1|add~511     ; |counter_jin|counter:inst1|add~513          ; cout0            ;
+; |counter_jin|counter:inst1|add~511     ; |counter_jin|counter:inst1|add~513COUT1_665 ; cout1            ;
+; |counter_jin|counter:inst1|add~516     ; |counter_jin|counter:inst1|add~516          ; combout          ;
+; |counter_jin|counter:inst1|add~516     ; |counter_jin|counter:inst1|add~518          ; cout0            ;
+; |counter_jin|counter:inst1|add~516     ; |counter_jin|counter:inst1|add~518COUT1_664 ; cout1            ;
+; |counter_jin|counter:inst1|add~521     ; |counter_jin|counter:inst1|add~521          ; combout          ;
+; |counter_jin|counter:inst1|add~521     ; |counter_jin|counter:inst1|add~523          ; cout0            ;
+; |counter_jin|counter:inst1|add~521     ; |counter_jin|counter:inst1|add~523COUT1_663 ; cout1            ;
+; |counter_jin|counter:inst1|add~526     ; |counter_jin|counter:inst1|add~526          ; combout          ;
+; |counter_jin|counter:inst1|add~526     ; |counter_jin|counter:inst1|add~528          ; cout0            ;
+; |counter_jin|counter:inst1|add~526     ; |counter_jin|counter:inst1|add~528COUT1_662 ; cout1            ;
+; |counter_jin|counter:inst1|add~531     ; |counter_jin|counter:inst1|add~531          ; combout          ;
+; |counter_jin|counter:inst1|add~531     ; |counter_jin|counter:inst1|add~533          ; cout             ;
+; |counter_jin|counter:inst1|add~536     ; |counter_jin|counter:inst1|add~536          ; combout          ;
+; |counter_jin|counter:inst1|add~536     ; |counter_jin|counter:inst1|add~538          ; cout0            ;
+; |counter_jin|counter:inst1|add~536     ; |counter_jin|counter:inst1|add~538COUT1_661 ; cout1            ;
+; |counter_jin|counter:inst1|add~541     ; |counter_jin|counter:inst1|add~541          ; combout          ;
+; |counter_jin|counter:inst1|add~541     ; |counter_jin|counter:inst1|add~543          ; cout0            ;
+; |counter_jin|counter:inst1|add~541     ; |counter_jin|counter:inst1|add~543COUT1_660 ; cout1            ;
+; |counter_jin|counter:inst1|add~546     ; |counter_jin|counter:inst1|add~546          ; combout          ;
+; |counter_jin|counter:inst1|add~546     ; |counter_jin|counter:inst1|add~548          ; cout0            ;
+; |counter_jin|counter:inst1|add~546     ; |counter_jin|counter:inst1|add~548COUT1_659 ; cout1            ;
+; |counter_jin|counter:inst1|add~551     ; |counter_jin|counter:inst1|add~551          ; combout          ;
+; |counter_jin|counter:inst1|add~551     ; |counter_jin|counter:inst1|add~553          ; cout0            ;
+; |counter_jin|counter:inst1|add~551     ; |counter_jin|counter:inst1|add~553COUT1_658 ; cout1            ;
+; |counter_jin|counter:inst1|add~556     ; |counter_jin|counter:inst1|add~556          ; combout          ;
+; |counter_jin|counter:inst1|add~556     ; |counter_jin|counter:inst1|add~558          ; cout             ;
+; |counter_jin|counter:inst1|add~561     ; |counter_jin|counter:inst1|add~561          ; combout          ;
+; |counter_jin|counter:inst1|add~561     ; |counter_jin|counter:inst1|add~563          ; cout0            ;
+; |counter_jin|counter:inst1|add~561     ; |counter_jin|counter:inst1|add~563COUT1_657 ; cout1            ;
+; |counter_jin|counter:inst1|add~566     ; |counter_jin|counter:inst1|add~566          ; combout          ;
+; |counter_jin|counter:inst1|add~566     ; |counter_jin|counter:inst1|add~568          ; cout0            ;
+; |counter_jin|counter:inst1|add~566     ; |counter_jin|counter:inst1|add~568COUT1_656 ; cout1            ;
+; |counter_jin|counter:inst1|add~571     ; |counter_jin|counter:inst1|add~571          ; combout          ;
+; |counter_jin|counter:inst1|add~571     ; |counter_jin|counter:inst1|add~573          ; cout0            ;
+; |counter_jin|counter:inst1|add~571     ; |counter_jin|counter:inst1|add~573COUT1_655 ; cout1            ;
+; |counter_jin|counter:inst1|add~576     ; |counter_jin|counter:inst1|add~576          ; combout          ;
+; |counter_jin|counter:inst1|add~576     ; |counter_jin|counter:inst1|add~578          ; cout0            ;
+; |counter_jin|counter:inst1|add~576     ; |counter_jin|counter:inst1|add~578COUT1_654 ; cout1            ;
+; |counter_jin|counter:inst1|add~581     ; |counter_jin|counter:inst1|add~581          ; combout          ;
+; |counter_jin|counter:inst1|add~581     ; |counter_jin|counter:inst1|add~583          ; cout             ;
+; |counter_jin|counter:inst1|add~586     ; |counter_jin|counter:inst1|add~586          ; combout          ;
+; |counter_jin|counter:inst1|add~586     ; |counter_jin|counter:inst1|add~588          ; cout0            ;
+; |counter_jin|counter:inst1|add~586     ; |counter_jin|counter:inst1|add~588COUT1_653 ; cout1            ;
+; |counter_jin|counter:inst1|add~591     ; |counter_jin|counter:inst1|add~591          ; combout          ;
+; |counter_jin|counter:inst1|add~591     ; |counter_jin|counter:inst1|add~593          ; cout0            ;
+; |counter_jin|counter:inst1|add~591     ; |counter_jin|counter:inst1|add~593COUT1_652 ; cout1            ;
+; |counter_jin|counter:inst1|add~596     ; |counter_jin|counter:inst1|add~596          ; combout          ;
+; |counter_jin|counter:inst1|add~596     ; |counter_jin|counter:inst1|add~598          ; cout0            ;
+; |counter_jin|counter:inst1|add~596     ; |counter_jin|counter:inst1|add~598COUT1_651 ; cout1            ;
+; |counter_jin|counter:inst1|add~601     ; |counter_jin|counter:inst1|add~601          ; combout          ;
+; |counter_jin|counter:inst1|add~601     ; |counter_jin|counter:inst1|add~603          ; cout0            ;
+; |counter_jin|counter:inst1|add~601     ; |counter_jin|counter:inst1|add~603COUT1_650 ; cout1            ;
+; |counter_jin|counter:inst1|add~606     ; |counter_jin|counter:inst1|add~606          ; combout          ;
+; |counter_jin|counter:inst1|add~606     ; |counter_jin|counter:inst1|add~608          ; cout             ;
+; |counter_jin|counter:inst1|add~611     ; |counter_jin|counter:inst1|add~611          ; combout          ;
+; |counter_jin|counter:inst1|add~611     ; |counter_jin|counter:inst1|add~613          ; cout0            ;
+; |counter_jin|counter:inst1|add~611     ; |counter_jin|counter:inst1|add~613COUT1_649 ; cout1            ;
+; |counter_jin|counter:inst1|add~616     ; |counter_jin|counter:inst1|add~616          ; combout          ;
+; |counter_jin|counter:inst1|add~616     ; |counter_jin|counter:inst1|add~618          ; cout0            ;
+; |counter_jin|counter:inst1|add~616     ; |counter_jin|counter:inst1|add~618COUT1_648 ; cout1            ;
+; |counter_jin|counter:inst1|add~621     ; |counter_jin|counter:inst1|add~621          ; combout          ;
+; |counter_jin|counter:inst1|add~621     ; |counter_jin|counter:inst1|add~623          ; cout0            ;
+; |counter_jin|counter:inst1|add~621     ; |counter_jin|counter:inst1|add~623COUT1_647 ; cout1            ;
+; |counter_jin|counter:inst1|add~626     ; |counter_jin|counter:inst1|add~626          ; combout          ;
+; |counter_jin|counter:inst1|add~626     ; |counter_jin|counter:inst1|add~628          ; cout0            ;
+; |counter_jin|counter:inst1|add~626     ; |counter_jin|counter:inst1|add~628COUT1_646 ; cout1            ;
+; |counter_jin|counter:inst1|add~631     ; |counter_jin|counter:inst1|add~631          ; combout          ;
+; |counter_jin|counter:inst1|add~631     ; |counter_jin|counter:inst1|add~633          ; cout             ;
+; |counter_jin|counter:inst1|add~636     ; |counter_jin|counter:inst1|add~638          ; cout0            ;
+; |counter_jin|counter:inst1|add~636     ; |counter_jin|counter:inst1|add~638COUT1_645 ; cout1            ;
+; |counter_jin|counter:inst|add~501      ; |counter_jin|counter:inst|add~501           ; combout          ;
+; |counter_jin|counter:inst|add~506      ; |counter_jin|counter:inst|add~506           ; combout          ;
+; |counter_jin|counter:inst|add~506      ; |counter_jin|counter:inst|add~508           ; cout             ;
+; |counter_jin|counter:inst|add~511      ; |counter_jin|counter:inst|add~511           ; combout          ;
+; |counter_jin|counter:inst|add~511      ; |counter_jin|counter:inst|add~513           ; cout0            ;
+; |counter_jin|counter:inst|add~511      ; |counter_jin|counter:inst|add~513COUT1_665  ; cout1            ;
+; |counter_jin|counter:inst|add~516      ; |counter_jin|counter:inst|add~516           ; combout          ;
+; |counter_jin|counter:inst|add~516      ; |counter_jin|counter:inst|add~518           ; cout0            ;
+; |counter_jin|counter:inst|add~516      ; |counter_jin|counter:inst|add~518COUT1_664  ; cout1            ;
+; |counter_jin|counter:inst|add~521      ; |counter_jin|counter:inst|add~521           ; combout          ;
+; |counter_jin|counter:inst|add~521      ; |counter_jin|counter:inst|add~523           ; cout0            ;
+; |counter_jin|counter:inst|add~521      ; |counter_jin|counter:inst|add~523COUT1_663  ; cout1            ;
+; |counter_jin|counter:inst|add~526      ; |counter_jin|counter:inst|add~526           ; combout          ;
+; |counter_jin|counter:inst|add~526      ; |counter_jin|counter:inst|add~528           ; cout0            ;
+; |counter_jin|counter:inst|add~526      ; |counter_jin|counter:inst|add~528COUT1_662  ; cout1            ;
+; |counter_jin|counter:inst|add~531      ; |counter_jin|counter:inst|add~531           ; combout          ;
+; |counter_jin|counter:inst|add~531      ; |counter_jin|counter:inst|add~533           ; cout             ;
+; |counter_jin|counter:inst|add~536      ; |counter_jin|counter:inst|add~536           ; combout          ;
+; |counter_jin|counter:inst|add~536      ; |counter_jin|counter:inst|add~538           ; cout0            ;
+; |counter_jin|counter:inst|add~536      ; |counter_jin|counter:inst|add~538COUT1_661  ; cout1            ;
+; |counter_jin|counter:inst|add~541      ; |counter_jin|counter:inst|add~541           ; combout          ;
+; |counter_jin|counter:inst|add~541      ; |counter_jin|counter:inst|add~543           ; cout0            ;
+; |counter_jin|counter:inst|add~541      ; |counter_jin|counter:inst|add~543COUT1_660  ; cout1            ;
+; |counter_jin|counter:inst|add~546      ; |counter_jin|counter:inst|add~546           ; combout          ;
+; |counter_jin|counter:inst|add~546      ; |counter_jin|counter:inst|add~548           ; cout0            ;
+; |counter_jin|counter:inst|add~546      ; |counter_jin|counter:inst|add~548COUT1_659  ; cout1            ;
+; |counter_jin|counter:inst|add~551      ; |counter_jin|counter:inst|add~551           ; combout          ;
+; |counter_jin|counter:inst|add~551      ; |counter_jin|counter:inst|add~553           ; cout0            ;
+; |counter_jin|counter:inst|add~551      ; |counter_jin|counter:inst|add~553COUT1_658  ; cout1            ;
+; |counter_jin|counter:inst|add~556      ; |counter_jin|counter:inst|add~556           ; combout          ;
+; |counter_jin|counter:inst|add~556      ; |counter_jin|counter:inst|add~558           ; cout             ;
+; |counter_jin|counter:inst|add~561      ; |counter_jin|counter:inst|add~561           ; combout          ;
+; |counter_jin|counter:inst|add~561      ; |counter_jin|counter:inst|add~563           ; cout0            ;
+; |counter_jin|counter:inst|add~561      ; |counter_jin|counter:inst|add~563COUT1_657  ; cout1            ;
+; |counter_jin|counter:inst|add~566      ; |counter_jin|counter:inst|add~566           ; combout          ;
+; |counter_jin|counter:inst|add~566      ; |counter_jin|counter:inst|add~568           ; cout0            ;
+; |counter_jin|counter:inst|add~566      ; |counter_jin|counter:inst|add~568COUT1_656  ; cout1            ;
+; |counter_jin|counter:inst|add~571      ; |counter_jin|counter:inst|add~571           ; combout          ;
+; |counter_jin|counter:inst|add~571      ; |counter_jin|counter:inst|add~573           ; cout0            ;
+; |counter_jin|counter:inst|add~571      ; |counter_jin|counter:inst|add~573COUT1_655  ; cout1            ;
+; |counter_jin|counter:inst|add~576      ; |counter_jin|counter:inst|add~576           ; combout          ;
+; |counter_jin|counter:inst|add~576      ; |counter_jin|counter:inst|add~578           ; cout0            ;
+; |counter_jin|counter:inst|add~576      ; |counter_jin|counter:inst|add~578COUT1_654  ; cout1            ;
+; |counter_jin|counter:inst|add~581      ; |counter_jin|counter:inst|add~581           ; combout          ;
+; |counter_jin|counter:inst|add~581      ; |counter_jin|counter:inst|add~583           ; cout             ;
+; |counter_jin|counter:inst|add~586      ; |counter_jin|counter:inst|add~586           ; combout          ;
+; |counter_jin|counter:inst|add~586      ; |counter_jin|counter:inst|add~588           ; cout0            ;
+; |counter_jin|counter:inst|add~586      ; |counter_jin|counter:inst|add~588COUT1_653  ; cout1            ;
+; |counter_jin|counter:inst|add~591      ; |counter_jin|counter:inst|add~591           ; combout          ;
+; |counter_jin|counter:inst|add~591      ; |counter_jin|counter:inst|add~593           ; cout0            ;
+; |counter_jin|counter:inst|add~591      ; |counter_jin|counter:inst|add~593COUT1_652  ; cout1            ;
+; |counter_jin|counter:inst|add~596      ; |counter_jin|counter:inst|add~596           ; combout          ;
+; |counter_jin|counter:inst|add~596      ; |counter_jin|counter:inst|add~598           ; cout0            ;
+; |counter_jin|counter:inst|add~596      ; |counter_jin|counter:inst|add~598COUT1_651  ; cout1            ;
+; |counter_jin|counter:inst|add~601      ; |counter_jin|counter:inst|add~601           ; combout          ;
+; |counter_jin|counter:inst|add~601      ; |counter_jin|counter:inst|add~603           ; cout0            ;
+; |counter_jin|counter:inst|add~601      ; |counter_jin|counter:inst|add~603COUT1_650  ; cout1            ;
+; |counter_jin|counter:inst|add~606      ; |counter_jin|counter:inst|add~606           ; combout          ;
+; |counter_jin|counter:inst|add~606      ; |counter_jin|counter:inst|add~608           ; cout             ;
+; |counter_jin|counter:inst|add~611      ; |counter_jin|counter:inst|add~611           ; combout          ;
+; |counter_jin|counter:inst|add~611      ; |counter_jin|counter:inst|add~613           ; cout0            ;
+; |counter_jin|counter:inst|add~611      ; |counter_jin|counter:inst|add~613COUT1_649  ; cout1            ;
+; |counter_jin|counter:inst|add~616      ; |counter_jin|counter:inst|add~616           ; combout          ;
+; |counter_jin|counter:inst|add~616      ; |counter_jin|counter:inst|add~618           ; cout0            ;
+; |counter_jin|counter:inst|add~616      ; |counter_jin|counter:inst|add~618COUT1_648  ; cout1            ;
+; |counter_jin|counter:inst|add~621      ; |counter_jin|counter:inst|add~621           ; combout          ;
+; |counter_jin|counter:inst|add~621      ; |counter_jin|counter:inst|add~623           ; cout0            ;
+; |counter_jin|counter:inst|add~621      ; |counter_jin|counter:inst|add~623COUT1_647  ; cout1            ;
+; |counter_jin|counter:inst|add~626      ; |counter_jin|counter:inst|add~626           ; combout          ;
+; |counter_jin|counter:inst|add~626      ; |counter_jin|counter:inst|add~628           ; cout0            ;
+; |counter_jin|counter:inst|add~626      ; |counter_jin|counter:inst|add~628COUT1_646  ; cout1            ;
+; |counter_jin|counter:inst|add~631      ; |counter_jin|counter:inst|add~631           ; combout          ;
+; |counter_jin|counter:inst|add~631      ; |counter_jin|counter:inst|add~633           ; cout             ;
+; |counter_jin|counter:inst|add~636      ; |counter_jin|counter:inst|add~638           ; cout0            ;
+; |counter_jin|counter:inst|add~636      ; |counter_jin|counter:inst|add~638COUT1_645  ; cout1            ;
+; |counter_jin|clk_jinwei                ; |counter_jin|clk_jinwei                     ; padio            ;
+; |counter_jin|led7[7]                   ; |counter_jin|led7[7]                        ; padio            ;
++----------------------------------------+---------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                ;
++----------------------------------------+---------------------------------------------+------------------+
+; Node Name                              ; Output Port Name                            ; Output Port Type ;
++----------------------------------------+---------------------------------------------+------------------+
+; |counter_jin|sel:inst3|LED[7]          ; |counter_jin|sel:inst3|LED[7]               ; regout           ;
+; |counter_jin|counter:inst2|n[1]        ; |counter_jin|counter:inst2|n[1]             ; regout           ;
+; |counter_jin|rtl~846                   ; |counter_jin|rtl~846                        ; combout          ;
+; |counter_jin|rtl~846                   ; |counter_jin|counter:inst2|n[2]             ; regout           ;
+; |counter_jin|counter:inst2|n[28]       ; |counter_jin|counter:inst2|n[28]            ; regout           ;
+; |counter_jin|counter:inst2|n[27]       ; |counter_jin|counter:inst2|n[27]            ; regout           ;
+; |counter_jin|counter:inst2|n[26]       ; |counter_jin|counter:inst2|n[26]            ; regout           ;
+; |counter_jin|rtl~847                   ; |counter_jin|rtl~847                        ; combout          ;
+; |counter_jin|rtl~847                   ; |counter_jin|counter:inst2|n[29]            ; regout           ;
+; |counter_jin|counter:inst2|n[30]       ; |counter_jin|counter:inst2|n[30]            ; regout           ;
+; |counter_jin|rtl~848                   ; |counter_jin|rtl~848                        ; combout          ;
+; |counter_jin|rtl~848                   ; |counter_jin|counter:inst2|n[31]            ; regout           ;
+; |counter_jin|counter:inst2|n[24]       ; |counter_jin|counter:inst2|n[24]            ; regout           ;
+; |counter_jin|counter:inst2|n[23]       ; |counter_jin|counter:inst2|n[23]            ; regout           ;
+; |counter_jin|counter:inst2|n[22]       ; |counter_jin|counter:inst2|n[22]            ; regout           ;
+; |counter_jin|rtl~849                   ; |counter_jin|rtl~849                        ; combout          ;
+; |counter_jin|rtl~849                   ; |counter_jin|counter:inst2|n[25]            ; regout           ;
+; |counter_jin|counter:inst2|n[20]       ; |counter_jin|counter:inst2|n[20]            ; regout           ;
+; |counter_jin|counter:inst2|n[19]       ; |counter_jin|counter:inst2|n[19]            ; regout           ;
+; |counter_jin|counter:inst2|n[18]       ; |counter_jin|counter:inst2|n[18]            ; regout           ;
+; |counter_jin|rtl~850                   ; |counter_jin|rtl~850                        ; combout          ;
+; |counter_jin|rtl~850                   ; |counter_jin|counter:inst2|n[21]            ; regout           ;
+; |counter_jin|counter:inst2|n[16]       ; |counter_jin|counter:inst2|n[16]            ; regout           ;
+; |counter_jin|counter:inst2|n[15]       ; |counter_jin|counter:inst2|n[15]            ; regout           ;
+; |counter_jin|counter:inst2|n[14]       ; |counter_jin|counter:inst2|n[14]            ; regout           ;
+; |counter_jin|rtl~851                   ; |counter_jin|rtl~851                        ; combout          ;
+; |counter_jin|rtl~851                   ; |counter_jin|counter:inst2|n[17]            ; regout           ;
+; |counter_jin|counter:inst2|n[12]       ; |counter_jin|counter:inst2|n[12]            ; regout           ;
+; |counter_jin|counter:inst2|n[11]       ; |counter_jin|counter:inst2|n[11]            ; regout           ;
+; |counter_jin|counter:inst2|n[10]       ; |counter_jin|counter:inst2|n[10]            ; regout           ;
+; |counter_jin|rtl~852                   ; |counter_jin|rtl~852                        ; combout          ;
+; |counter_jin|rtl~852                   ; |counter_jin|counter:inst2|n[13]            ; regout           ;
+; |counter_jin|counter:inst2|n[8]        ; |counter_jin|counter:inst2|n[8]             ; regout           ;
+; |counter_jin|counter:inst2|n[7]        ; |counter_jin|counter:inst2|n[7]             ; regout           ;
+; |counter_jin|counter:inst2|n[6]        ; |counter_jin|counter:inst2|n[6]             ; regout           ;
+; |counter_jin|rtl~853                   ; |counter_jin|rtl~853                        ; combout          ;
+; |counter_jin|rtl~853                   ; |counter_jin|counter:inst2|n[9]             ; regout           ;
+; |counter_jin|counter:inst2|n[3]        ; |counter_jin|counter:inst2|n[3]             ; regout           ;
+; |counter_jin|counter:inst2|n[5]        ; |counter_jin|counter:inst2|n[5]             ; regout           ;
+; |counter_jin|counter:inst2|n[4]        ; |counter_jin|counter:inst2|n[4]             ; regout           ;
+; |counter_jin|rtl~854                   ; |counter_jin|rtl~854                        ; combout          ;
+; |counter_jin|rtl~854                   ; |counter_jin|counter:inst2|n[0]             ; regout           ;
+; |counter_jin|rtl~855                   ; |counter_jin|rtl~855                        ; combout          ;
+; |counter_jin|rtl~0                     ; |counter_jin|rtl~0                          ; combout          ;
+; |counter_jin|rtl~0                     ; |counter_jin|counter:inst2|clk_jinwei       ; regout           ;
+; |counter_jin|counter:inst1|n[3]        ; |counter_jin|counter:inst1|n[3]             ; regout           ;
+; |counter_jin|sel:inst3|Mux~733         ; |counter_jin|sel:inst3|Mux~733              ; combout          ;
+; |counter_jin|counter:inst2|LED7[6]~149 ; |counter_jin|counter:inst2|LED7[6]~149      ; combout          ;
+; |counter_jin|counter:inst2|LED7[5]~150 ; |counter_jin|counter:inst2|LED7[5]~150      ; combout          ;
+; |counter_jin|counter:inst2|LED7[4]~151 ; |counter_jin|counter:inst2|LED7[4]~151      ; combout          ;
+; |counter_jin|counter:inst2|LED7[3]~152 ; |counter_jin|counter:inst2|LED7[3]~152      ; combout          ;
+; |counter_jin|counter:inst2|LED7[2]~153 ; |counter_jin|counter:inst2|LED7[2]~153      ; combout          ;
+; |counter_jin|counter:inst2|LED7[1]~154 ; |counter_jin|counter:inst2|LED7[1]~154      ; combout          ;
+; |counter_jin|counter:inst2|LED7[0]~155 ; |counter_jin|counter:inst2|LED7[0]~155      ; combout          ;
+; |counter_jin|counter:inst2|add~481     ; |counter_jin|counter:inst2|add~481          ; combout          ;
+; |counter_jin|counter:inst2|add~481     ; |counter_jin|counter:inst2|add~483          ; cout0            ;
+; |counter_jin|counter:inst2|add~481     ; |counter_jin|counter:inst2|add~483COUT1_643 ; cout1            ;
+; |counter_jin|counter:inst2|add~486     ; |counter_jin|counter:inst2|add~486          ; combout          ;
+; |counter_jin|counter:inst2|add~486     ; |counter_jin|counter:inst2|add~488          ; cout0            ;
+; |counter_jin|counter:inst2|add~486     ; |counter_jin|counter:inst2|add~488COUT1_642 ; cout1            ;
+; |counter_jin|counter:inst2|add~491     ; |counter_jin|counter:inst2|add~491          ; combout          ;
+; |counter_jin|counter:inst2|add~491     ; |counter_jin|counter:inst2|add~493          ; cout0            ;
+; |counter_jin|counter:inst2|add~491     ; |counter_jin|counter:inst2|add~493COUT1_665 ; cout1            ;
+; |counter_jin|counter:inst2|add~496     ; |counter_jin|counter:inst2|add~496          ; combout          ;
+; |counter_jin|counter:inst2|add~496     ; |counter_jin|counter:inst2|add~498          ; cout0            ;
+; |counter_jin|counter:inst2|add~496     ; |counter_jin|counter:inst2|add~498COUT1_664 ; cout1            ;
+; |counter_jin|counter:inst2|add~501     ; |counter_jin|counter:inst2|add~501          ; combout          ;
+; |counter_jin|counter:inst2|add~501     ; |counter_jin|counter:inst2|add~503          ; cout0            ;
+; |counter_jin|counter:inst2|add~501     ; |counter_jin|counter:inst2|add~503COUT1_663 ; cout1            ;
+; |counter_jin|counter:inst2|add~506     ; |counter_jin|counter:inst2|add~506          ; combout          ;
+; |counter_jin|counter:inst2|add~506     ; |counter_jin|counter:inst2|add~508          ; cout0            ;
+; |counter_jin|counter:inst2|add~506     ; |counter_jin|counter:inst2|add~508COUT1_662 ; cout1            ;
+; |counter_jin|counter:inst2|add~511     ; |counter_jin|counter:inst2|add~511          ; combout          ;
+; |counter_jin|counter:inst2|add~516     ; |counter_jin|counter:inst2|add~516          ; combout          ;
+; |counter_jin|counter:inst2|add~516     ; |counter_jin|counter:inst2|add~518          ; cout             ;
+; |counter_jin|counter:inst2|add~521     ; |counter_jin|counter:inst2|add~521          ; combout          ;
+; |counter_jin|counter:inst2|add~521     ; |counter_jin|counter:inst2|add~523          ; cout             ;
+; |counter_jin|counter:inst2|add~526     ; |counter_jin|counter:inst2|add~526          ; combout          ;
+; |counter_jin|counter:inst2|add~526     ; |counter_jin|counter:inst2|add~528          ; cout0            ;
+; |counter_jin|counter:inst2|add~526     ; |counter_jin|counter:inst2|add~528COUT1_661 ; cout1            ;
+; |counter_jin|counter:inst2|add~531     ; |counter_jin|counter:inst2|add~531          ; combout          ;
+; |counter_jin|counter:inst2|add~531     ; |counter_jin|counter:inst2|add~533          ; cout0            ;
+; |counter_jin|counter:inst2|add~531     ; |counter_jin|counter:inst2|add~533COUT1_660 ; cout1            ;
+; |counter_jin|counter:inst2|add~536     ; |counter_jin|counter:inst2|add~536          ; combout          ;
+; |counter_jin|counter:inst2|add~536     ; |counter_jin|counter:inst2|add~538          ; cout0            ;
+; |counter_jin|counter:inst2|add~536     ; |counter_jin|counter:inst2|add~538COUT1_659 ; cout1            ;
+; |counter_jin|counter:inst2|add~541     ; |counter_jin|counter:inst2|add~541          ; combout          ;
+; |counter_jin|counter:inst2|add~541     ; |counter_jin|counter:inst2|add~543          ; cout0            ;
+; |counter_jin|counter:inst2|add~541     ; |counter_jin|counter:inst2|add~543COUT1_658 ; cout1            ;
+; |counter_jin|counter:inst2|add~546     ; |counter_jin|counter:inst2|add~546          ; combout          ;
+; |counter_jin|counter:inst2|add~546     ; |counter_jin|counter:inst2|add~548          ; cout             ;
+; |counter_jin|counter:inst2|add~551     ; |counter_jin|counter:inst2|add~551          ; combout          ;
+; |counter_jin|counter:inst2|add~551     ; |counter_jin|counter:inst2|add~553          ; cout0            ;
+; |counter_jin|counter:inst2|add~551     ; |counter_jin|counter:inst2|add~553COUT1_657 ; cout1            ;
+; |counter_jin|counter:inst2|add~556     ; |counter_jin|counter:inst2|add~556          ; combout          ;
+; |counter_jin|counter:inst2|add~556     ; |counter_jin|counter:inst2|add~558          ; cout0            ;
+; |counter_jin|counter:inst2|add~556     ; |counter_jin|counter:inst2|add~558COUT1_656 ; cout1            ;
+; |counter_jin|counter:inst2|add~561     ; |counter_jin|counter:inst2|add~561          ; combout          ;
+; |counter_jin|counter:inst2|add~561     ; |counter_jin|counter:inst2|add~563          ; cout0            ;
+; |counter_jin|counter:inst2|add~561     ; |counter_jin|counter:inst2|add~563COUT1_655 ; cout1            ;
+; |counter_jin|counter:inst2|add~566     ; |counter_jin|counter:inst2|add~566          ; combout          ;
+; |counter_jin|counter:inst2|add~566     ; |counter_jin|counter:inst2|add~568          ; cout0            ;
+; |counter_jin|counter:inst2|add~566     ; |counter_jin|counter:inst2|add~568COUT1_654 ; cout1            ;
+; |counter_jin|counter:inst2|add~571     ; |counter_jin|counter:inst2|add~571          ; combout          ;
+; |counter_jin|counter:inst2|add~571     ; |counter_jin|counter:inst2|add~573          ; cout             ;
+; |counter_jin|counter:inst2|add~576     ; |counter_jin|counter:inst2|add~576          ; combout          ;
+; |counter_jin|counter:inst2|add~576     ; |counter_jin|counter:inst2|add~578          ; cout0            ;
+; |counter_jin|counter:inst2|add~576     ; |counter_jin|counter:inst2|add~578COUT1_653 ; cout1            ;
+; |counter_jin|counter:inst2|add~581     ; |counter_jin|counter:inst2|add~581          ; combout          ;
+; |counter_jin|counter:inst2|add~581     ; |counter_jin|counter:inst2|add~583          ; cout0            ;
+; |counter_jin|counter:inst2|add~581     ; |counter_jin|counter:inst2|add~583COUT1_652 ; cout1            ;
+; |counter_jin|counter:inst2|add~586     ; |counter_jin|counter:inst2|add~586          ; combout          ;
+; |counter_jin|counter:inst2|add~586     ; |counter_jin|counter:inst2|add~588          ; cout0            ;
+; |counter_jin|counter:inst2|add~586     ; |counter_jin|counter:inst2|add~588COUT1_651 ; cout1            ;
+; |counter_jin|counter:inst2|add~591     ; |counter_jin|counter:inst2|add~591          ; combout          ;
+; |counter_jin|counter:inst2|add~591     ; |counter_jin|counter:inst2|add~593          ; cout0            ;
+; |counter_jin|counter:inst2|add~591     ; |counter_jin|counter:inst2|add~593COUT1_650 ; cout1            ;
+; |counter_jin|counter:inst2|add~596     ; |counter_jin|counter:inst2|add~596          ; combout          ;
+; |counter_jin|counter:inst2|add~596     ; |counter_jin|counter:inst2|add~598          ; cout             ;
+; |counter_jin|counter:inst2|add~601     ; |counter_jin|counter:inst2|add~601          ; combout          ;
+; |counter_jin|counter:inst2|add~601     ; |counter_jin|counter:inst2|add~603          ; cout0            ;
+; |counter_jin|counter:inst2|add~601     ; |counter_jin|counter:inst2|add~603COUT1_649 ; cout1            ;
+; |counter_jin|counter:inst2|add~606     ; |counter_jin|counter:inst2|add~606          ; combout          ;
+; |counter_jin|counter:inst2|add~606     ; |counter_jin|counter:inst2|add~608          ; cout0            ;
+; |counter_jin|counter:inst2|add~606     ; |counter_jin|counter:inst2|add~608COUT1_648 ; cout1            ;
+; |counter_jin|counter:inst2|add~611     ; |counter_jin|counter:inst2|add~611          ; combout          ;
+; |counter_jin|counter:inst2|add~611     ; |counter_jin|counter:inst2|add~613          ; cout0            ;
+; |counter_jin|counter:inst2|add~611     ; |counter_jin|counter:inst2|add~613COUT1_647 ; cout1            ;
+; |counter_jin|counter:inst2|add~616     ; |counter_jin|counter:inst2|add~616          ; combout          ;
+; |counter_jin|counter:inst2|add~616     ; |counter_jin|counter:inst2|add~618          ; cout0            ;
+; |counter_jin|counter:inst2|add~616     ; |counter_jin|counter:inst2|add~618COUT1_646 ; cout1            ;
+; |counter_jin|counter:inst2|add~621     ; |counter_jin|counter:inst2|add~621          ; combout          ;
+; |counter_jin|counter:inst2|add~621     ; |counter_jin|counter:inst2|add~623          ; cout0            ;
+; |counter_jin|counter:inst2|add~621     ; |counter_jin|counter:inst2|add~623COUT1_644 ; cout1            ;
+; |counter_jin|counter:inst2|add~626     ; |counter_jin|counter:inst2|add~626          ; combout          ;
+; |counter_jin|counter:inst2|add~626     ; |counter_jin|counter:inst2|add~628          ; cout             ;
+; |counter_jin|counter:inst2|add~631     ; |counter_jin|counter:inst2|add~631          ; combout          ;
+; |counter_jin|counter:inst2|add~631     ; |counter_jin|counter:inst2|add~633          ; cout             ;
+; |counter_jin|counter:inst2|add~636     ; |counter_jin|counter:inst2|add~636          ; combout          ;
+; |counter_jin|counter:inst2|add~636     ; |counter_jin|counter:inst2|add~638          ; cout0            ;
+; |counter_jin|counter:inst2|add~636     ; |counter_jin|counter:inst2|add~638COUT1_645 ; cout1            ;
+; |counter_jin|counter:inst1|n[30]       ; |counter_jin|counter:inst1|n[30]            ; regout           ;
+; |counter_jin|counter:inst1|n[29]       ; |counter_jin|counter:inst1|n[29]            ; regout           ;
+; |counter_jin|counter:inst1|n[28]       ; |counter_jin|counter:inst1|n[28]            ; regout           ;
+; |counter_jin|rtl~858                   ; |counter_jin|rtl~858                        ; combout          ;
+; |counter_jin|rtl~858                   ; |counter_jin|counter:inst1|n[31]            ; regout           ;
+; |counter_jin|rtl~859                   ; |counter_jin|rtl~859                        ; combout          ;
+; |counter_jin|counter:inst1|n[26]       ; |counter_jin|counter:inst1|n[26]            ; regout           ;
+; |counter_jin|counter:inst1|n[25]       ; |counter_jin|counter:inst1|n[25]            ; regout           ;
+; |counter_jin|counter:inst1|n[24]       ; |counter_jin|counter:inst1|n[24]            ; regout           ;
+; |counter_jin|rtl~860                   ; |counter_jin|rtl~860                        ; combout          ;
+; |counter_jin|rtl~860                   ; |counter_jin|counter:inst1|n[27]            ; regout           ;
+; |counter_jin|counter:inst1|n[22]       ; |counter_jin|counter:inst1|n[22]            ; regout           ;
+; |counter_jin|counter:inst1|n[21]       ; |counter_jin|counter:inst1|n[21]            ; regout           ;
+; |counter_jin|counter:inst1|n[20]       ; |counter_jin|counter:inst1|n[20]            ; regout           ;
+; |counter_jin|rtl~861                   ; |counter_jin|rtl~861                        ; combout          ;
+; |counter_jin|rtl~861                   ; |counter_jin|counter:inst1|n[23]            ; regout           ;
+; |counter_jin|counter:inst1|n[18]       ; |counter_jin|counter:inst1|n[18]            ; regout           ;
+; |counter_jin|counter:inst1|n[17]       ; |counter_jin|counter:inst1|n[17]            ; regout           ;
+; |counter_jin|counter:inst1|n[16]       ; |counter_jin|counter:inst1|n[16]            ; regout           ;
+; |counter_jin|rtl~862                   ; |counter_jin|rtl~862                        ; combout          ;
+; |counter_jin|rtl~862                   ; |counter_jin|counter:inst1|n[19]            ; regout           ;
+; |counter_jin|counter:inst1|n[14]       ; |counter_jin|counter:inst1|n[14]            ; regout           ;
+; |counter_jin|counter:inst1|n[13]       ; |counter_jin|counter:inst1|n[13]            ; regout           ;
+; |counter_jin|counter:inst1|n[12]       ; |counter_jin|counter:inst1|n[12]            ; regout           ;
+; |counter_jin|rtl~863                   ; |counter_jin|rtl~863                        ; combout          ;
+; |counter_jin|rtl~863                   ; |counter_jin|counter:inst1|n[15]            ; regout           ;
+; |counter_jin|counter:inst1|n[10]       ; |counter_jin|counter:inst1|n[10]            ; regout           ;
+; |counter_jin|counter:inst1|n[9]        ; |counter_jin|counter:inst1|n[9]             ; regout           ;
+; |counter_jin|counter:inst1|n[8]        ; |counter_jin|counter:inst1|n[8]             ; regout           ;
+; |counter_jin|rtl~864                   ; |counter_jin|rtl~864                        ; combout          ;
+; |counter_jin|rtl~864                   ; |counter_jin|counter:inst1|n[11]            ; regout           ;
+; |counter_jin|counter:inst1|n[6]        ; |counter_jin|counter:inst1|n[6]             ; regout           ;
+; |counter_jin|counter:inst1|n[5]        ; |counter_jin|counter:inst1|n[5]             ; regout           ;
+; |counter_jin|counter:inst1|n[4]        ; |counter_jin|counter:inst1|n[4]             ; regout           ;
+; |counter_jin|rtl~865                   ; |counter_jin|rtl~865                        ; combout          ;
+; |counter_jin|rtl~865                   ; |counter_jin|counter:inst1|n[7]             ; regout           ;
+; |counter_jin|rtl~866                   ; |counter_jin|rtl~866                        ; combout          ;
+; |counter_jin|rtl~1                     ; |counter_jin|rtl~1                          ; combout          ;
+; |counter_jin|rtl~1                     ; |counter_jin|counter:inst1|clk_jinwei       ; regout           ;
+; |counter_jin|counter:inst|add~481      ; |counter_jin|counter:inst|add~483           ; cout0            ;
+; |counter_jin|counter:inst|n[30]        ; |counter_jin|counter:inst|n[30]             ; regout           ;
+; |counter_jin|counter:inst|n[29]        ; |counter_jin|counter:inst|n[29]             ; regout           ;
+; |counter_jin|counter:inst|n[28]        ; |counter_jin|counter:inst|n[28]             ; regout           ;
+; |counter_jin|rtl~867                   ; |counter_jin|rtl~867                        ; combout          ;
+; |counter_jin|rtl~867                   ; |counter_jin|counter:inst|n[31]             ; regout           ;
+; |counter_jin|counter:inst|n[26]        ; |counter_jin|counter:inst|n[26]             ; regout           ;
+; |counter_jin|counter:inst|n[25]        ; |counter_jin|counter:inst|n[25]             ; regout           ;
+; |counter_jin|counter:inst|n[24]        ; |counter_jin|counter:inst|n[24]             ; regout           ;
+; |counter_jin|rtl~869                   ; |counter_jin|rtl~869                        ; combout          ;
+; |counter_jin|rtl~869                   ; |counter_jin|counter:inst|n[27]             ; regout           ;
+; |counter_jin|counter:inst|n[22]        ; |counter_jin|counter:inst|n[22]             ; regout           ;
+; |counter_jin|counter:inst|n[21]        ; |counter_jin|counter:inst|n[21]             ; regout           ;
+; |counter_jin|counter:inst|n[20]        ; |counter_jin|counter:inst|n[20]             ; regout           ;
+; |counter_jin|rtl~870                   ; |counter_jin|rtl~870                        ; combout          ;
+; |counter_jin|rtl~870                   ; |counter_jin|counter:inst|n[23]             ; regout           ;
+; |counter_jin|counter:inst|n[18]        ; |counter_jin|counter:inst|n[18]             ; regout           ;
+; |counter_jin|counter:inst|n[17]        ; |counter_jin|counter:inst|n[17]             ; regout           ;
+; |counter_jin|counter:inst|n[16]        ; |counter_jin|counter:inst|n[16]             ; regout           ;
+; |counter_jin|rtl~871                   ; |counter_jin|rtl~871                        ; combout          ;
+; |counter_jin|rtl~871                   ; |counter_jin|counter:inst|n[19]             ; regout           ;
+; |counter_jin|counter:inst|n[14]        ; |counter_jin|counter:inst|n[14]             ; regout           ;
+; |counter_jin|counter:inst|n[13]        ; |counter_jin|counter:inst|n[13]             ; regout           ;
+; |counter_jin|counter:inst|n[12]        ; |counter_jin|counter:inst|n[12]             ; regout           ;
+; |counter_jin|rtl~872                   ; |counter_jin|rtl~872                        ; combout          ;
+; |counter_jin|rtl~872                   ; |counter_jin|counter:inst|n[15]             ; regout           ;
+; |counter_jin|counter:inst|n[10]        ; |counter_jin|counter:inst|n[10]             ; regout           ;
+; |counter_jin|counter:inst|n[9]         ; |counter_jin|counter:inst|n[9]              ; regout           ;
+; |counter_jin|counter:inst|n[8]         ; |counter_jin|counter:inst|n[8]              ; regout           ;
+; |counter_jin|rtl~873                   ; |counter_jin|rtl~873                        ; combout          ;
+; |counter_jin|rtl~873                   ; |counter_jin|counter:inst|n[11]             ; regout           ;
+; |counter_jin|counter:inst|n[6]         ; |counter_jin|counter:inst|n[6]              ; regout           ;
+; |counter_jin|counter:inst|n[5]         ; |counter_jin|counter:inst|n[5]              ; regout           ;
+; |counter_jin|counter:inst|n[4]         ; |counter_jin|counter:inst|n[4]              ; regout           ;
+; |counter_jin|rtl~874                   ; |counter_jin|rtl~874                        ; combout          ;
+; |counter_jin|rtl~874                   ; |counter_jin|counter:inst|n[7]              ; regout           ;
+; |counter_jin|rtl~875                   ; |counter_jin|rtl~875                        ; combout          ;
+; |counter_jin|counter:inst1|add~481     ; |counter_jin|counter:inst1|add~483          ; cout0            ;
+; |counter_jin|counter:inst1|add~486     ; |counter_jin|counter:inst1|add~488          ; cout0            ;
+; |counter_jin|counter:inst1|add~491     ; |counter_jin|counter:inst1|add~493          ; cout0            ;
+; |counter_jin|counter:inst|add~486      ; |counter_jin|counter:inst|add~488           ; cout0            ;
+; |counter_jin|counter:inst|add~491      ; |counter_jin|counter:inst|add~493           ; cout0            ;
+; |counter_jin|counter:inst1|add~501     ; |counter_jin|counter:inst1|add~501          ; combout          ;
+; |counter_jin|counter:inst1|add~506     ; |counter_jin|counter:inst1|add~506          ; combout          ;
+; |counter_jin|counter:inst1|add~506     ; |counter_jin|counter:inst1|add~508          ; cout             ;
+; |counter_jin|counter:inst1|add~511     ; |counter_jin|counter:inst1|add~511          ; combout          ;
+; |counter_jin|counter:inst1|add~511     ; |counter_jin|counter:inst1|add~513          ; cout0            ;
+; |counter_jin|counter:inst1|add~511     ; |counter_jin|counter:inst1|add~513COUT1_665 ; cout1            ;
+; |counter_jin|counter:inst1|add~516     ; |counter_jin|counter:inst1|add~516          ; combout          ;
+; |counter_jin|counter:inst1|add~516     ; |counter_jin|counter:inst1|add~518          ; cout0            ;
+; |counter_jin|counter:inst1|add~516     ; |counter_jin|counter:inst1|add~518COUT1_664 ; cout1            ;
+; |counter_jin|counter:inst1|add~521     ; |counter_jin|counter:inst1|add~521          ; combout          ;
+; |counter_jin|counter:inst1|add~521     ; |counter_jin|counter:inst1|add~523          ; cout0            ;
+; |counter_jin|counter:inst1|add~521     ; |counter_jin|counter:inst1|add~523COUT1_663 ; cout1            ;
+; |counter_jin|counter:inst1|add~526     ; |counter_jin|counter:inst1|add~526          ; combout          ;
+; |counter_jin|counter:inst1|add~526     ; |counter_jin|counter:inst1|add~528          ; cout0            ;
+; |counter_jin|counter:inst1|add~526     ; |counter_jin|counter:inst1|add~528COUT1_662 ; cout1            ;
+; |counter_jin|counter:inst1|add~531     ; |counter_jin|counter:inst1|add~531          ; combout          ;
+; |counter_jin|counter:inst1|add~531     ; |counter_jin|counter:inst1|add~533          ; cout             ;
+; |counter_jin|counter:inst1|add~536     ; |counter_jin|counter:inst1|add~536          ; combout          ;
+; |counter_jin|counter:inst1|add~536     ; |counter_jin|counter:inst1|add~538          ; cout0            ;
+; |counter_jin|counter:inst1|add~536     ; |counter_jin|counter:inst1|add~538COUT1_661 ; cout1            ;
+; |counter_jin|counter:inst1|add~541     ; |counter_jin|counter:inst1|add~541          ; combout          ;
+; |counter_jin|counter:inst1|add~541     ; |counter_jin|counter:inst1|add~543          ; cout0            ;
+; |counter_jin|counter:inst1|add~541     ; |counter_jin|counter:inst1|add~543COUT1_660 ; cout1            ;
+; |counter_jin|counter:inst1|add~546     ; |counter_jin|counter:inst1|add~546          ; combout          ;
+; |counter_jin|counter:inst1|add~546     ; |counter_jin|counter:inst1|add~548          ; cout0            ;
+; |counter_jin|counter:inst1|add~546     ; |counter_jin|counter:inst1|add~548COUT1_659 ; cout1            ;
+; |counter_jin|counter:inst1|add~551     ; |counter_jin|counter:inst1|add~551          ; combout          ;
+; |counter_jin|counter:inst1|add~551     ; |counter_jin|counter:inst1|add~553          ; cout0            ;
+; |counter_jin|counter:inst1|add~551     ; |counter_jin|counter:inst1|add~553COUT1_658 ; cout1            ;
+; |counter_jin|counter:inst1|add~556     ; |counter_jin|counter:inst1|add~556          ; combout          ;
+; |counter_jin|counter:inst1|add~556     ; |counter_jin|counter:inst1|add~558          ; cout             ;
+; |counter_jin|counter:inst1|add~561     ; |counter_jin|counter:inst1|add~561          ; combout          ;
+; |counter_jin|counter:inst1|add~561     ; |counter_jin|counter:inst1|add~563          ; cout0            ;
+; |counter_jin|counter:inst1|add~561     ; |counter_jin|counter:inst1|add~563COUT1_657 ; cout1            ;
+; |counter_jin|counter:inst1|add~566     ; |counter_jin|counter:inst1|add~566          ; combout          ;
+; |counter_jin|counter:inst1|add~566     ; |counter_jin|counter:inst1|add~568          ; cout0            ;
+; |counter_jin|counter:inst1|add~566     ; |counter_jin|counter:inst1|add~568COUT1_656 ; cout1            ;
+; |counter_jin|counter:inst1|add~571     ; |counter_jin|counter:inst1|add~571          ; combout          ;
+; |counter_jin|counter:inst1|add~571     ; |counter_jin|counter:inst1|add~573          ; cout0            ;
+; |counter_jin|counter:inst1|add~571     ; |counter_jin|counter:inst1|add~573COUT1_655 ; cout1            ;
+; |counter_jin|counter:inst1|add~576     ; |counter_jin|counter:inst1|add~576          ; combout          ;
+; |counter_jin|counter:inst1|add~576     ; |counter_jin|counter:inst1|add~578          ; cout0            ;
+; |counter_jin|counter:inst1|add~576     ; |counter_jin|counter:inst1|add~578COUT1_654 ; cout1            ;
+; |counter_jin|counter:inst1|add~581     ; |counter_jin|counter:inst1|add~581          ; combout          ;
+; |counter_jin|counter:inst1|add~581     ; |counter_jin|counter:inst1|add~583          ; cout             ;
+; |counter_jin|counter:inst1|add~586     ; |counter_jin|counter:inst1|add~586          ; combout          ;
+; |counter_jin|counter:inst1|add~586     ; |counter_jin|counter:inst1|add~588          ; cout0            ;
+; |counter_jin|counter:inst1|add~586     ; |counter_jin|counter:inst1|add~588COUT1_653 ; cout1            ;
+; |counter_jin|counter:inst1|add~591     ; |counter_jin|counter:inst1|add~591          ; combout          ;
+; |counter_jin|counter:inst1|add~591     ; |counter_jin|counter:inst1|add~593          ; cout0            ;
+; |counter_jin|counter:inst1|add~591     ; |counter_jin|counter:inst1|add~593COUT1_652 ; cout1            ;
+; |counter_jin|counter:inst1|add~596     ; |counter_jin|counter:inst1|add~596          ; combout          ;
+; |counter_jin|counter:inst1|add~596     ; |counter_jin|counter:inst1|add~598          ; cout0            ;
+; |counter_jin|counter:inst1|add~596     ; |counter_jin|counter:inst1|add~598COUT1_651 ; cout1            ;
+; |counter_jin|counter:inst1|add~601     ; |counter_jin|counter:inst1|add~601          ; combout          ;
+; |counter_jin|counter:inst1|add~601     ; |counter_jin|counter:inst1|add~603          ; cout0            ;
+; |counter_jin|counter:inst1|add~601     ; |counter_jin|counter:inst1|add~603COUT1_650 ; cout1            ;
+; |counter_jin|counter:inst1|add~606     ; |counter_jin|counter:inst1|add~606          ; combout          ;
+; |counter_jin|counter:inst1|add~606     ; |counter_jin|counter:inst1|add~608          ; cout             ;
+; |counter_jin|counter:inst1|add~611     ; |counter_jin|counter:inst1|add~611          ; combout          ;
+; |counter_jin|counter:inst1|add~611     ; |counter_jin|counter:inst1|add~613          ; cout0            ;
+; |counter_jin|counter:inst1|add~611     ; |counter_jin|counter:inst1|add~613COUT1_649 ; cout1            ;
+; |counter_jin|counter:inst1|add~616     ; |counter_jin|counter:inst1|add~616          ; combout          ;
+; |counter_jin|counter:inst1|add~616     ; |counter_jin|counter:inst1|add~618          ; cout0            ;
+; |counter_jin|counter:inst1|add~616     ; |counter_jin|counter:inst1|add~618COUT1_648 ; cout1            ;
+; |counter_jin|counter:inst1|add~621     ; |counter_jin|counter:inst1|add~621          ; combout          ;
+; |counter_jin|counter:inst1|add~621     ; |counter_jin|counter:inst1|add~623          ; cout0            ;
+; |counter_jin|counter:inst1|add~621     ; |counter_jin|counter:inst1|add~623COUT1_647 ; cout1            ;
+; |counter_jin|counter:inst1|add~626     ; |counter_jin|counter:inst1|add~626          ; combout          ;
+; |counter_jin|counter:inst1|add~626     ; |counter_jin|counter:inst1|add~628          ; cout0            ;
+; |counter_jin|counter:inst1|add~626     ; |counter_jin|counter:inst1|add~628COUT1_646 ; cout1            ;
+; |counter_jin|counter:inst1|add~631     ; |counter_jin|counter:inst1|add~631          ; combout          ;
+; |counter_jin|counter:inst1|add~631     ; |counter_jin|counter:inst1|add~633          ; cout             ;
+; |counter_jin|counter:inst1|add~636     ; |counter_jin|counter:inst1|add~638          ; cout0            ;
+; |counter_jin|counter:inst1|add~636     ; |counter_jin|counter:inst1|add~638COUT1_645 ; cout1            ;
+; |counter_jin|counter:inst|add~501      ; |counter_jin|counter:inst|add~501           ; combout          ;
+; |counter_jin|counter:inst|add~506      ; |counter_jin|counter:inst|add~506           ; combout          ;
+; |counter_jin|counter:inst|add~506      ; |counter_jin|counter:inst|add~508           ; cout             ;
+; |counter_jin|counter:inst|add~511      ; |counter_jin|counter:inst|add~511           ; combout          ;
+; |counter_jin|counter:inst|add~511      ; |counter_jin|counter:inst|add~513           ; cout0            ;
+; |counter_jin|counter:inst|add~511      ; |counter_jin|counter:inst|add~513COUT1_665  ; cout1            ;
+; |counter_jin|counter:inst|add~516      ; |counter_jin|counter:inst|add~516           ; combout          ;
+; |counter_jin|counter:inst|add~516      ; |counter_jin|counter:inst|add~518           ; cout0            ;
+; |counter_jin|counter:inst|add~516      ; |counter_jin|counter:inst|add~518COUT1_664  ; cout1            ;
+; |counter_jin|counter:inst|add~521      ; |counter_jin|counter:inst|add~521           ; combout          ;
+; |counter_jin|counter:inst|add~521      ; |counter_jin|counter:inst|add~523           ; cout0            ;
+; |counter_jin|counter:inst|add~521      ; |counter_jin|counter:inst|add~523COUT1_663  ; cout1            ;
+; |counter_jin|counter:inst|add~526      ; |counter_jin|counter:inst|add~526           ; combout          ;
+; |counter_jin|counter:inst|add~526      ; |counter_jin|counter:inst|add~528           ; cout0            ;
+; |counter_jin|counter:inst|add~526      ; |counter_jin|counter:inst|add~528COUT1_662  ; cout1            ;
+; |counter_jin|counter:inst|add~531      ; |counter_jin|counter:inst|add~531           ; combout          ;
+; |counter_jin|counter:inst|add~531      ; |counter_jin|counter:inst|add~533           ; cout             ;
+; |counter_jin|counter:inst|add~536      ; |counter_jin|counter:inst|add~536           ; combout          ;
+; |counter_jin|counter:inst|add~536      ; |counter_jin|counter:inst|add~538           ; cout0            ;
+; |counter_jin|counter:inst|add~536      ; |counter_jin|counter:inst|add~538COUT1_661  ; cout1            ;
+; |counter_jin|counter:inst|add~541      ; |counter_jin|counter:inst|add~541           ; combout          ;
+; |counter_jin|counter:inst|add~541      ; |counter_jin|counter:inst|add~543           ; cout0            ;
+; |counter_jin|counter:inst|add~541      ; |counter_jin|counter:inst|add~543COUT1_660  ; cout1            ;
+; |counter_jin|counter:inst|add~546      ; |counter_jin|counter:inst|add~546           ; combout          ;
+; |counter_jin|counter:inst|add~546      ; |counter_jin|counter:inst|add~548           ; cout0            ;
+; |counter_jin|counter:inst|add~546      ; |counter_jin|counter:inst|add~548COUT1_659  ; cout1            ;
+; |counter_jin|counter:inst|add~551      ; |counter_jin|counter:inst|add~551           ; combout          ;
+; |counter_jin|counter:inst|add~551      ; |counter_jin|counter:inst|add~553           ; cout0            ;
+; |counter_jin|counter:inst|add~551      ; |counter_jin|counter:inst|add~553COUT1_658  ; cout1            ;
+; |counter_jin|counter:inst|add~556      ; |counter_jin|counter:inst|add~556           ; combout          ;
+; |counter_jin|counter:inst|add~556      ; |counter_jin|counter:inst|add~558           ; cout             ;
+; |counter_jin|counter:inst|add~561      ; |counter_jin|counter:inst|add~561           ; combout          ;
+; |counter_jin|counter:inst|add~561      ; |counter_jin|counter:inst|add~563           ; cout0            ;
+; |counter_jin|counter:inst|add~561      ; |counter_jin|counter:inst|add~563COUT1_657  ; cout1            ;
+; |counter_jin|counter:inst|add~566      ; |counter_jin|counter:inst|add~566           ; combout          ;
+; |counter_jin|counter:inst|add~566      ; |counter_jin|counter:inst|add~568           ; cout0            ;
+; |counter_jin|counter:inst|add~566      ; |counter_jin|counter:inst|add~568COUT1_656  ; cout1            ;
+; |counter_jin|counter:inst|add~571      ; |counter_jin|counter:inst|add~571           ; combout          ;
+; |counter_jin|counter:inst|add~571      ; |counter_jin|counter:inst|add~573           ; cout0            ;
+; |counter_jin|counter:inst|add~571      ; |counter_jin|counter:inst|add~573COUT1_655  ; cout1            ;
+; |counter_jin|counter:inst|add~576      ; |counter_jin|counter:inst|add~576           ; combout          ;
+; |counter_jin|counter:inst|add~576      ; |counter_jin|counter:inst|add~578           ; cout0            ;
+; |counter_jin|counter:inst|add~576      ; |counter_jin|counter:inst|add~578COUT1_654  ; cout1            ;
+; |counter_jin|counter:inst|add~581      ; |counter_jin|counter:inst|add~581           ; combout          ;
+; |counter_jin|counter:inst|add~581      ; |counter_jin|counter:inst|add~583           ; cout             ;
+; |counter_jin|counter:inst|add~586      ; |counter_jin|counter:inst|add~586           ; combout          ;
+; |counter_jin|counter:inst|add~586      ; |counter_jin|counter:inst|add~588           ; cout0            ;
+; |counter_jin|counter:inst|add~586      ; |counter_jin|counter:inst|add~588COUT1_653  ; cout1            ;
+; |counter_jin|counter:inst|add~591      ; |counter_jin|counter:inst|add~591           ; combout          ;
+; |counter_jin|counter:inst|add~591      ; |counter_jin|counter:inst|add~593           ; cout0            ;
+; |counter_jin|counter:inst|add~591      ; |counter_jin|counter:inst|add~593COUT1_652  ; cout1            ;
+; |counter_jin|counter:inst|add~596      ; |counter_jin|counter:inst|add~596           ; combout          ;
+; |counter_jin|counter:inst|add~596      ; |counter_jin|counter:inst|add~598           ; cout0            ;
+; |counter_jin|counter:inst|add~596      ; |counter_jin|counter:inst|add~598COUT1_651  ; cout1            ;
+; |counter_jin|counter:inst|add~601      ; |counter_jin|counter:inst|add~601           ; combout          ;
+; |counter_jin|counter:inst|add~601      ; |counter_jin|counter:inst|add~603           ; cout0            ;
+; |counter_jin|counter:inst|add~601      ; |counter_jin|counter:inst|add~603COUT1_650  ; cout1            ;
+; |counter_jin|counter:inst|add~606      ; |counter_jin|counter:inst|add~606           ; combout          ;
+; |counter_jin|counter:inst|add~606      ; |counter_jin|counter:inst|add~608           ; cout             ;
+; |counter_jin|counter:inst|add~611      ; |counter_jin|counter:inst|add~611           ; combout          ;
+; |counter_jin|counter:inst|add~611      ; |counter_jin|counter:inst|add~613           ; cout0            ;
+; |counter_jin|counter:inst|add~611      ; |counter_jin|counter:inst|add~613COUT1_649  ; cout1            ;
+; |counter_jin|counter:inst|add~616      ; |counter_jin|counter:inst|add~616           ; combout          ;
+; |counter_jin|counter:inst|add~616      ; |counter_jin|counter:inst|add~618           ; cout0            ;
+; |counter_jin|counter:inst|add~616      ; |counter_jin|counter:inst|add~618COUT1_648  ; cout1            ;
+; |counter_jin|counter:inst|add~621      ; |counter_jin|counter:inst|add~621           ; combout          ;
+; |counter_jin|counter:inst|add~621      ; |counter_jin|counter:inst|add~623           ; cout0            ;
+; |counter_jin|counter:inst|add~621      ; |counter_jin|counter:inst|add~623COUT1_647  ; cout1            ;
+; |counter_jin|counter:inst|add~626      ; |counter_jin|counter:inst|add~626           ; combout          ;
+; |counter_jin|counter:inst|add~626      ; |counter_jin|counter:inst|add~628           ; cout0            ;
+; |counter_jin|counter:inst|add~626      ; |counter_jin|counter:inst|add~628COUT1_646  ; cout1            ;
+; |counter_jin|counter:inst|add~631      ; |counter_jin|counter:inst|add~631           ; combout          ;
+; |counter_jin|counter:inst|add~631      ; |counter_jin|counter:inst|add~633           ; cout             ;
+; |counter_jin|counter:inst|add~636      ; |counter_jin|counter:inst|add~638           ; cout0            ;
+; |counter_jin|counter:inst|add~636      ; |counter_jin|counter:inst|add~638COUT1_645  ; cout1            ;
+; |counter_jin|clk_jinwei                ; |counter_jin|clk_jinwei                     ; padio            ;
+; |counter_jin|led7[7]                   ; |counter_jin|led7[7]                        ; padio            ;
++----------------------------------------+---------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 5.1 Build 176 10/26/2005 SJ Full Version
+    Info: Processing started: Thu Apr 11 11:03:36 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off counter_jin -c counter_jin
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      16.52 %
+Info: Number of transitions in simulation is 4856
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Processing ended: Thu Apr 11 11:03:36 2013
+    Info: Elapsed time: 00:00:02
+
+

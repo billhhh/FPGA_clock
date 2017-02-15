@@ -1,0 +1,45 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY counter IS
+	PORT
+	(
+		clk		: IN	STD_LOGIC;
+		clk_jinwei		: out	STD_LOGIC;
+		LED7 : OUT STD_LOGIC_VECTOR(7 downto 0)
+	);
+END counter;
+
+ARCHITECTURE a OF counter IS
+	signal	num		: 	integer range 0 to 9;
+BEGIN
+PROCESS (clk)
+	VARIABLE n	: integer;
+BEGIN
+IF rising_edge(clk) THEN
+   if n=9 then
+      n:=0;
+      clk_jinwei<='1';
+   else
+      n:=n+1;
+      clk_jinwei<='0';
+   end if;	
+   num<=n;
+END IF;
+END PROCESS ;
+
+WITH  num  SELECT
+LED7  	<=  "00111111"	WHEN 0,
+"00000110"	WHEN 1,
+"01011011"	WHEN 2,
+"01001111"	WHEN 3,
+"01100110"	WHEN 4,
+"01101101"	WHEN 5,
+"01111101"	WHEN 6,
+"00000111"	WHEN 7,
+"01111111"	WHEN 8,
+"01101111"	WHEN 9,
+"10000000" 	WHEN OTHERS;
+
+END a;
+
