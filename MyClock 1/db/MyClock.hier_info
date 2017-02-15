@@ -1,0 +1,130 @@
+|MyClock
+finalout <= Hour:inst2.clk_jin
+clk => clock:inst.clk
+led[0] <= selector:inst4.LED[0]
+led[1] <= selector:inst4.LED[1]
+led[2] <= selector:inst4.LED[2]
+led[3] <= selector:inst4.LED[3]
+led[4] <= selector:inst4.LED[4]
+led[5] <= selector:inst4.LED[5]
+led[6] <= selector:inst4.LED[6]
+led[7] <= selector:inst4.LED[7]
+scan_clk => selector:inst4.scan_clk
+sel[0] <= selector:inst4.sel[0]
+sel[1] <= selector:inst4.sel[1]
+sel[2] <= selector:inst4.sel[2]
+sel[3] <= selector:inst4.sel[3]
+sel[4] <= selector:inst4.sel[4]
+sel[5] <= selector:inst4.sel[5]
+
+
+|MyClock|Hour:inst2
+clk => count[3].CLK
+clk => count[2].CLK
+clk => count[1].CLK
+clk => count[0].CLK
+clk => clk_jin~reg0.CLK
+clk => count[4].CLK
+clk_jin <= clk_jin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shi[0] <= shi~10.DB_MAX_OUTPUT_PORT_TYPE
+shi[1] <= shi~9.DB_MAX_OUTPUT_PORT_TYPE
+shi[2] <= shi~8.DB_MAX_OUTPUT_PORT_TYPE
+shi[3] <= <GND>
+ge[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+ge[1] <= ge~17.DB_MAX_OUTPUT_PORT_TYPE
+ge[2] <= ge~16.DB_MAX_OUTPUT_PORT_TYPE
+ge[3] <= ge~15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MyClock|clock:inst1
+clk => count[4].CLK
+clk => count[3].CLK
+clk => count[2].CLK
+clk => count[1].CLK
+clk => count[0].CLK
+clk => clk_jin~reg0.CLK
+clk => count[5].CLK
+clk_jin <= clk_jin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shi[0] <= shi~10.DB_MAX_OUTPUT_PORT_TYPE
+shi[1] <= shi~9.DB_MAX_OUTPUT_PORT_TYPE
+shi[2] <= shi~8.DB_MAX_OUTPUT_PORT_TYPE
+shi[3] <= <GND>
+ge[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+ge[1] <= ge~17.DB_MAX_OUTPUT_PORT_TYPE
+ge[2] <= ge~16.DB_MAX_OUTPUT_PORT_TYPE
+ge[3] <= ge~15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MyClock|clock:inst
+clk => count[4].CLK
+clk => count[3].CLK
+clk => count[2].CLK
+clk => count[1].CLK
+clk => count[0].CLK
+clk => clk_jin~reg0.CLK
+clk => count[5].CLK
+clk_jin <= clk_jin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+shi[0] <= shi~10.DB_MAX_OUTPUT_PORT_TYPE
+shi[1] <= shi~9.DB_MAX_OUTPUT_PORT_TYPE
+shi[2] <= shi~8.DB_MAX_OUTPUT_PORT_TYPE
+shi[3] <= <GND>
+ge[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+ge[1] <= ge~17.DB_MAX_OUTPUT_PORT_TYPE
+ge[2] <= ge~16.DB_MAX_OUTPUT_PORT_TYPE
+ge[3] <= ge~15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MyClock|selector:inst4
+scan_clk => sel[4]~reg0.CLK
+scan_clk => sel[3]~reg0.CLK
+scan_clk => sel[2]~reg0.CLK
+scan_clk => sel[1]~reg0.CLK
+scan_clk => sel[0]~reg0.CLK
+scan_clk => n[2].CLK
+scan_clk => n[1].CLK
+scan_clk => n[0].CLK
+scan_clk => num[3].CLK
+scan_clk => num[2].CLK
+scan_clk => num[1].CLK
+scan_clk => num[0].CLK
+scan_clk => sel[5]~reg0.CLK
+sec_shi[0] => Mux~12.IN2
+sec_shi[1] => Mux~11.IN2
+sec_shi[2] => Mux~10.IN2
+sec_shi[3] => Mux~9.IN2
+sec_ge[0] => Mux~12.IN3
+sec_ge[1] => Mux~11.IN3
+sec_ge[2] => Mux~10.IN3
+sec_ge[3] => Mux~9.IN3
+min_shi[0] => Mux~12.IN4
+min_shi[1] => Mux~11.IN4
+min_shi[2] => Mux~10.IN4
+min_shi[3] => Mux~9.IN4
+min_ge[0] => Mux~12.IN5
+min_ge[1] => Mux~11.IN5
+min_ge[2] => Mux~10.IN5
+min_ge[3] => Mux~9.IN5
+hour_shi[0] => Mux~12.IN6
+hour_shi[1] => Mux~11.IN6
+hour_shi[2] => Mux~10.IN6
+hour_shi[3] => Mux~9.IN6
+hour_ge[0] => Mux~12.IN7
+hour_ge[1] => Mux~11.IN7
+hour_ge[2] => Mux~10.IN7
+hour_ge[3] => Mux~9.IN7
+LED[0] <= Mux~20.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= Mux~19.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= Mux~18.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= Mux~17.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= Mux~16.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= Mux~15.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= Mux~14.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] <= Mux~13.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] <= sel[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= sel[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sel[2] <= sel[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sel[3] <= sel[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sel[4] <= sel[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sel[5] <= sel[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,938 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1_clk_jin is Hour:inst2|clk_jin at LC_X23_Y15_N2
+--operation mode is normal
+
+C1_clk_jin_lut_out = C1L4 & (C1L1);
+C1_clk_jin = DFFEAS(C1_clk_jin_lut_out, GLOBAL(B1_clk_jin), VCC, , , , , , );
+
+
+--D1_num[2] is selector:inst4|num[2] at LC_X25_Y14_N7
+--operation mode is normal
+
+D1_num[2]_lut_out = D1L18 & (D1L17 # !D1_n[2] & D1L20) # !D1L18 & (!D1_n[2] & D1L20);
+D1_num[2] = DFFEAS(D1_num[2]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_num[1] is selector:inst4|num[1] at LC_X25_Y14_N4
+--operation mode is normal
+
+D1_num[1]_lut_out = D1_n[2] & !D1_n[1] & (D1L27) # !D1_n[2] & (D1L22);
+D1_num[1] = DFFEAS(D1_num[1]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_num[3] is selector:inst4|num[3] at LC_X26_Y14_N3
+--operation mode is normal
+
+D1_num[3]_lut_out = D1L28 # D1L24 # D1L29;
+D1_num[3] = DFFEAS(D1_num[3]_lut_out, GLOBAL(scan_clk), VCC, , , , , !D1_n[0], );
+
+
+--D1L8 is selector:inst4|LED[7]~153 at LC_X28_Y14_N4
+--operation mode is normal
+
+D1L8 = !D1_num[1] & !D1_num[2] # !D1_num[3];
+
+
+--D1_num[0] is selector:inst4|num[0] at LC_X24_Y14_N0
+--operation mode is normal
+
+D1_num[0]_lut_out = D1_n[2] & (!D1_n[1] & D1L31) # !D1_n[2] & D1L26;
+D1_num[0] = DFFEAS(D1_num[0]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1L7 is selector:inst4|LED[6]~154 at LC_X28_Y14_N6
+--operation mode is normal
+
+D1L7 = D1_num[1] & !D1_num[3] & (!D1_num[0] # !D1_num[2]) # !D1_num[1] & (D1_num[3] $ D1_num[2]);
+
+
+--D1L6 is selector:inst4|LED[5]~155 at LC_X28_Y14_N7
+--operation mode is normal
+
+D1L6 = D1_num[2] & (D1_num[3] # D1_num[1] & D1_num[0]) # !D1_num[2] & (D1_num[1] # !D1_num[3] & D1_num[0]);
+
+
+--D1L5 is selector:inst4|LED[4]~156 at LC_X28_Y14_N5
+--operation mode is normal
+
+D1L5 = D1_num[0] # D1_num[1] & D1_num[3] # !D1_num[1] & (D1_num[2]);
+
+
+--D1L4 is selector:inst4|LED[3]~157 at LC_X28_Y14_N9
+--operation mode is normal
+
+D1L4 = D1_num[1] & (D1_num[3] # D1_num[2] & D1_num[0]) # !D1_num[1] & (D1_num[2] $ (!D1_num[3] & D1_num[0]));
+
+
+--D1L3 is selector:inst4|LED[2]~158 at LC_X28_Y14_N2
+--operation mode is normal
+
+D1L3 = D1_num[2] & D1_num[3] # !D1_num[2] & D1_num[1] & (D1_num[3] # !D1_num[0]);
+
+
+--D1L2 is selector:inst4|LED[1]~159 at LC_X28_Y14_N3
+--operation mode is normal
+
+D1L2 = D1_num[3] & (D1_num[1] # D1_num[2]) # !D1_num[3] & D1_num[2] & (D1_num[1] $ D1_num[0]);
+
+
+--D1L1 is selector:inst4|LED[0]~160 at LC_X28_Y14_N8
+--operation mode is normal
+
+D1L1 = D1_num[1] & D1_num[3] # !D1_num[1] & (D1_num[2] $ (!D1_num[3] & D1_num[0]));
+
+
+--D1_sel[5] is selector:inst4|sel[5] at LC_X26_Y14_N0
+--operation mode is normal
+
+D1_sel[5]_lut_out = D1_n[2] # D1_n[0] # D1_n[1];
+D1_sel[5] = DFFEAS(D1_sel[5]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_sel[4] is selector:inst4|sel[4] at LC_X26_Y14_N4
+--operation mode is normal
+
+D1_sel[4]_lut_out = D1_n[2] # D1_n[1] # !D1_n[0];
+D1_sel[4] = DFFEAS(D1_sel[4]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_sel[3] is selector:inst4|sel[3] at LC_X26_Y14_N2
+--operation mode is normal
+
+D1_sel[3]_lut_out = D1_n[0] # !D1_n[1];
+D1_sel[3] = DFFEAS(D1_sel[3]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_sel[2] is selector:inst4|sel[2] at LC_X26_Y14_N9
+--operation mode is normal
+
+D1_sel[2]_lut_out = !D1_n[0] # !D1_n[1];
+D1_sel[2] = DFFEAS(D1_sel[2]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_sel[1] is selector:inst4|sel[1] at LC_X26_Y14_N7
+--operation mode is normal
+
+D1_sel[1]_lut_out = D1_n[0] # !D1_n[2];
+D1_sel[1] = DFFEAS(D1_sel[1]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_sel[0] is selector:inst4|sel[0] at LC_X26_Y14_N8
+--operation mode is normal
+
+D1_sel[0]_lut_out = !D1_n[2] # !D1_n[0];
+D1_sel[0] = DFFEAS(D1_sel[0]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1L1 is Hour:inst2|add~279 at LC_X24_Y15_N3
+--operation mode is arithmetic
+
+C1L1 = C1_count[3] $ C1L6;
+
+--C1L2 is Hour:inst2|add~281 at LC_X24_Y15_N3
+--operation mode is arithmetic
+
+C1L2_cout_0 = !C1L6 # !C1_count[3];
+C1L2 = CARRY(C1L2_cout_0);
+
+--C1L3 is Hour:inst2|add~281COUT1_307 at LC_X24_Y15_N3
+--operation mode is arithmetic
+
+C1L3_cout_1 = !C1L7 # !C1_count[3];
+C1L3 = CARRY(C1L3_cout_1);
+
+
+--C1L4 is Hour:inst2|add~284 at LC_X24_Y15_N4
+--operation mode is normal
+
+C1L4 = C1L2 $ !C1_count[4];
+
+
+--B1_clk_jin is clock:inst1|clk_jin at LC_X27_Y14_N7
+--operation mode is normal
+
+B1_clk_jin_lut_out = !B1L32;
+B1_clk_jin = DFFEAS(B1_clk_jin_lut_out, GLOBAL(B2_clk_jin), VCC, , , , , , );
+
+
+--C1_count[1] is Hour:inst2|count[1] at LC_X24_Y15_N9
+--operation mode is normal
+
+C1_count[1]_lut_out = C1L8 & (!C1L4 # !C1L1);
+C1_count[1] = DFFEAS(C1_count[1]_lut_out, GLOBAL(B1_clk_jin), VCC, , , , , , );
+
+
+--C1_count[3] is Hour:inst2|count[3] at LC_X24_Y15_N8
+--operation mode is normal
+
+C1_count[3]_lut_out = !C1L4 & C1L1;
+C1_count[3] = DFFEAS(C1_count[3]_lut_out, GLOBAL(B1_clk_jin), VCC, , , , , , );
+
+
+--C1_count[4] is Hour:inst2|count[4] at LC_X24_Y15_N6
+--operation mode is normal
+
+C1_count[4]_lut_out = C1L4 & !C1L1;
+C1_count[4] = DFFEAS(C1_count[4]_lut_out, GLOBAL(B1_clk_jin), VCC, , , , , , );
+
+
+--C1_count[2] is Hour:inst2|count[2] at LC_X24_Y15_N7
+--operation mode is normal
+
+C1_count[2]_lut_out = C1L5 & (!C1L1 # !C1L4);
+C1_count[2] = DFFEAS(C1_count[2]_lut_out, GLOBAL(B1_clk_jin), VCC, , , , , , );
+
+
+--D1L17 is selector:inst4|Mux~2434 at LC_X24_Y14_N9
+--operation mode is normal
+
+D1L17 = C1_count[4] & !C1_count[2] & (C1_count[3] # !C1_count[1]) # !C1_count[4] & C1_count[2] & (C1_count[1] # !C1_count[3]);
+
+
+--D1_n[2] is selector:inst4|n[2] at LC_X25_Y14_N8
+--operation mode is normal
+
+D1_n[2]_lut_out = D1_n[0] & !D1_n[2] & D1_n[1] # !D1_n[0] & D1_n[2];
+D1_n[2] = DFFEAS(D1_n[2]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_n[0] is selector:inst4|n[0] at LC_X25_Y14_N0
+--operation mode is normal
+
+D1_n[0]_lut_out = !D1_n[0];
+D1_n[0] = DFFEAS(D1_n[0]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1_n[1] is selector:inst4|n[1] at LC_X25_Y14_N5
+--operation mode is normal
+
+D1_n[1]_lut_out = D1_n[0] & !D1_n[2] & !D1_n[1] # !D1_n[0] & (D1_n[1]);
+D1_n[1] = DFFEAS(D1_n[1]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--D1L18 is selector:inst4|Mux~2435 at LC_X25_Y14_N9
+--operation mode is normal
+
+D1L18 = D1_n[0] & D1_n[2] & !D1_n[1];
+
+
+--B1_count[5] is clock:inst1|count[5] at LC_X26_Y16_N5
+--operation mode is normal
+
+B1_count[5]_lut_out = B1L1 & (!B1L2 # !B1L9 # !B1L5);
+B1_count[5] = DFFEAS(B1_count[5]_lut_out, GLOBAL(B2_clk_jin), VCC, , , , , , );
+
+
+--B1_count[3] is clock:inst1|count[3] at LC_X27_Y16_N9
+--operation mode is normal
+
+B1_count[3]_lut_out = B1L5 & (!B1L9 # !B1L2 # !B1L1);
+B1_count[3] = DFFEAS(B1_count[3]_lut_out, GLOBAL(B2_clk_jin), VCC, , , , , , );
+
+
+--B1_count[4] is clock:inst1|count[4] at LC_X26_Y16_N6
+--operation mode is normal
+
+B1_count[4]_lut_out = B1L9 & (!B1L2 # !B1L5 # !B1L1);
+B1_count[4] = DFFEAS(B1_count[4]_lut_out, GLOBAL(B2_clk_jin), VCC, , , , , , );
+
+
+--B1L37 is clock:inst1|shi[2]~523 at LC_X26_Y15_N7
+--operation mode is normal
+
+B1L37 = B1_count[5] & (B1_count[3] # B1_count[4]);
+
+
+--B2_count[1] is clock:inst|count[1] at LC_X25_Y9_N9
+--operation mode is normal
+
+B2_count[1]_lut_out = B2L32 & (B2L1);
+B2_count[1] = DFFEAS(B2_count[1]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B2_count[2] is clock:inst|count[2] at LC_X26_Y9_N7
+--operation mode is normal
+
+B2_count[2]_lut_out = B2L5 & (!B2L4 # !B2L12 # !B2L8);
+B2_count[2] = DFFEAS(B2_count[2]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B2_count[5] is clock:inst|count[5] at LC_X26_Y9_N3
+--operation mode is normal
+
+B2_count[5]_lut_out = B2L4 & (!B2L12 # !B2L8 # !B2L5);
+B2_count[5] = DFFEAS(B2_count[5]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B2_count[4] is clock:inst|count[4] at LC_X26_Y9_N9
+--operation mode is normal
+
+B2_count[4]_lut_out = B2L12 & (!B2L4 # !B2L8 # !B2L5);
+B2_count[4] = DFFEAS(B2_count[4]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B2_count[3] is clock:inst|count[3] at LC_X25_Y9_N0
+--operation mode is normal
+
+B2_count[3]_lut_out = B2L8 & (!B2L12 # !B2L5 # !B2L4);
+B2_count[3] = DFFEAS(B2_count[3]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B2L37 is clock:inst|shi[2]~481 at LC_X25_Y10_N8
+--operation mode is normal
+
+B2L37 = B2_count[5] & (B2_count[4] # B2_count[3]);
+
+
+--D1L19 is selector:inst4|Mux~2436 at LC_X25_Y14_N1
+--operation mode is normal
+
+D1L19 = D1_n[0] & (B2L31 # D1_n[1]) # !D1_n[0] & B2L37 & (!D1_n[1]);
+
+
+--B1_count[1] is clock:inst1|count[1] at LC_X27_Y16_N8
+--operation mode is normal
+
+B1_count[1]_lut_out = B1L12 & (B1L32);
+B1_count[1] = DFFEAS(B1_count[1]_lut_out, GLOBAL(B2_clk_jin), VCC, , , , , , );
+
+
+--B1_count[2] is clock:inst1|count[2] at LC_X26_Y16_N9
+--operation mode is normal
+
+B1_count[2]_lut_out = B1L2 & (!B1L9 # !B1L5 # !B1L1);
+B1_count[2] = DFFEAS(B1_count[2]_lut_out, GLOBAL(B2_clk_jin), VCC, , , , , , );
+
+
+--D1L20 is selector:inst4|Mux~2437 at LC_X25_Y14_N6
+--operation mode is normal
+
+D1L20 = D1L19 & (B1L31 # !D1_n[1]) # !D1L19 & D1_n[1] & (B1L37);
+
+
+--B1L36 is clock:inst1|shi[1]~524 at LC_X26_Y16_N8
+--operation mode is normal
+
+B1L36 = B1_count[4] & (B1_count[5] & B1_count[2] & B1_count[3] # !B1_count[5] & (B1_count[2] # B1_count[3])) # !B1_count[4] & B1_count[5] & (!B1_count[3]);
+
+
+--D1L21 is selector:inst4|Mux~2439 at LC_X25_Y14_N2
+--operation mode is normal
+
+D1L21 = D1_n[0] & (B2L28 # D1_n[1]) # !D1_n[0] & (B2L36 & !D1_n[1]);
+
+
+--D1L22 is selector:inst4|Mux~2440 at LC_X25_Y14_N3
+--operation mode is normal
+
+D1L22 = D1_n[1] & (D1L21 & (B1L28) # !D1L21 & B1L36) # !D1_n[1] & (D1L21);
+
+
+--D1L23 is selector:inst4|Mux~2442 at LC_X24_Y14_N8
+--operation mode is normal
+
+D1L23 = C1_count[3] & !C1_count[1] & (C1_count[4] $ !C1_count[2]) # !C1_count[3] & C1_count[4] & C1_count[1] & !C1_count[2];
+
+
+--D1L24 is selector:inst4|Mux~2443 at LC_X26_Y14_N5
+--operation mode is normal
+
+D1L24 = D1L23 & !D1_n[1] & D1_n[2];
+
+
+--B2_count[0] is clock:inst|count[0] at LC_X25_Y9_N8
+--operation mode is normal
+
+B2_count[0]_lut_out = B2L15 & (B2L32);
+B2_count[0] = DFFEAS(B2_count[0]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--D1L25 is selector:inst4|Mux~2444 at LC_X24_Y14_N5
+--operation mode is normal
+
+D1L25 = D1_n[1] & D1_n[0] # !D1_n[1] & (D1_n[0] & B2_count[0] # !D1_n[0] & (B2L35));
+
+
+--B1_count[0] is clock:inst1|count[0] at LC_X27_Y16_N0
+--operation mode is normal
+
+B1_count[0]_lut_out = B1L32 & B1L15;
+B1_count[0] = DFFEAS(B1_count[0]_lut_out, GLOBAL(B2_clk_jin), VCC, , , , , , );
+
+
+--D1L26 is selector:inst4|Mux~2445 at LC_X24_Y14_N4
+--operation mode is normal
+
+D1L26 = D1L25 & (B1_count[0] # !D1_n[1]) # !D1L25 & B1L35 & D1_n[1];
+
+
+--C1_count[0] is Hour:inst2|count[0] at LC_X24_Y15_N5
+--operation mode is normal
+
+C1_count[0]_lut_out = C1L11 & (!C1L4 # !C1L1);
+C1_count[0] = DFFEAS(C1_count[0]_lut_out, GLOBAL(B1_clk_jin), VCC, , , , , , );
+
+
+--C1L5 is Hour:inst2|add~289 at LC_X24_Y15_N2
+--operation mode is arithmetic
+
+C1L5 = C1_count[2] $ (!C1L9);
+
+--C1L6 is Hour:inst2|add~291 at LC_X24_Y15_N2
+--operation mode is arithmetic
+
+C1L6_cout_0 = C1_count[2] & (!C1L9);
+C1L6 = CARRY(C1L6_cout_0);
+
+--C1L7 is Hour:inst2|add~291COUT1_306 at LC_X24_Y15_N2
+--operation mode is arithmetic
+
+C1L7_cout_1 = C1_count[2] & (!C1L10);
+C1L7 = CARRY(C1L7_cout_1);
+
+
+--B1L1 is clock:inst1|add~461 at LC_X27_Y16_N6
+--operation mode is normal
+
+B1L1_carry_eqn = (!B1L6 & B1L10) # (B1L6 & B1L11);
+B1L1 = B1_count[5] $ B1L1_carry_eqn;
+
+
+--B1L2 is clock:inst1|add~466 at LC_X27_Y16_N3
+--operation mode is arithmetic
+
+B1L2 = B1_count[2] $ !B1L13;
+
+--B1L3 is clock:inst1|add~468 at LC_X27_Y16_N3
+--operation mode is arithmetic
+
+B1L3_cout_0 = B1_count[2] & !B1L13;
+B1L3 = CARRY(B1L3_cout_0);
+
+--B1L4 is clock:inst1|add~468COUT1 at LC_X27_Y16_N3
+--operation mode is arithmetic
+
+B1L4_cout_1 = B1_count[2] & !B1L14;
+B1L4 = CARRY(B1L4_cout_1);
+
+
+--B1L5 is clock:inst1|add~471 at LC_X27_Y16_N4
+--operation mode is arithmetic
+
+B1L5 = B1_count[3] $ (B1L3);
+
+--B1L6 is clock:inst1|add~473 at LC_X27_Y16_N4
+--operation mode is arithmetic
+
+B1L6 = B1L7;
+
+
+--B1L9 is clock:inst1|add~476 at LC_X27_Y16_N5
+--operation mode is arithmetic
+
+B1L9_carry_eqn = (!B1L6 & GND) # (B1L6 & VCC);
+B1L9 = B1_count[4] $ (!B1L9_carry_eqn);
+
+--B1L10 is clock:inst1|add~478 at LC_X27_Y16_N5
+--operation mode is arithmetic
+
+B1L10_cout_0 = B1_count[4] & (!B1L6);
+B1L10 = CARRY(B1L10_cout_0);
+
+--B1L11 is clock:inst1|add~478COUT1_494 at LC_X27_Y16_N5
+--operation mode is arithmetic
+
+B1L11_cout_1 = B1_count[4] & (!B1L6);
+B1L11 = CARRY(B1L11_cout_1);
+
+
+--B1L32 is clock:inst1|LessThan~551 at LC_X27_Y16_N7
+--operation mode is normal
+
+B1L32 = !B1L9 # !B1L5 # !B1L2 # !B1L1;
+
+
+--B2_clk_jin is clock:inst|clk_jin at LC_X21_Y10_N2
+--operation mode is normal
+
+B2_clk_jin_lut_out = !B2L32;
+B2_clk_jin = DFFEAS(B2_clk_jin_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--C1L8 is Hour:inst2|add~294 at LC_X24_Y15_N1
+--operation mode is arithmetic
+
+C1L8 = C1_count[1] $ (C1L12);
+
+--C1L9 is Hour:inst2|add~296 at LC_X24_Y15_N1
+--operation mode is arithmetic
+
+C1L9_cout_0 = !C1L12 # !C1_count[1];
+C1L9 = CARRY(C1L9_cout_0);
+
+--C1L10 is Hour:inst2|add~296COUT1 at LC_X24_Y15_N1
+--operation mode is arithmetic
+
+C1L10_cout_1 = !C1L13 # !C1_count[1];
+C1L10 = CARRY(C1L10_cout_1);
+
+
+--B2L1 is clock:inst|add~461 at LC_X25_Y9_N2
+--operation mode is arithmetic
+
+B2L1 = B2_count[1] $ (B2L16);
+
+--B2L2 is clock:inst|add~463 at LC_X25_Y9_N2
+--operation mode is arithmetic
+
+B2L2_cout_0 = !B2L16 # !B2_count[1];
+B2L2 = CARRY(B2L2_cout_0);
+
+--B2L3 is clock:inst|add~463COUT1_493 at LC_X25_Y9_N2
+--operation mode is arithmetic
+
+B2L3_cout_1 = !B2L17 # !B2_count[1];
+B2L3 = CARRY(B2L3_cout_1);
+
+
+--B2L4 is clock:inst|add~466 at LC_X25_Y9_N6
+--operation mode is normal
+
+B2L4_carry_eqn = (!B2L9 & B2L13) # (B2L9 & B2L14);
+B2L4 = B2L4_carry_eqn $ B2_count[5];
+
+
+--B2L5 is clock:inst|add~471 at LC_X25_Y9_N3
+--operation mode is arithmetic
+
+B2L5 = B2_count[2] $ (!B2L2);
+
+--B2L6 is clock:inst|add~473 at LC_X25_Y9_N3
+--operation mode is arithmetic
+
+B2L6_cout_0 = B2_count[2] & (!B2L2);
+B2L6 = CARRY(B2L6_cout_0);
+
+--B2L7 is clock:inst|add~473COUT1 at LC_X25_Y9_N3
+--operation mode is arithmetic
+
+B2L7_cout_1 = B2_count[2] & (!B2L3);
+B2L7 = CARRY(B2L7_cout_1);
+
+
+--B2L8 is clock:inst|add~476 at LC_X25_Y9_N4
+--operation mode is arithmetic
+
+B2L8 = B2_count[3] $ B2L6;
+
+--B2L9 is clock:inst|add~478 at LC_X25_Y9_N4
+--operation mode is arithmetic
+
+B2L9 = B2L10;
+
+
+--B2L12 is clock:inst|add~481 at LC_X25_Y9_N5
+--operation mode is arithmetic
+
+B2L12_carry_eqn = (!B2L9 & GND) # (B2L9 & VCC);
+B2L12 = B2_count[4] $ !B2L12_carry_eqn;
+
+--B2L13 is clock:inst|add~483 at LC_X25_Y9_N5
+--operation mode is arithmetic
+
+B2L13_cout_0 = B2_count[4] & !B2L9;
+B2L13 = CARRY(B2L13_cout_0);
+
+--B2L14 is clock:inst|add~483COUT1_494 at LC_X25_Y9_N5
+--operation mode is arithmetic
+
+B2L14_cout_1 = B2_count[4] & !B2L9;
+B2L14 = CARRY(B2L14_cout_1);
+
+
+--B2L32 is clock:inst|LessThan~540 at LC_X25_Y9_N7
+--operation mode is normal
+
+B2L32 = !B2L12 # !B2L8 # !B2L5 # !B2L4;
+
+
+--B1L12 is clock:inst1|add~481 at LC_X27_Y16_N2
+--operation mode is arithmetic
+
+B1L12 = B1_count[1] $ B1L16;
+
+--B1L13 is clock:inst1|add~483 at LC_X27_Y16_N2
+--operation mode is arithmetic
+
+B1L13_cout_0 = !B1L16 # !B1_count[1];
+B1L13 = CARRY(B1L13_cout_0);
+
+--B1L14 is clock:inst1|add~483COUT1_493 at LC_X27_Y16_N2
+--operation mode is arithmetic
+
+B1L14_cout_1 = !B1L17 # !B1_count[1];
+B1L14 = CARRY(B1L14_cout_1);
+
+
+--B2L15 is clock:inst|add~486 at LC_X25_Y9_N1
+--operation mode is arithmetic
+
+B2L15 = !B2_count[0];
+
+--B2L16 is clock:inst|add~488 at LC_X25_Y9_N1
+--operation mode is arithmetic
+
+B2L16_cout_0 = B2_count[0];
+B2L16 = CARRY(B2L16_cout_0);
+
+--B2L17 is clock:inst|add~488COUT1_492 at LC_X25_Y9_N1
+--operation mode is arithmetic
+
+B2L17_cout_1 = B2_count[0];
+B2L17 = CARRY(B2L17_cout_1);
+
+
+--B1L15 is clock:inst1|add~486 at LC_X27_Y16_N1
+--operation mode is arithmetic
+
+B1L15 = !B1_count[0];
+
+--B1L16 is clock:inst1|add~488 at LC_X27_Y16_N1
+--operation mode is arithmetic
+
+B1L16_cout_0 = B1_count[0];
+B1L16 = CARRY(B1L16_cout_0);
+
+--B1L17 is clock:inst1|add~488COUT1_492 at LC_X27_Y16_N1
+--operation mode is arithmetic
+
+B1L17_cout_1 = B1_count[0];
+B1L17 = CARRY(B1L17_cout_1);
+
+
+--C1L11 is Hour:inst2|add~299 at LC_X24_Y15_N0
+--operation mode is arithmetic
+
+C1L11 = !C1_count[0];
+
+--C1L12 is Hour:inst2|add~301 at LC_X24_Y15_N0
+--operation mode is arithmetic
+
+C1L12_cout_0 = C1_count[0];
+C1L12 = CARRY(C1L12_cout_0);
+
+--C1L13 is Hour:inst2|add~301COUT1_305 at LC_X24_Y15_N0
+--operation mode is arithmetic
+
+C1L13_cout_1 = C1_count[0];
+C1L13 = CARRY(C1L13_cout_1);
+
+
+--B2L29 is clock:inst|ge[2]~2647 at LC_X26_Y9_N0
+--operation mode is normal
+
+B2L29 = B2_count[4] & (B2_count[1] & B2_count[2] & B2_count[5] # !B2_count[1] & !B2_count[2] & !B2_count[5]) # !B2_count[4] & (B2_count[2] $ (B2_count[1] & B2_count[5]));
+
+
+--B2L30 is clock:inst|ge[2]~2648 at LC_X26_Y9_N1
+--operation mode is normal
+
+B2L30 = B2_count[4] & !B2_count[2] & (!B2_count[5] # !B2_count[1]) # !B2_count[4] & B2_count[2] & (B2_count[1] # B2_count[5]);
+
+
+--B2L31 is clock:inst|ge[2]~2653 at LC_X26_Y9_N6
+--operation mode is normal
+
+B2L31 = B2_count[3] & (B2L30) # !B2_count[3] & B2L29;
+
+
+--B1L29 is clock:inst1|ge[2]~2677 at LC_X26_Y16_N4
+--operation mode is normal
+
+B1L29 = B1_count[4] & (B1_count[5] & B1_count[2] & B1_count[1] # !B1_count[5] & !B1_count[2] & !B1_count[1]) # !B1_count[4] & (B1_count[2] $ (B1_count[5] & B1_count[1]));
+
+
+--B1L30 is clock:inst1|ge[2]~2678 at LC_X26_Y16_N3
+--operation mode is normal
+
+B1L30 = B1_count[4] & !B1_count[2] & (!B1_count[1] # !B1_count[5]) # !B1_count[4] & B1_count[2] & (B1_count[5] # B1_count[1]);
+
+
+--B1L31 is clock:inst1|ge[2]~2683 at LC_X26_Y16_N0
+--operation mode is normal
+
+B1L31 = B1_count[3] & B1L30 # !B1_count[3] & (B1L29);
+
+
+--B2L26 is clock:inst|ge[1]~2651 at LC_X25_Y10_N2
+--operation mode is normal
+
+B2L26 = B2_count[3] & (B2_count[2] & !B2_count[1] & !B2_count[4] # !B2_count[2] & B2_count[1] & B2_count[4]) # !B2_count[3] & (B2_count[1] $ (!B2_count[2] & B2_count[4]));
+
+
+--B2L27 is clock:inst|ge[1]~2652 at LC_X25_Y10_N4
+--operation mode is normal
+
+B2L27 = B2_count[3] & (B2_count[1] $ (!B2_count[2] & B2_count[4])) # !B2_count[3] & !B2_count[1] & (B2_count[2] # !B2_count[4]);
+
+
+--B2L28 is clock:inst|ge[1]~2654 at LC_X25_Y10_N6
+--operation mode is normal
+
+B2L28 = B2_count[5] & B2L27 # !B2_count[5] & (B2L26);
+
+
+--B1L26 is clock:inst1|ge[1]~2681 at LC_X26_Y15_N2
+--operation mode is normal
+
+B1L26 = B1_count[3] & (B1_count[2] & !B1_count[4] & !B1_count[1] # !B1_count[2] & B1_count[4] & B1_count[1]) # !B1_count[3] & (B1_count[1] $ (!B1_count[2] & B1_count[4]));
+
+
+--B1L27 is clock:inst1|ge[1]~2682 at LC_X26_Y15_N0
+--operation mode is normal
+
+B1L27 = B1_count[3] & (B1_count[1] $ (!B1_count[2] & B1_count[4])) # !B1_count[3] & !B1_count[1] & (B1_count[2] # !B1_count[4]);
+
+
+--B1L28 is clock:inst1|ge[1]~2684 at LC_X26_Y15_N6
+--operation mode is normal
+
+B1L28 = B1_count[5] & (B1L27) # !B1_count[5] & B1L26;
+
+
+--B2L36 is clock:inst|shi[1]~482 at LC_X26_Y9_N4
+--operation mode is normal
+
+B2L36 = B2_count[3] & B2_count[4] & (B2_count[2] # !B2_count[5]) # !B2_count[3] & (B2_count[4] & B2_count[2] & !B2_count[5] # !B2_count[4] & (B2_count[5]));
+
+
+--D1L9 is selector:inst4|Mux~2414 at LC_X24_Y14_N1
+--operation mode is normal
+
+D1L9 = C1_count[3] & C1_count[4] & (C1_count[1] # !D1_n[0]) # !C1_count[3] & D1_n[0] & (C1_count[1] $ C1_count[4]);
+
+
+--D1L10 is selector:inst4|Mux~2415 at LC_X24_Y14_N6
+--operation mode is normal
+
+D1L10 = D1_n[0] & (C1_count[1] & !C1_count[3] # !C1_count[1] & C1_count[3] & !C1_count[4]) # !D1_n[0] & (C1_count[4]);
+
+
+--D1L27 is selector:inst4|Mux~2455 at LC_X24_Y14_N7
+--operation mode is normal
+
+D1L27 = C1_count[2] & (D1L10) # !C1_count[2] & D1L9;
+
+
+--D1L12 is selector:inst4|Mux~2420 at LC_X26_Y9_N8
+--operation mode is normal
+
+D1L12 = B2_count[2] & B2_count[1] & !B2_count[3] & B2_count[5] # !B2_count[2] & !B2_count[1] & B2_count[3] & !B2_count[5];
+
+
+--D1L13 is selector:inst4|Mux~2421 at LC_X26_Y9_N2
+--operation mode is normal
+
+D1L13 = B2_count[2] & !B2_count[1] & B2_count[3] & !B2_count[5] # !B2_count[2] & (B2_count[1] & (B2_count[3] $ !B2_count[5]) # !B2_count[1] & !B2_count[3] & B2_count[5]);
+
+
+--D1L11 is selector:inst4|Mux~2419 at LC_X26_Y9_N5
+--operation mode is normal
+
+D1L11 = B2_count[4] & D1L13 # !B2_count[4] & (D1L12);
+
+
+--D1L28 is selector:inst4|Mux~2456 at LC_X26_Y14_N6
+--operation mode is normal
+
+D1L28 = !D1_n[1] & !D1_n[2] & D1L11;
+
+
+--D1L15 is selector:inst4|Mux~2428 at LC_X26_Y16_N1
+--operation mode is normal
+
+D1L15 = B1_count[1] & B1_count[5] & B1_count[2] & !B1_count[3] # !B1_count[1] & !B1_count[5] & !B1_count[2] & B1_count[3];
+
+
+--D1L16 is selector:inst4|Mux~2429 at LC_X26_Y16_N2
+--operation mode is normal
+
+D1L16 = B1_count[1] & !B1_count[2] & (B1_count[5] $ !B1_count[3]) # !B1_count[1] & (B1_count[5] & !B1_count[2] & !B1_count[3] # !B1_count[5] & B1_count[2] & B1_count[3]);
+
+
+--D1L14 is selector:inst4|Mux~2427 at LC_X26_Y16_N7
+--operation mode is normal
+
+D1L14 = B1_count[4] & (D1L16) # !B1_count[4] & (D1L15);
+
+
+--D1L29 is selector:inst4|Mux~2457 at LC_X26_Y14_N1
+--operation mode is normal
+
+D1L29 = D1L14 & D1_n[1] & !D1_n[2];
+
+
+--B2L33 is clock:inst|shi[0]~479 at LC_X25_Y10_N7
+--operation mode is normal
+
+B2L33 = B2_count[3] & (B2_count[2] & (B2_count[1] # !B2_count[4]) # !B2_count[2] & B2_count[1] & !B2_count[4]) # !B2_count[3] & !B2_count[2] & (B2_count[4]);
+
+
+--B2L34 is clock:inst|shi[0]~480 at LC_X25_Y10_N5
+--operation mode is normal
+
+B2L34 = B2_count[3] & !B2_count[2] & (B2_count[4]) # !B2_count[3] & (B2_count[2] # B2_count[1] # !B2_count[4]);
+
+
+--B2L35 is clock:inst|shi[0]~483 at LC_X25_Y10_N9
+--operation mode is normal
+
+B2L35 = B2_count[5] & (B2L34) # !B2_count[5] & (B2L33);
+
+
+--B1L33 is clock:inst1|shi[0]~521 at LC_X26_Y15_N4
+--operation mode is normal
+
+B1L33 = B1_count[2] & B1_count[3] & (B1_count[1] # !B1_count[4]) # !B1_count[2] & (B1_count[4] & !B1_count[3] # !B1_count[4] & B1_count[3] & B1_count[1]);
+
+
+--B1L34 is clock:inst1|shi[0]~522 at LC_X26_Y15_N8
+--operation mode is normal
+
+B1L34 = B1_count[2] & (!B1_count[3]) # !B1_count[2] & (B1_count[4] & (B1_count[3] # B1_count[1]) # !B1_count[4] & !B1_count[3]);
+
+
+--B1L35 is clock:inst1|shi[0]~525 at LC_X26_Y15_N9
+--operation mode is normal
+
+B1L35 = B1_count[5] & (B1L34) # !B1_count[5] & B1L33;
+
+
+--D1L30 is selector:inst4|Mux~2458 at LC_X24_Y14_N2
+--operation mode is normal
+
+D1L30 = C1_count[4] & (C1_count[3] & C1_count[1] & C1_count[2] # !C1_count[3] & (!C1_count[2])) # !C1_count[4] & C1_count[3] & (C1_count[1] # C1_count[2]);
+
+
+--D1L31 is selector:inst4|Mux~2459 at LC_X24_Y14_N3
+--operation mode is normal
+
+D1L31 = D1_n[0] & (C1_count[0]) # !D1_n[0] & D1L30;
+
+
+--scan_clk is scan_clk at PIN_29
+--operation mode is input
+
+scan_clk = INPUT();
+
+
+--clk is clk at PIN_28
+--operation mode is input
+
+clk = INPUT();
+
+
+--finalout is finalout at PIN_201
+--operation mode is output
+
+finalout = OUTPUT(C1_clk_jin);
+
+
+--led[7] is led[7] at PIN_107
+--operation mode is output
+
+led[7] = OUTPUT(!D1L8);
+
+
+--led[6] is led[6] at PIN_160
+--operation mode is output
+
+led[6] = OUTPUT(D1L7);
+
+
+--led[5] is led[5] at PIN_196
+--operation mode is output
+
+led[5] = OUTPUT(!D1L6);
+
+
+--led[4] is led[4] at PIN_158
+--operation mode is output
+
+led[4] = OUTPUT(!D1L5);
+
+
+--led[3] is led[3] at PIN_159
+--operation mode is output
+
+led[3] = OUTPUT(!D1L4);
+
+
+--led[2] is led[2] at PIN_195
+--operation mode is output
+
+led[2] = OUTPUT(!D1L3);
+
+
+--led[1] is led[1] at PIN_156
+--operation mode is output
+
+led[1] = OUTPUT(!D1L2);
+
+
+--led[0] is led[0] at PIN_194
+--operation mode is output
+
+led[0] = OUTPUT(!D1L1);
+
+
+--sel[5] is sel[5] at PIN_197
+--operation mode is output
+
+sel[5] = OUTPUT(D1_sel[5]);
+
+
+--sel[4] is sel[4] at PIN_199
+--operation mode is output
+
+sel[4] = OUTPUT(D1_sel[4]);
+
+
+--sel[3] is sel[3] at PIN_164
+--operation mode is output
+
+sel[3] = OUTPUT(D1_sel[3]);
+
+
+--sel[2] is sel[2] at PIN_198
+--operation mode is output
+
+sel[2] = OUTPUT(D1_sel[2]);
+
+
+--sel[1] is sel[1] at PIN_200
+--operation mode is output
+
+sel[1] = OUTPUT(D1_sel[1]);
+
+
+--sel[0] is sel[0] at PIN_161
+--operation mode is output
+
+sel[0] = OUTPUT(D1_sel[0]);
+
+
+
+
