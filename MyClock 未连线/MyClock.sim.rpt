@@ -1,0 +1,398 @@
+Simulator report for MyClock
+Fri Apr 19 08:43:31 2013
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 147 nodes    ;
+; Simulation Coverage         ;      54.34 % ;
+; Total Number of Transitions ; 3668         ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                        ;
++-----------------------------------------------------------------+---------+---------------+
+; Option                                                          ; Setting ; Default Value ;
++-----------------------------------------------------------------+---------+---------------+
+; Simulation mode                                                 ; Timing  ; Timing        ;
+; Start time                                                      ; 0 ns    ; 0 ns          ;
+; Add pins automatically to simulation output waveforms           ; On      ; On            ;
+; Check outputs                                                   ; Off     ; Off           ;
+; Report simulation coverage                                      ; On      ; On            ;
+; Detect setup and hold time violations                           ; Off     ; Off           ;
+; Detect glitches                                                 ; Off     ; Off           ;
+; Automatically save/load simulation netlist                      ; Off     ; Off           ;
+; Disable timing delays in Timing Simulation                      ; Off     ; Off           ;
+; Generate Signal Activity File                                   ; Off     ; Off           ;
+; Group bus channels in simulation results                        ; Off     ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements ; On      ; On            ;
+; Overwrite Waveform Inputs With Simulation Outputs               ; Off     ;               ;
++-----------------------------------------------------------------+---------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      54.34 % ;
+; Total nodes checked                                 ; 147          ;
+; Total output ports checked                          ; 173          ;
+; Total output ports with complete 1/0-value coverage ; 94           ;
+; Total output ports with no 1/0-value coverage       ; 74           ;
+; Total output ports with no 1-value coverage         ; 74           ;
+; Total output ports with no 0-value coverage         ; 79           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                  ;
++------------------------------------+--------------------------------------+------------------+
+; Node Name                          ; Output Port Name                     ; Output Port Type ;
++------------------------------------+--------------------------------------+------------------+
+; |MyClock|selector:inst4|num[0]     ; |MyClock|selector:inst4|num[0]       ; regout           ;
+; |MyClock|selector:inst4|num[1]     ; |MyClock|selector:inst4|num[1]       ; regout           ;
+; |MyClock|selector:inst4|num[2]     ; |MyClock|selector:inst4|num[2]       ; regout           ;
+; |MyClock|selector:inst4|num[3]     ; |MyClock|selector:inst4|num[3]       ; regout           ;
+; |MyClock|selector:inst4|LED[6]~151 ; |MyClock|selector:inst4|LED[6]~151   ; combout          ;
+; |MyClock|selector:inst4|LED[5]~152 ; |MyClock|selector:inst4|LED[5]~152   ; combout          ;
+; |MyClock|selector:inst4|LED[4]~153 ; |MyClock|selector:inst4|LED[4]~153   ; combout          ;
+; |MyClock|selector:inst4|LED[3]~154 ; |MyClock|selector:inst4|LED[3]~154   ; combout          ;
+; |MyClock|selector:inst4|LED[2]~155 ; |MyClock|selector:inst4|LED[2]~155   ; combout          ;
+; |MyClock|selector:inst4|LED[1]~156 ; |MyClock|selector:inst4|LED[1]~156   ; combout          ;
+; |MyClock|selector:inst4|LED[0]~157 ; |MyClock|selector:inst4|LED[0]~157   ; combout          ;
+; |MyClock|selector:inst4|sel[7]     ; |MyClock|selector:inst4|sel[7]       ; regout           ;
+; |MyClock|selector:inst4|sel[6]     ; |MyClock|selector:inst4|sel[6]       ; regout           ;
+; |MyClock|selector:inst4|sel[5]     ; |MyClock|selector:inst4|sel[5]       ; regout           ;
+; |MyClock|selector:inst4|sel[4]     ; |MyClock|selector:inst4|sel[4]       ; regout           ;
+; |MyClock|selector:inst4|sel[3]     ; |MyClock|selector:inst4|sel[3]       ; regout           ;
+; |MyClock|selector:inst4|sel[2]     ; |MyClock|selector:inst4|sel[2]       ; regout           ;
+; |MyClock|selector:inst4|sel[1]     ; |MyClock|selector:inst4|sel[1]       ; regout           ;
+; |MyClock|selector:inst4|sel[0]     ; |MyClock|selector:inst4|sel[0]       ; regout           ;
+; |MyClock|clock:inst|count[0]       ; |MyClock|clock:inst|count[0]         ; regout           ;
+; |MyClock|selector:inst4|n[1]       ; |MyClock|selector:inst4|n[1]         ; regout           ;
+; |MyClock|selector:inst4|n[0]       ; |MyClock|selector:inst4|n[0]         ; regout           ;
+; |MyClock|selector:inst4|n[2]       ; |MyClock|selector:inst4|n[2]         ; regout           ;
+; |MyClock|selector:inst4|Mux~5135   ; |MyClock|selector:inst4|Mux~5135     ; combout          ;
+; |MyClock|selector:inst4|Mux~5136   ; |MyClock|selector:inst4|Mux~5136     ; combout          ;
+; |MyClock|selector:inst4|Mux~5137   ; |MyClock|selector:inst4|Mux~5137     ; combout          ;
+; |MyClock|selector:inst4|Mux~5142   ; |MyClock|selector:inst4|Mux~5142     ; combout          ;
+; |MyClock|selector:inst4|Mux~5143   ; |MyClock|selector:inst4|Mux~5143     ; combout          ;
+; |MyClock|clock:inst|count[4]       ; |MyClock|clock:inst|count[4]         ; regout           ;
+; |MyClock|clock:inst|count[1]       ; |MyClock|clock:inst|count[1]         ; regout           ;
+; |MyClock|clock:inst|count[3]       ; |MyClock|clock:inst|count[3]         ; regout           ;
+; |MyClock|clock:inst|count[2]       ; |MyClock|clock:inst|count[2]         ; regout           ;
+; |MyClock|clock:inst|LessThan~550   ; |MyClock|clock:inst|LessThan~550     ; combout          ;
+; |MyClock|clock:inst|ge~2369        ; |MyClock|clock:inst|ge~2369          ; combout          ;
+; |MyClock|selector:inst4|Mux~5146   ; |MyClock|selector:inst4|Mux~5146     ; combout          ;
+; |MyClock|selector:inst4|Mux~5147   ; |MyClock|selector:inst4|Mux~5147     ; combout          ;
+; |MyClock|selector:inst4|Mux~5148   ; |MyClock|selector:inst4|Mux~5148     ; combout          ;
+; |MyClock|selector:inst4|Mux~5150   ; |MyClock|selector:inst4|Mux~5150     ; combout          ;
+; |MyClock|selector:inst4|Mux~5151   ; |MyClock|selector:inst4|Mux~5151     ; combout          ;
+; |MyClock|selector:inst4|Mux~5152   ; |MyClock|selector:inst4|Mux~5152     ; combout          ;
+; |MyClock|selector:inst4|Mux~5153   ; |MyClock|selector:inst4|Mux~5153     ; combout          ;
+; |MyClock|selector:inst4|Mux~5154   ; |MyClock|selector:inst4|Mux~5154     ; combout          ;
+; |MyClock|clock:inst|LessThan~552   ; |MyClock|clock:inst|LessThan~552     ; combout          ;
+; |MyClock|selector:inst4|Mux~5155   ; |MyClock|selector:inst4|Mux~5155     ; combout          ;
+; |MyClock|selector:inst4|Mux~5156   ; |MyClock|selector:inst4|Mux~5156     ; combout          ;
+; |MyClock|selector:inst4|Mux~5157   ; |MyClock|selector:inst4|Mux~5157     ; combout          ;
+; |MyClock|selector:inst4|Mux~5158   ; |MyClock|selector:inst4|Mux~5158     ; combout          ;
+; |MyClock|selector:inst4|Mux~5161   ; |MyClock|selector:inst4|Mux~5161     ; combout          ;
+; |MyClock|selector:inst4|Mux~5163   ; |MyClock|selector:inst4|Mux~5163     ; combout          ;
+; |MyClock|selector:inst4|Mux~5167   ; |MyClock|selector:inst4|Mux~5167     ; combout          ;
+; |MyClock|clock:inst|add~429        ; |MyClock|clock:inst|add~429          ; combout          ;
+; |MyClock|clock:inst|add~429        ; |MyClock|clock:inst|add~431          ; cout0            ;
+; |MyClock|clock:inst|add~429        ; |MyClock|clock:inst|add~431COUT1_460 ; cout1            ;
+; |MyClock|clock:inst|add~434        ; |MyClock|clock:inst|add~434          ; combout          ;
+; |MyClock|clock:inst|add~439        ; |MyClock|clock:inst|add~439          ; combout          ;
+; |MyClock|clock:inst|add~439        ; |MyClock|clock:inst|add~441          ; cout             ;
+; |MyClock|clock:inst|add~444        ; |MyClock|clock:inst|add~444          ; combout          ;
+; |MyClock|clock:inst|add~444        ; |MyClock|clock:inst|add~446          ; cout0            ;
+; |MyClock|clock:inst|add~444        ; |MyClock|clock:inst|add~446COUT1     ; cout1            ;
+; |MyClock|clock:inst|add~449        ; |MyClock|clock:inst|add~449          ; combout          ;
+; |MyClock|clock:inst|add~449        ; |MyClock|clock:inst|add~451          ; cout0            ;
+; |MyClock|clock:inst|add~454        ; |MyClock|clock:inst|add~454          ; combout          ;
+; |MyClock|clock:inst|add~454        ; |MyClock|clock:inst|add~456          ; cout0            ;
+; |MyClock|clock:inst|add~454        ; |MyClock|clock:inst|add~456COUT1_461 ; cout1            ;
+; |MyClock|selector:inst4|Mux~5174   ; |MyClock|selector:inst4|Mux~5174     ; combout          ;
+; |MyClock|selector:inst4|Mux~5175   ; |MyClock|selector:inst4|Mux~5175     ; combout          ;
+; |MyClock|clock:inst|ge~2367        ; |MyClock|clock:inst|ge~2367          ; combout          ;
+; |MyClock|clock:inst|ge~2368        ; |MyClock|clock:inst|ge~2368          ; combout          ;
+; |MyClock|clock:inst|ge~2370        ; |MyClock|clock:inst|ge~2370          ; combout          ;
+; |MyClock|selector:inst4|Mux~5098   ; |MyClock|selector:inst4|Mux~5098     ; combout          ;
+; |MyClock|selector:inst4|Mux~5126   ; |MyClock|selector:inst4|Mux~5126     ; combout          ;
+; |MyClock|selector:inst4|Mux~5127   ; |MyClock|selector:inst4|Mux~5127     ; combout          ;
+; |MyClock|selector:inst4|Mux~5125   ; |MyClock|selector:inst4|Mux~5125     ; combout          ;
+; |MyClock|selector:inst4|Mux~5179   ; |MyClock|selector:inst4|Mux~5179     ; combout          ;
+; |MyClock|selector:inst4|Mux~5181   ; |MyClock|selector:inst4|Mux~5181     ; combout          ;
+; |MyClock|selector:inst4|Mux~5182   ; |MyClock|selector:inst4|Mux~5182     ; combout          ;
+; |MyClock|selector:inst4|Mux~5183   ; |MyClock|selector:inst4|Mux~5183     ; combout          ;
+; |MyClock|scan_clk                  ; |MyClock|scan_clk                    ; combout          ;
+; |MyClock|clk                       ; |MyClock|clk                         ; combout          ;
+; |MyClock|led[6]                    ; |MyClock|led[6]                      ; padio            ;
+; |MyClock|led[5]                    ; |MyClock|led[5]                      ; padio            ;
+; |MyClock|led[4]                    ; |MyClock|led[4]                      ; padio            ;
+; |MyClock|led[3]                    ; |MyClock|led[3]                      ; padio            ;
+; |MyClock|led[2]                    ; |MyClock|led[2]                      ; padio            ;
+; |MyClock|led[1]                    ; |MyClock|led[1]                      ; padio            ;
+; |MyClock|led[0]                    ; |MyClock|led[0]                      ; padio            ;
+; |MyClock|sel[7]                    ; |MyClock|sel[7]                      ; padio            ;
+; |MyClock|sel[6]                    ; |MyClock|sel[6]                      ; padio            ;
+; |MyClock|sel[5]                    ; |MyClock|sel[5]                      ; padio            ;
+; |MyClock|sel[4]                    ; |MyClock|sel[4]                      ; padio            ;
+; |MyClock|sel[3]                    ; |MyClock|sel[3]                      ; padio            ;
+; |MyClock|sel[2]                    ; |MyClock|sel[2]                      ; padio            ;
+; |MyClock|sel[1]                    ; |MyClock|sel[1]                      ; padio            ;
+; |MyClock|sel[0]                    ; |MyClock|sel[0]                      ; padio            ;
++------------------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                      ;
++------------------------------------+---------------------------------------+------------------+
+; Node Name                          ; Output Port Name                      ; Output Port Type ;
++------------------------------------+---------------------------------------+------------------+
+; |MyClock|Hour:inst2|clk_jin        ; |MyClock|Hour:inst2|clk_jin           ; regout           ;
+; |MyClock|selector:inst4|LED[7]~150 ; |MyClock|selector:inst4|LED[7]~150    ; combout          ;
+; |MyClock|Hour:inst2|add~279        ; |MyClock|Hour:inst2|add~279           ; combout          ;
+; |MyClock|Hour:inst2|add~279        ; |MyClock|Hour:inst2|add~281           ; cout0            ;
+; |MyClock|Hour:inst2|add~279        ; |MyClock|Hour:inst2|add~281COUT1_307  ; cout1            ;
+; |MyClock|Hour:inst2|add~284        ; |MyClock|Hour:inst2|add~284           ; combout          ;
+; |MyClock|clock:inst1|clk_jin       ; |MyClock|clock:inst1|clk_jin          ; regout           ;
+; |MyClock|Hour:inst2|count[0]       ; |MyClock|Hour:inst2|count[0]          ; regout           ;
+; |MyClock|clock:inst1|count[5]      ; |MyClock|clock:inst1|count[5]         ; regout           ;
+; |MyClock|clock:inst1|count[4]      ; |MyClock|clock:inst1|count[4]         ; regout           ;
+; |MyClock|clock:inst1|LessThan~548  ; |MyClock|clock:inst1|LessThan~548     ; combout          ;
+; |MyClock|clock:inst1|count[1]      ; |MyClock|clock:inst1|count[1]         ; regout           ;
+; |MyClock|clock:inst1|count[3]      ; |MyClock|clock:inst1|count[3]         ; regout           ;
+; |MyClock|clock:inst1|count[2]      ; |MyClock|clock:inst1|count[2]         ; regout           ;
+; |MyClock|selector:inst4|Mux~5138   ; |MyClock|selector:inst4|Mux~5138      ; combout          ;
+; |MyClock|clock:inst1|LessThan~549  ; |MyClock|clock:inst1|LessThan~549     ; combout          ;
+; |MyClock|clock:inst1|ge~2340       ; |MyClock|clock:inst1|ge~2340          ; combout          ;
+; |MyClock|selector:inst4|Mux~5139   ; |MyClock|selector:inst4|Mux~5139      ; combout          ;
+; |MyClock|selector:inst4|Mux~5140   ; |MyClock|selector:inst4|Mux~5140      ; combout          ;
+; |MyClock|clock:inst1|count[0]      ; |MyClock|clock:inst1|count[0]         ; regout           ;
+; |MyClock|Hour:inst2|count[4]       ; |MyClock|Hour:inst2|count[4]          ; regout           ;
+; |MyClock|Hour:inst2|count[3]       ; |MyClock|Hour:inst2|count[3]          ; regout           ;
+; |MyClock|Hour:inst2|count[2]       ; |MyClock|Hour:inst2|count[2]          ; regout           ;
+; |MyClock|Hour:inst2|count[1]       ; |MyClock|Hour:inst2|count[1]          ; regout           ;
+; |MyClock|Hour:inst2|LessThan~435   ; |MyClock|Hour:inst2|LessThan~435      ; combout          ;
+; |MyClock|Hour:inst2|shi~56         ; |MyClock|Hour:inst2|shi~56            ; combout          ;
+; |MyClock|selector:inst4|Mux~5141   ; |MyClock|selector:inst4|Mux~5141      ; combout          ;
+; |MyClock|selector:inst4|Mux~5144   ; |MyClock|selector:inst4|Mux~5144      ; combout          ;
+; |MyClock|clock:inst1|LessThan~550  ; |MyClock|clock:inst1|LessThan~550     ; combout          ;
+; |MyClock|clock:inst1|shi[2]~136    ; |MyClock|clock:inst1|shi[2]~136       ; combout          ;
+; |MyClock|clock:inst1|LessThan~551  ; |MyClock|clock:inst1|LessThan~551     ; combout          ;
+; |MyClock|selector:inst4|Mux~5159   ; |MyClock|selector:inst4|Mux~5159      ; combout          ;
+; |MyClock|selector:inst4|Mux~5162   ; |MyClock|selector:inst4|Mux~5162      ; combout          ;
+; |MyClock|selector:inst4|Mux~5165   ; |MyClock|selector:inst4|Mux~5165      ; combout          ;
+; |MyClock|selector:inst4|Mux~5166   ; |MyClock|selector:inst4|Mux~5166      ; combout          ;
+; |MyClock|Hour:inst2|add~289        ; |MyClock|Hour:inst2|add~289           ; combout          ;
+; |MyClock|Hour:inst2|add~289        ; |MyClock|Hour:inst2|add~291           ; cout0            ;
+; |MyClock|Hour:inst2|add~289        ; |MyClock|Hour:inst2|add~291COUT1_306  ; cout1            ;
+; |MyClock|clock:inst1|add~429       ; |MyClock|clock:inst1|add~429          ; combout          ;
+; |MyClock|clock:inst1|add~434       ; |MyClock|clock:inst1|add~434          ; combout          ;
+; |MyClock|clock:inst1|add~434       ; |MyClock|clock:inst1|add~436          ; cout0            ;
+; |MyClock|clock:inst1|add~434       ; |MyClock|clock:inst1|add~436COUT1     ; cout1            ;
+; |MyClock|clock:inst1|add~439       ; |MyClock|clock:inst1|add~439          ; combout          ;
+; |MyClock|clock:inst1|add~439       ; |MyClock|clock:inst1|add~441          ; cout             ;
+; |MyClock|clock:inst1|add~444       ; |MyClock|clock:inst1|add~444          ; combout          ;
+; |MyClock|clock:inst1|add~444       ; |MyClock|clock:inst1|add~446          ; cout0            ;
+; |MyClock|clock:inst1|add~444       ; |MyClock|clock:inst1|add~446COUT1_462 ; cout1            ;
+; |MyClock|clock:inst1|LessThan~552  ; |MyClock|clock:inst1|LessThan~552     ; combout          ;
+; |MyClock|clock:inst|clk_jin        ; |MyClock|clock:inst|clk_jin           ; regout           ;
+; |MyClock|Hour:inst2|add~294        ; |MyClock|Hour:inst2|add~294           ; combout          ;
+; |MyClock|Hour:inst2|add~294        ; |MyClock|Hour:inst2|add~296           ; cout0            ;
+; |MyClock|Hour:inst2|add~294        ; |MyClock|Hour:inst2|add~296COUT1_305  ; cout1            ;
+; |MyClock|clock:inst|add~449        ; |MyClock|clock:inst|add~451COUT1_462  ; cout1            ;
+; |MyClock|clock:inst|LessThan~553   ; |MyClock|clock:inst|LessThan~553      ; combout          ;
+; |MyClock|clock:inst1|add~449       ; |MyClock|clock:inst1|add~449          ; combout          ;
+; |MyClock|clock:inst1|add~449       ; |MyClock|clock:inst1|add~451          ; cout0            ;
+; |MyClock|clock:inst1|add~449       ; |MyClock|clock:inst1|add~451COUT1_461 ; cout1            ;
+; |MyClock|clock:inst1|add~454       ; |MyClock|clock:inst1|add~454          ; combout          ;
+; |MyClock|clock:inst1|add~454       ; |MyClock|clock:inst1|add~456          ; cout0            ;
+; |MyClock|clock:inst1|add~454       ; |MyClock|clock:inst1|add~456COUT1_460 ; cout1            ;
+; |MyClock|Hour:inst2|add~299        ; |MyClock|Hour:inst2|add~299           ; combout          ;
+; |MyClock|Hour:inst2|add~299        ; |MyClock|Hour:inst2|add~301           ; cout0            ;
+; |MyClock|Hour:inst2|add~299        ; |MyClock|Hour:inst2|add~301COUT1      ; cout1            ;
+; |MyClock|selector:inst4|Mux~5176   ; |MyClock|selector:inst4|Mux~5176      ; combout          ;
+; |MyClock|selector:inst4|Mux~5101   ; |MyClock|selector:inst4|Mux~5101      ; combout          ;
+; |MyClock|selector:inst4|Mux~5107   ; |MyClock|selector:inst4|Mux~5107      ; combout          ;
+; |MyClock|selector:inst4|Mux~5108   ; |MyClock|selector:inst4|Mux~5108      ; combout          ;
+; |MyClock|selector:inst4|Mux~5106   ; |MyClock|selector:inst4|Mux~5106      ; combout          ;
+; |MyClock|selector:inst4|Mux~5177   ; |MyClock|selector:inst4|Mux~5177      ; combout          ;
+; |MyClock|selector:inst4|Mux~5117   ; |MyClock|selector:inst4|Mux~5117      ; combout          ;
+; |MyClock|selector:inst4|Mux~5178   ; |MyClock|selector:inst4|Mux~5178      ; combout          ;
+; |MyClock|selector:inst4|Mux~5180   ; |MyClock|selector:inst4|Mux~5180      ; combout          ;
+; |MyClock|finalout                  ; |MyClock|finalout                     ; padio            ;
+; |MyClock|led[7]                    ; |MyClock|led[7]                       ; padio            ;
++------------------------------------+---------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                      ;
++------------------------------------+---------------------------------------+------------------+
+; Node Name                          ; Output Port Name                      ; Output Port Type ;
++------------------------------------+---------------------------------------+------------------+
+; |MyClock|Hour:inst2|clk_jin        ; |MyClock|Hour:inst2|clk_jin           ; regout           ;
+; |MyClock|selector:inst4|LED[7]~150 ; |MyClock|selector:inst4|LED[7]~150    ; combout          ;
+; |MyClock|Hour:inst2|add~279        ; |MyClock|Hour:inst2|add~279           ; combout          ;
+; |MyClock|Hour:inst2|add~279        ; |MyClock|Hour:inst2|add~281           ; cout0            ;
+; |MyClock|Hour:inst2|add~279        ; |MyClock|Hour:inst2|add~281COUT1_307  ; cout1            ;
+; |MyClock|Hour:inst2|add~284        ; |MyClock|Hour:inst2|add~284           ; combout          ;
+; |MyClock|clock:inst1|clk_jin       ; |MyClock|clock:inst1|clk_jin          ; regout           ;
+; |MyClock|Hour:inst2|count[0]       ; |MyClock|Hour:inst2|count[0]          ; regout           ;
+; |MyClock|clock:inst1|count[5]      ; |MyClock|clock:inst1|count[5]         ; regout           ;
+; |MyClock|clock:inst1|count[4]      ; |MyClock|clock:inst1|count[4]         ; regout           ;
+; |MyClock|clock:inst1|LessThan~548  ; |MyClock|clock:inst1|LessThan~548     ; combout          ;
+; |MyClock|clock:inst1|count[1]      ; |MyClock|clock:inst1|count[1]         ; regout           ;
+; |MyClock|clock:inst1|count[3]      ; |MyClock|clock:inst1|count[3]         ; regout           ;
+; |MyClock|clock:inst1|count[2]      ; |MyClock|clock:inst1|count[2]         ; regout           ;
+; |MyClock|selector:inst4|Mux~5138   ; |MyClock|selector:inst4|Mux~5138      ; combout          ;
+; |MyClock|clock:inst1|LessThan~549  ; |MyClock|clock:inst1|LessThan~549     ; combout          ;
+; |MyClock|clock:inst1|ge~2340       ; |MyClock|clock:inst1|ge~2340          ; combout          ;
+; |MyClock|selector:inst4|Mux~5139   ; |MyClock|selector:inst4|Mux~5139      ; combout          ;
+; |MyClock|selector:inst4|Mux~5140   ; |MyClock|selector:inst4|Mux~5140      ; combout          ;
+; |MyClock|clock:inst1|count[0]      ; |MyClock|clock:inst1|count[0]         ; regout           ;
+; |MyClock|Hour:inst2|count[4]       ; |MyClock|Hour:inst2|count[4]          ; regout           ;
+; |MyClock|Hour:inst2|count[3]       ; |MyClock|Hour:inst2|count[3]          ; regout           ;
+; |MyClock|Hour:inst2|count[2]       ; |MyClock|Hour:inst2|count[2]          ; regout           ;
+; |MyClock|Hour:inst2|count[1]       ; |MyClock|Hour:inst2|count[1]          ; regout           ;
+; |MyClock|Hour:inst2|LessThan~435   ; |MyClock|Hour:inst2|LessThan~435      ; combout          ;
+; |MyClock|Hour:inst2|shi~56         ; |MyClock|Hour:inst2|shi~56            ; combout          ;
+; |MyClock|selector:inst4|Mux~5141   ; |MyClock|selector:inst4|Mux~5141      ; combout          ;
+; |MyClock|selector:inst4|Mux~5144   ; |MyClock|selector:inst4|Mux~5144      ; combout          ;
+; |MyClock|clock:inst|count[5]       ; |MyClock|clock:inst|count[5]          ; regout           ;
+; |MyClock|clock:inst|LessThan~549   ; |MyClock|clock:inst|LessThan~549      ; combout          ;
+; |MyClock|selector:inst4|Mux~5145   ; |MyClock|selector:inst4|Mux~5145      ; combout          ;
+; |MyClock|clock:inst1|LessThan~550  ; |MyClock|clock:inst1|LessThan~550     ; combout          ;
+; |MyClock|clock:inst1|shi[2]~136    ; |MyClock|clock:inst1|shi[2]~136       ; combout          ;
+; |MyClock|clock:inst|shi[2]~182     ; |MyClock|clock:inst|shi[2]~182        ; combout          ;
+; |MyClock|clock:inst|LessThan~551   ; |MyClock|clock:inst|LessThan~551      ; combout          ;
+; |MyClock|clock:inst1|LessThan~551  ; |MyClock|clock:inst1|LessThan~551     ; combout          ;
+; |MyClock|selector:inst4|Mux~5159   ; |MyClock|selector:inst4|Mux~5159      ; combout          ;
+; |MyClock|selector:inst4|Mux~5162   ; |MyClock|selector:inst4|Mux~5162      ; combout          ;
+; |MyClock|selector:inst4|Mux~5165   ; |MyClock|selector:inst4|Mux~5165      ; combout          ;
+; |MyClock|selector:inst4|Mux~5166   ; |MyClock|selector:inst4|Mux~5166      ; combout          ;
+; |MyClock|Hour:inst2|add~289        ; |MyClock|Hour:inst2|add~289           ; combout          ;
+; |MyClock|Hour:inst2|add~289        ; |MyClock|Hour:inst2|add~291           ; cout0            ;
+; |MyClock|Hour:inst2|add~289        ; |MyClock|Hour:inst2|add~291COUT1_306  ; cout1            ;
+; |MyClock|clock:inst1|add~429       ; |MyClock|clock:inst1|add~429          ; combout          ;
+; |MyClock|clock:inst1|add~434       ; |MyClock|clock:inst1|add~434          ; combout          ;
+; |MyClock|clock:inst1|add~434       ; |MyClock|clock:inst1|add~436          ; cout0            ;
+; |MyClock|clock:inst1|add~434       ; |MyClock|clock:inst1|add~436COUT1     ; cout1            ;
+; |MyClock|clock:inst1|add~439       ; |MyClock|clock:inst1|add~439          ; combout          ;
+; |MyClock|clock:inst1|add~439       ; |MyClock|clock:inst1|add~441          ; cout             ;
+; |MyClock|clock:inst1|add~444       ; |MyClock|clock:inst1|add~444          ; combout          ;
+; |MyClock|clock:inst1|add~444       ; |MyClock|clock:inst1|add~446          ; cout0            ;
+; |MyClock|clock:inst1|add~444       ; |MyClock|clock:inst1|add~446COUT1_462 ; cout1            ;
+; |MyClock|clock:inst1|LessThan~552  ; |MyClock|clock:inst1|LessThan~552     ; combout          ;
+; |MyClock|clock:inst|clk_jin        ; |MyClock|clock:inst|clk_jin           ; regout           ;
+; |MyClock|Hour:inst2|add~294        ; |MyClock|Hour:inst2|add~294           ; combout          ;
+; |MyClock|Hour:inst2|add~294        ; |MyClock|Hour:inst2|add~296           ; cout0            ;
+; |MyClock|Hour:inst2|add~294        ; |MyClock|Hour:inst2|add~296COUT1_305  ; cout1            ;
+; |MyClock|clock:inst|add~449        ; |MyClock|clock:inst|add~451COUT1_462  ; cout1            ;
+; |MyClock|clock:inst|LessThan~553   ; |MyClock|clock:inst|LessThan~553      ; combout          ;
+; |MyClock|clock:inst1|add~449       ; |MyClock|clock:inst1|add~449          ; combout          ;
+; |MyClock|clock:inst1|add~449       ; |MyClock|clock:inst1|add~451          ; cout0            ;
+; |MyClock|clock:inst1|add~449       ; |MyClock|clock:inst1|add~451COUT1_461 ; cout1            ;
+; |MyClock|clock:inst1|add~454       ; |MyClock|clock:inst1|add~454          ; combout          ;
+; |MyClock|clock:inst1|add~454       ; |MyClock|clock:inst1|add~456          ; cout0            ;
+; |MyClock|clock:inst1|add~454       ; |MyClock|clock:inst1|add~456COUT1_460 ; cout1            ;
+; |MyClock|Hour:inst2|add~299        ; |MyClock|Hour:inst2|add~299           ; combout          ;
+; |MyClock|Hour:inst2|add~299        ; |MyClock|Hour:inst2|add~301           ; cout0            ;
+; |MyClock|Hour:inst2|add~299        ; |MyClock|Hour:inst2|add~301COUT1      ; cout1            ;
+; |MyClock|selector:inst4|Mux~5176   ; |MyClock|selector:inst4|Mux~5176      ; combout          ;
+; |MyClock|selector:inst4|Mux~5101   ; |MyClock|selector:inst4|Mux~5101      ; combout          ;
+; |MyClock|selector:inst4|Mux~5107   ; |MyClock|selector:inst4|Mux~5107      ; combout          ;
+; |MyClock|selector:inst4|Mux~5108   ; |MyClock|selector:inst4|Mux~5108      ; combout          ;
+; |MyClock|selector:inst4|Mux~5106   ; |MyClock|selector:inst4|Mux~5106      ; combout          ;
+; |MyClock|selector:inst4|Mux~5177   ; |MyClock|selector:inst4|Mux~5177      ; combout          ;
+; |MyClock|selector:inst4|Mux~5117   ; |MyClock|selector:inst4|Mux~5117      ; combout          ;
+; |MyClock|selector:inst4|Mux~5178   ; |MyClock|selector:inst4|Mux~5178      ; combout          ;
+; |MyClock|selector:inst4|Mux~5180   ; |MyClock|selector:inst4|Mux~5180      ; combout          ;
+; |MyClock|finalout                  ; |MyClock|finalout                     ; padio            ;
+; |MyClock|led[7]                    ; |MyClock|led[7]                       ; padio            ;
++------------------------------------+---------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 5.1 Build 176 10/26/2005 SJ Full Version
+    Info: Processing started: Fri Apr 19 08:43:30 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off MyClock -c MyClock
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      54.34 %
+Info: Number of transitions in simulation is 3668
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Processing ended: Fri Apr 19 08:43:31 2013
+    Info: Elapsed time: 00:00:01
+Info: You are using the Quartus II software in "Evaluation Mode". You have 2 days left (until 21-apr-2013) before compilation and simulation support are disabled.
+
+
