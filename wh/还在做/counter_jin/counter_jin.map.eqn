@@ -1,0 +1,2379 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1_clk_jinwei is counter:inst2|clk_jinwei
+--operation mode is normal
+
+B1_clk_jinwei_lut_out = A1L12;
+B1_clk_jinwei = DFFEAS(B1_clk_jinwei_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--C1_LED[7] is sel:inst3|LED[7]
+--operation mode is normal
+
+C1_LED[7]_lut_out = !C1L10 & (C1_s[2] & !C1L18 # !C1_s[2] & (!C1L11));
+C1_LED[7] = DFFEAS(C1_LED[7]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_LED[6] is sel:inst3|LED[6]
+--operation mode is normal
+
+C1_LED[6]_lut_out = C1_s[1] & (B3L71) # !C1_s[1] & B1L71;
+C1_LED[6] = DFFEAS(C1_LED[6]_lut_out, scan_clk, VCC, , , B2L71, , , !C1_s[2]);
+
+
+--C1_LED[5] is sel:inst3|LED[5]
+--operation mode is normal
+
+C1_LED[5]_lut_out = !C1L12 & (C1_s[2] # !B2L70);
+C1_LED[5] = DFFEAS(C1_LED[5]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_LED[4] is sel:inst3|LED[4]
+--operation mode is normal
+
+C1_LED[4]_lut_out = !C1L13 & (C1_s[2] # !B2L69);
+C1_LED[4] = DFFEAS(C1_LED[4]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_LED[3] is sel:inst3|LED[3]
+--operation mode is normal
+
+C1_LED[3]_lut_out = !C1L14 & (C1_s[2] # !B2L68);
+C1_LED[3] = DFFEAS(C1_LED[3]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_LED[2] is sel:inst3|LED[2]
+--operation mode is normal
+
+C1_LED[2]_lut_out = !C1L15 & (C1_s[2] # !B2L67);
+C1_LED[2] = DFFEAS(C1_LED[2]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_LED[1] is sel:inst3|LED[1]
+--operation mode is normal
+
+C1_LED[1]_lut_out = !C1L16 & (C1_s[2] # !B2L66);
+C1_LED[1] = DFFEAS(C1_LED[1]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_LED[0] is sel:inst3|LED[0]
+--operation mode is normal
+
+C1_LED[0]_lut_out = !C1L17 & (C1_s[2] # !B2L65);
+C1_LED[0] = DFFEAS(C1_LED[0]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_s[2] is sel:inst3|s[2]
+--operation mode is normal
+
+C1_s[2]_lut_out = !C1_s[1] # !C1_s[2];
+C1_s[2] = DFFEAS(C1_s[2]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_s[1] is sel:inst3|s[1]
+--operation mode is normal
+
+C1_s[1]_lut_out = C1_s[2];
+C1_s[1] = DFFEAS(C1_s[1]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--C1_s[0] is sel:inst3|s[0]
+--operation mode is normal
+
+C1_s[0]_lut_out = C1_s[1];
+C1_s[0] = DFFEAS(C1_s[0]_lut_out, scan_clk, VCC, , , , , , );
+
+
+--B1_n[2] is counter:inst2|n[2]
+--operation mode is normal
+
+B1_n[2]_lut_out = B1L1;
+B1_n[2] = DFFEAS(B1_n[2]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[1] is counter:inst2|n[1]
+--operation mode is normal
+
+B1_n[1]_lut_out = B1L3 & (!A1L12);
+B1_n[1] = DFFEAS(B1_n[1]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L15 is rtl~846
+--operation mode is normal
+
+A1L15 = !B1_n[2] & !B1_n[1];
+
+
+--B1_n[29] is counter:inst2|n[29]
+--operation mode is normal
+
+B1_n[29]_lut_out = B1L5;
+B1_n[29] = DFFEAS(B1_n[29]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[28] is counter:inst2|n[28]
+--operation mode is normal
+
+B1_n[28]_lut_out = B1L7;
+B1_n[28] = DFFEAS(B1_n[28]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[27] is counter:inst2|n[27]
+--operation mode is normal
+
+B1_n[27]_lut_out = B1L9;
+B1_n[27] = DFFEAS(B1_n[27]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[26] is counter:inst2|n[26]
+--operation mode is normal
+
+B1_n[26]_lut_out = B1L11;
+B1_n[26] = DFFEAS(B1_n[26]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L16 is rtl~847
+--operation mode is normal
+
+A1L16 = !B1_n[29] & !B1_n[28] & !B1_n[27] & !B1_n[26];
+
+
+--B1_n[31] is counter:inst2|n[31]
+--operation mode is normal
+
+B1_n[31]_lut_out = B1L13;
+B1_n[31] = DFFEAS(B1_n[31]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[30] is counter:inst2|n[30]
+--operation mode is normal
+
+B1_n[30]_lut_out = B1L14;
+B1_n[30] = DFFEAS(B1_n[30]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L17 is rtl~848
+--operation mode is normal
+
+A1L17 = A1L15 & A1L16 & !B1_n[31] & !B1_n[30];
+
+
+--B1_n[25] is counter:inst2|n[25]
+--operation mode is normal
+
+B1_n[25]_lut_out = B1L16;
+B1_n[25] = DFFEAS(B1_n[25]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[24] is counter:inst2|n[24]
+--operation mode is normal
+
+B1_n[24]_lut_out = B1L18;
+B1_n[24] = DFFEAS(B1_n[24]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[23] is counter:inst2|n[23]
+--operation mode is normal
+
+B1_n[23]_lut_out = B1L20;
+B1_n[23] = DFFEAS(B1_n[23]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[22] is counter:inst2|n[22]
+--operation mode is normal
+
+B1_n[22]_lut_out = B1L22;
+B1_n[22] = DFFEAS(B1_n[22]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L18 is rtl~849
+--operation mode is normal
+
+A1L18 = !B1_n[25] & !B1_n[24] & !B1_n[23] & !B1_n[22];
+
+
+--B1_n[21] is counter:inst2|n[21]
+--operation mode is normal
+
+B1_n[21]_lut_out = B1L24;
+B1_n[21] = DFFEAS(B1_n[21]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[20] is counter:inst2|n[20]
+--operation mode is normal
+
+B1_n[20]_lut_out = B1L26;
+B1_n[20] = DFFEAS(B1_n[20]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[19] is counter:inst2|n[19]
+--operation mode is normal
+
+B1_n[19]_lut_out = B1L28;
+B1_n[19] = DFFEAS(B1_n[19]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[18] is counter:inst2|n[18]
+--operation mode is normal
+
+B1_n[18]_lut_out = B1L30;
+B1_n[18] = DFFEAS(B1_n[18]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L19 is rtl~850
+--operation mode is normal
+
+A1L19 = !B1_n[21] & !B1_n[20] & !B1_n[19] & !B1_n[18];
+
+
+--B1_n[17] is counter:inst2|n[17]
+--operation mode is normal
+
+B1_n[17]_lut_out = B1L32;
+B1_n[17] = DFFEAS(B1_n[17]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[16] is counter:inst2|n[16]
+--operation mode is normal
+
+B1_n[16]_lut_out = B1L34;
+B1_n[16] = DFFEAS(B1_n[16]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[15] is counter:inst2|n[15]
+--operation mode is normal
+
+B1_n[15]_lut_out = B1L36;
+B1_n[15] = DFFEAS(B1_n[15]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[14] is counter:inst2|n[14]
+--operation mode is normal
+
+B1_n[14]_lut_out = B1L38;
+B1_n[14] = DFFEAS(B1_n[14]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L20 is rtl~851
+--operation mode is normal
+
+A1L20 = !B1_n[17] & !B1_n[16] & !B1_n[15] & !B1_n[14];
+
+
+--B1_n[13] is counter:inst2|n[13]
+--operation mode is normal
+
+B1_n[13]_lut_out = B1L40;
+B1_n[13] = DFFEAS(B1_n[13]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[12] is counter:inst2|n[12]
+--operation mode is normal
+
+B1_n[12]_lut_out = B1L42;
+B1_n[12] = DFFEAS(B1_n[12]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[11] is counter:inst2|n[11]
+--operation mode is normal
+
+B1_n[11]_lut_out = B1L44;
+B1_n[11] = DFFEAS(B1_n[11]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[10] is counter:inst2|n[10]
+--operation mode is normal
+
+B1_n[10]_lut_out = B1L46;
+B1_n[10] = DFFEAS(B1_n[10]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L21 is rtl~852
+--operation mode is normal
+
+A1L21 = !B1_n[13] & !B1_n[12] & !B1_n[11] & !B1_n[10];
+
+
+--B1_n[9] is counter:inst2|n[9]
+--operation mode is normal
+
+B1_n[9]_lut_out = B1L48;
+B1_n[9] = DFFEAS(B1_n[9]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[8] is counter:inst2|n[8]
+--operation mode is normal
+
+B1_n[8]_lut_out = B1L50;
+B1_n[8] = DFFEAS(B1_n[8]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[7] is counter:inst2|n[7]
+--operation mode is normal
+
+B1_n[7]_lut_out = B1L52;
+B1_n[7] = DFFEAS(B1_n[7]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[6] is counter:inst2|n[6]
+--operation mode is normal
+
+B1_n[6]_lut_out = B1L54;
+B1_n[6] = DFFEAS(B1_n[6]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L22 is rtl~853
+--operation mode is normal
+
+A1L22 = !B1_n[9] & !B1_n[8] & !B1_n[7] & !B1_n[6];
+
+
+--B1_n[3] is counter:inst2|n[3]
+--operation mode is normal
+
+B1_n[3]_lut_out = B1L56 & (!A1L12);
+B1_n[3] = DFFEAS(B1_n[3]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[0] is counter:inst2|n[0]
+--operation mode is normal
+
+B1_n[0]_lut_out = B1L58;
+B1_n[0] = DFFEAS(B1_n[0]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[5] is counter:inst2|n[5]
+--operation mode is normal
+
+B1_n[5]_lut_out = B1L60;
+B1_n[5] = DFFEAS(B1_n[5]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--B1_n[4] is counter:inst2|n[4]
+--operation mode is normal
+
+B1_n[4]_lut_out = B1L62;
+B1_n[4] = DFFEAS(B1_n[4]_lut_out, B2_clk_jinwei, VCC, , , , , , );
+
+
+--A1L23 is rtl~854
+--operation mode is normal
+
+A1L23 = B1_n[3] & B1_n[0] & !B1_n[5] & !B1_n[4];
+
+
+--A1L24 is rtl~855
+--operation mode is normal
+
+A1L24 = A1L20 & A1L21 & A1L22 & A1L23;
+
+
+--A1L12 is rtl~0
+--operation mode is normal
+
+A1L12 = A1L17 & A1L18 & A1L19 & A1L24;
+
+
+--B2_clk_jinwei is counter:inst1|clk_jinwei
+--operation mode is normal
+
+B2_clk_jinwei_lut_out = A1L13;
+B2_clk_jinwei = DFFEAS(B2_clk_jinwei_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B3_n[3] is counter:inst|n[3]
+--operation mode is normal
+
+B3_n[3]_lut_out = B3L1 & (!A1L14);
+B3_n[3] = DFFEAS(B3_n[3]_lut_out, clk, VCC, , , , , , );
+
+
+--C1L10 is sel:inst3|Mux~733
+--operation mode is normal
+
+C1L10 = C1_s[2] & (C1_s[1] & (!B3_n[3]) # !C1_s[1] & !B1_n[3]);
+
+
+--B3_n[2] is counter:inst|n[2]
+--operation mode is normal
+
+B3_n[2]_lut_out = B3L3;
+B3_n[2] = DFFEAS(B3_n[2]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[1] is counter:inst|n[1]
+--operation mode is normal
+
+B3_n[1]_lut_out = B3L5 & (!A1L14);
+B3_n[1] = DFFEAS(B3_n[1]_lut_out, clk, VCC, , , , , , );
+
+
+--A1L25 is rtl~856
+--operation mode is normal
+
+A1L25 = !B3_n[2] & !B3_n[1];
+
+
+--B2_n[2] is counter:inst1|n[2]
+--operation mode is normal
+
+B2_n[2]_lut_out = B2L1;
+B2_n[2] = DFFEAS(B2_n[2]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[1] is counter:inst1|n[1]
+--operation mode is normal
+
+B2_n[1]_lut_out = B2L3 & (!A1L13);
+B2_n[1] = DFFEAS(B2_n[1]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[3] is counter:inst1|n[3]
+--operation mode is normal
+
+B2_n[3]_lut_out = B2L5 & (!A1L13);
+B2_n[3] = DFFEAS(B2_n[3]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--C1L11 is sel:inst3|Mux~734
+--operation mode is normal
+
+C1L11 = !B2_n[2] & !B2_n[1] # !B2_n[3];
+
+
+--B1L71 is counter:inst2|LED7[6]~149
+--operation mode is normal
+
+B1L71 = B1_n[1] & !B1_n[3] & (!B1_n[2] # !B1_n[0]) # !B1_n[1] & (B1_n[2] $ B1_n[3]);
+
+
+--B3_n[0] is counter:inst|n[0]
+--operation mode is normal
+
+B3_n[0]_lut_out = B3L7;
+B3_n[0] = DFFEAS(B3_n[0]_lut_out, clk, VCC, , , , , , );
+
+
+--B3L71 is counter:inst|LED7[6]~149
+--operation mode is normal
+
+B3L71 = B3_n[1] & !B3_n[3] & (!B3_n[2] # !B3_n[0]) # !B3_n[1] & (B3_n[2] $ B3_n[3]);
+
+
+--B2_n[0] is counter:inst1|n[0]
+--operation mode is normal
+
+B2_n[0]_lut_out = B2L7;
+B2_n[0] = DFFEAS(B2_n[0]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2L71 is counter:inst1|LED7[6]~155
+--operation mode is normal
+
+B2L71 = B2_n[1] & !B2_n[3] & (!B2_n[2] # !B2_n[0]) # !B2_n[1] & (B2_n[2] $ B2_n[3]);
+
+
+--B3L70 is counter:inst|LED7[5]~150
+--operation mode is normal
+
+B3L70 = B3_n[0] & (B3_n[1] # B3_n[2] $ !B3_n[3]) # !B3_n[0] & (B3_n[2] & (B3_n[3]) # !B3_n[2] & B3_n[1]);
+
+
+--B1L70 is counter:inst2|LED7[5]~150
+--operation mode is normal
+
+B1L70 = B1_n[0] & (B1_n[1] # B1_n[2] $ !B1_n[3]) # !B1_n[0] & (B1_n[2] & (B1_n[3]) # !B1_n[2] & B1_n[1]);
+
+
+--C1L12 is sel:inst3|Mux~736
+--operation mode is normal
+
+C1L12 = C1_s[2] & (C1_s[1] & B3L70 # !C1_s[1] & (B1L70));
+
+
+--B2L70 is counter:inst1|LED7[5]~156
+--operation mode is normal
+
+B2L70 = B2_n[0] & (B2_n[1] # B2_n[2] $ !B2_n[3]) # !B2_n[0] & (B2_n[2] & (B2_n[3]) # !B2_n[2] & B2_n[1]);
+
+
+--B3L69 is counter:inst|LED7[4]~151
+--operation mode is normal
+
+B3L69 = B3_n[0] # B3_n[1] & (B3_n[3]) # !B3_n[1] & B3_n[2];
+
+
+--B1L69 is counter:inst2|LED7[4]~151
+--operation mode is normal
+
+B1L69 = B1_n[0] # B1_n[1] & (B1_n[3]) # !B1_n[1] & B1_n[2];
+
+
+--C1L13 is sel:inst3|Mux~738
+--operation mode is normal
+
+C1L13 = C1_s[2] & (C1_s[1] & B3L69 # !C1_s[1] & (B1L69));
+
+
+--B2L69 is counter:inst1|LED7[4]~157
+--operation mode is normal
+
+B2L69 = B2_n[0] # B2_n[1] & (B2_n[3]) # !B2_n[1] & B2_n[2];
+
+
+--B3L68 is counter:inst|LED7[3]~152
+--operation mode is normal
+
+B3L68 = B3_n[1] & (B3_n[3] # B3_n[0] & B3_n[2]) # !B3_n[1] & (B3_n[2] $ (B3_n[0] & !B3_n[3]));
+
+
+--B1L68 is counter:inst2|LED7[3]~152
+--operation mode is normal
+
+B1L68 = B1_n[1] & (B1_n[3] # B1_n[0] & B1_n[2]) # !B1_n[1] & (B1_n[2] $ (B1_n[0] & !B1_n[3]));
+
+
+--C1L14 is sel:inst3|Mux~740
+--operation mode is normal
+
+C1L14 = C1_s[2] & (C1_s[1] & B3L68 # !C1_s[1] & (B1L68));
+
+
+--B2L68 is counter:inst1|LED7[3]~158
+--operation mode is normal
+
+B2L68 = B2_n[1] & (B2_n[3] # B2_n[0] & B2_n[2]) # !B2_n[1] & (B2_n[2] $ (B2_n[0] & !B2_n[3]));
+
+
+--B3L67 is counter:inst|LED7[2]~153
+--operation mode is normal
+
+B3L67 = B3_n[2] & (B3_n[3]) # !B3_n[2] & B3_n[1] & (B3_n[3] # !B3_n[0]);
+
+
+--B1L67 is counter:inst2|LED7[2]~153
+--operation mode is normal
+
+B1L67 = B1_n[2] & (B1_n[3]) # !B1_n[2] & B1_n[1] & (B1_n[3] # !B1_n[0]);
+
+
+--C1L15 is sel:inst3|Mux~742
+--operation mode is normal
+
+C1L15 = C1_s[2] & (C1_s[1] & B3L67 # !C1_s[1] & (B1L67));
+
+
+--B2L67 is counter:inst1|LED7[2]~159
+--operation mode is normal
+
+B2L67 = B2_n[2] & (B2_n[3]) # !B2_n[2] & B2_n[1] & (B2_n[3] # !B2_n[0]);
+
+
+--B3L66 is counter:inst|LED7[1]~154
+--operation mode is normal
+
+B3L66 = B3_n[2] & (B3_n[3] # B3_n[0] $ B3_n[1]) # !B3_n[2] & (B3_n[1] & B3_n[3]);
+
+
+--B1L66 is counter:inst2|LED7[1]~154
+--operation mode is normal
+
+B1L66 = B1_n[2] & (B1_n[3] # B1_n[0] $ B1_n[1]) # !B1_n[2] & (B1_n[1] & B1_n[3]);
+
+
+--C1L16 is sel:inst3|Mux~744
+--operation mode is normal
+
+C1L16 = C1_s[2] & (C1_s[1] & B3L66 # !C1_s[1] & (B1L66));
+
+
+--B2L66 is counter:inst1|LED7[1]~160
+--operation mode is normal
+
+B2L66 = B2_n[2] & (B2_n[3] # B2_n[0] $ B2_n[1]) # !B2_n[2] & (B2_n[1] & B2_n[3]);
+
+
+--B3L65 is counter:inst|LED7[0]~155
+--operation mode is normal
+
+B3L65 = B3_n[1] & (B3_n[3]) # !B3_n[1] & (B3_n[2] $ (B3_n[0] & !B3_n[3]));
+
+
+--B1L65 is counter:inst2|LED7[0]~155
+--operation mode is normal
+
+B1L65 = B1_n[1] & (B1_n[3]) # !B1_n[1] & (B1_n[2] $ (B1_n[0] & !B1_n[3]));
+
+
+--C1L17 is sel:inst3|Mux~746
+--operation mode is normal
+
+C1L17 = C1_s[2] & (C1_s[1] & B3L65 # !C1_s[1] & (B1L65));
+
+
+--B2L65 is counter:inst1|LED7[0]~161
+--operation mode is normal
+
+B2L65 = B2_n[1] & (B2_n[3]) # !B2_n[1] & (B2_n[2] $ (B2_n[0] & !B2_n[3]));
+
+
+--B1L1 is counter:inst2|add~481
+--operation mode is arithmetic
+
+B1L1_carry_eqn = B1L4;
+B1L1 = B1_n[2] $ (!B1L1_carry_eqn);
+
+--B1L2 is counter:inst2|add~483
+--operation mode is arithmetic
+
+B1L2 = CARRY(B1_n[2] & (!B1L4));
+
+
+--B1L3 is counter:inst2|add~486
+--operation mode is arithmetic
+
+B1L3_carry_eqn = B1L59;
+B1L3 = B1_n[1] $ (B1L3_carry_eqn);
+
+--B1L4 is counter:inst2|add~488
+--operation mode is arithmetic
+
+B1L4 = CARRY(!B1L59 # !B1_n[1]);
+
+
+--B1L5 is counter:inst2|add~491
+--operation mode is arithmetic
+
+B1L5_carry_eqn = B1L8;
+B1L5 = B1_n[29] $ (B1L5_carry_eqn);
+
+--B1L6 is counter:inst2|add~493
+--operation mode is arithmetic
+
+B1L6 = CARRY(!B1L8 # !B1_n[29]);
+
+
+--B1L7 is counter:inst2|add~496
+--operation mode is arithmetic
+
+B1L7_carry_eqn = B1L10;
+B1L7 = B1_n[28] $ (!B1L7_carry_eqn);
+
+--B1L8 is counter:inst2|add~498
+--operation mode is arithmetic
+
+B1L8 = CARRY(B1_n[28] & (!B1L10));
+
+
+--B1L9 is counter:inst2|add~501
+--operation mode is arithmetic
+
+B1L9_carry_eqn = B1L12;
+B1L9 = B1_n[27] $ (B1L9_carry_eqn);
+
+--B1L10 is counter:inst2|add~503
+--operation mode is arithmetic
+
+B1L10 = CARRY(!B1L12 # !B1_n[27]);
+
+
+--B1L11 is counter:inst2|add~506
+--operation mode is arithmetic
+
+B1L11_carry_eqn = B1L17;
+B1L11 = B1_n[26] $ (!B1L11_carry_eqn);
+
+--B1L12 is counter:inst2|add~508
+--operation mode is arithmetic
+
+B1L12 = CARRY(B1_n[26] & (!B1L17));
+
+
+--B1L13 is counter:inst2|add~511
+--operation mode is normal
+
+B1L13_carry_eqn = B1L15;
+B1L13 = B1_n[31] $ (B1L13_carry_eqn);
+
+
+--B1L14 is counter:inst2|add~516
+--operation mode is arithmetic
+
+B1L14_carry_eqn = B1L6;
+B1L14 = B1_n[30] $ (!B1L14_carry_eqn);
+
+--B1L15 is counter:inst2|add~518
+--operation mode is arithmetic
+
+B1L15 = CARRY(B1_n[30] & (!B1L6));
+
+
+--B1L16 is counter:inst2|add~521
+--operation mode is arithmetic
+
+B1L16_carry_eqn = B1L19;
+B1L16 = B1_n[25] $ (B1L16_carry_eqn);
+
+--B1L17 is counter:inst2|add~523
+--operation mode is arithmetic
+
+B1L17 = CARRY(!B1L19 # !B1_n[25]);
+
+
+--B1L18 is counter:inst2|add~526
+--operation mode is arithmetic
+
+B1L18_carry_eqn = B1L21;
+B1L18 = B1_n[24] $ (!B1L18_carry_eqn);
+
+--B1L19 is counter:inst2|add~528
+--operation mode is arithmetic
+
+B1L19 = CARRY(B1_n[24] & (!B1L21));
+
+
+--B1L20 is counter:inst2|add~531
+--operation mode is arithmetic
+
+B1L20_carry_eqn = B1L23;
+B1L20 = B1_n[23] $ (B1L20_carry_eqn);
+
+--B1L21 is counter:inst2|add~533
+--operation mode is arithmetic
+
+B1L21 = CARRY(!B1L23 # !B1_n[23]);
+
+
+--B1L22 is counter:inst2|add~536
+--operation mode is arithmetic
+
+B1L22_carry_eqn = B1L25;
+B1L22 = B1_n[22] $ (!B1L22_carry_eqn);
+
+--B1L23 is counter:inst2|add~538
+--operation mode is arithmetic
+
+B1L23 = CARRY(B1_n[22] & (!B1L25));
+
+
+--B1L24 is counter:inst2|add~541
+--operation mode is arithmetic
+
+B1L24_carry_eqn = B1L27;
+B1L24 = B1_n[21] $ (B1L24_carry_eqn);
+
+--B1L25 is counter:inst2|add~543
+--operation mode is arithmetic
+
+B1L25 = CARRY(!B1L27 # !B1_n[21]);
+
+
+--B1L26 is counter:inst2|add~546
+--operation mode is arithmetic
+
+B1L26_carry_eqn = B1L29;
+B1L26 = B1_n[20] $ (!B1L26_carry_eqn);
+
+--B1L27 is counter:inst2|add~548
+--operation mode is arithmetic
+
+B1L27 = CARRY(B1_n[20] & (!B1L29));
+
+
+--B1L28 is counter:inst2|add~551
+--operation mode is arithmetic
+
+B1L28_carry_eqn = B1L31;
+B1L28 = B1_n[19] $ (B1L28_carry_eqn);
+
+--B1L29 is counter:inst2|add~553
+--operation mode is arithmetic
+
+B1L29 = CARRY(!B1L31 # !B1_n[19]);
+
+
+--B1L30 is counter:inst2|add~556
+--operation mode is arithmetic
+
+B1L30_carry_eqn = B1L33;
+B1L30 = B1_n[18] $ (!B1L30_carry_eqn);
+
+--B1L31 is counter:inst2|add~558
+--operation mode is arithmetic
+
+B1L31 = CARRY(B1_n[18] & (!B1L33));
+
+
+--B1L32 is counter:inst2|add~561
+--operation mode is arithmetic
+
+B1L32_carry_eqn = B1L35;
+B1L32 = B1_n[17] $ (B1L32_carry_eqn);
+
+--B1L33 is counter:inst2|add~563
+--operation mode is arithmetic
+
+B1L33 = CARRY(!B1L35 # !B1_n[17]);
+
+
+--B1L34 is counter:inst2|add~566
+--operation mode is arithmetic
+
+B1L34_carry_eqn = B1L37;
+B1L34 = B1_n[16] $ (!B1L34_carry_eqn);
+
+--B1L35 is counter:inst2|add~568
+--operation mode is arithmetic
+
+B1L35 = CARRY(B1_n[16] & (!B1L37));
+
+
+--B1L36 is counter:inst2|add~571
+--operation mode is arithmetic
+
+B1L36_carry_eqn = B1L39;
+B1L36 = B1_n[15] $ (B1L36_carry_eqn);
+
+--B1L37 is counter:inst2|add~573
+--operation mode is arithmetic
+
+B1L37 = CARRY(!B1L39 # !B1_n[15]);
+
+
+--B1L38 is counter:inst2|add~576
+--operation mode is arithmetic
+
+B1L38_carry_eqn = B1L41;
+B1L38 = B1_n[14] $ (!B1L38_carry_eqn);
+
+--B1L39 is counter:inst2|add~578
+--operation mode is arithmetic
+
+B1L39 = CARRY(B1_n[14] & (!B1L41));
+
+
+--B1L40 is counter:inst2|add~581
+--operation mode is arithmetic
+
+B1L40_carry_eqn = B1L43;
+B1L40 = B1_n[13] $ (B1L40_carry_eqn);
+
+--B1L41 is counter:inst2|add~583
+--operation mode is arithmetic
+
+B1L41 = CARRY(!B1L43 # !B1_n[13]);
+
+
+--B1L42 is counter:inst2|add~586
+--operation mode is arithmetic
+
+B1L42_carry_eqn = B1L45;
+B1L42 = B1_n[12] $ (!B1L42_carry_eqn);
+
+--B1L43 is counter:inst2|add~588
+--operation mode is arithmetic
+
+B1L43 = CARRY(B1_n[12] & (!B1L45));
+
+
+--B1L44 is counter:inst2|add~591
+--operation mode is arithmetic
+
+B1L44_carry_eqn = B1L47;
+B1L44 = B1_n[11] $ (B1L44_carry_eqn);
+
+--B1L45 is counter:inst2|add~593
+--operation mode is arithmetic
+
+B1L45 = CARRY(!B1L47 # !B1_n[11]);
+
+
+--B1L46 is counter:inst2|add~596
+--operation mode is arithmetic
+
+B1L46_carry_eqn = B1L49;
+B1L46 = B1_n[10] $ (!B1L46_carry_eqn);
+
+--B1L47 is counter:inst2|add~598
+--operation mode is arithmetic
+
+B1L47 = CARRY(B1_n[10] & (!B1L49));
+
+
+--B1L48 is counter:inst2|add~601
+--operation mode is arithmetic
+
+B1L48_carry_eqn = B1L51;
+B1L48 = B1_n[9] $ (B1L48_carry_eqn);
+
+--B1L49 is counter:inst2|add~603
+--operation mode is arithmetic
+
+B1L49 = CARRY(!B1L51 # !B1_n[9]);
+
+
+--B1L50 is counter:inst2|add~606
+--operation mode is arithmetic
+
+B1L50_carry_eqn = B1L53;
+B1L50 = B1_n[8] $ (!B1L50_carry_eqn);
+
+--B1L51 is counter:inst2|add~608
+--operation mode is arithmetic
+
+B1L51 = CARRY(B1_n[8] & (!B1L53));
+
+
+--B1L52 is counter:inst2|add~611
+--operation mode is arithmetic
+
+B1L52_carry_eqn = B1L55;
+B1L52 = B1_n[7] $ (B1L52_carry_eqn);
+
+--B1L53 is counter:inst2|add~613
+--operation mode is arithmetic
+
+B1L53 = CARRY(!B1L55 # !B1_n[7]);
+
+
+--B1L54 is counter:inst2|add~616
+--operation mode is arithmetic
+
+B1L54_carry_eqn = B1L61;
+B1L54 = B1_n[6] $ (!B1L54_carry_eqn);
+
+--B1L55 is counter:inst2|add~618
+--operation mode is arithmetic
+
+B1L55 = CARRY(B1_n[6] & (!B1L61));
+
+
+--B1L56 is counter:inst2|add~621
+--operation mode is arithmetic
+
+B1L56_carry_eqn = B1L2;
+B1L56 = B1_n[3] $ (B1L56_carry_eqn);
+
+--B1L57 is counter:inst2|add~623
+--operation mode is arithmetic
+
+B1L57 = CARRY(!B1L2 # !B1_n[3]);
+
+
+--B1L58 is counter:inst2|add~626
+--operation mode is arithmetic
+
+B1L58 = !B1_n[0];
+
+--B1L59 is counter:inst2|add~628
+--operation mode is arithmetic
+
+B1L59 = CARRY(B1_n[0]);
+
+
+--B1L60 is counter:inst2|add~631
+--operation mode is arithmetic
+
+B1L60_carry_eqn = B1L63;
+B1L60 = B1_n[5] $ (B1L60_carry_eqn);
+
+--B1L61 is counter:inst2|add~633
+--operation mode is arithmetic
+
+B1L61 = CARRY(!B1L63 # !B1_n[5]);
+
+
+--B1L62 is counter:inst2|add~636
+--operation mode is arithmetic
+
+B1L62_carry_eqn = B1L57;
+B1L62 = B1_n[4] $ (!B1L62_carry_eqn);
+
+--B1L63 is counter:inst2|add~638
+--operation mode is arithmetic
+
+B1L63 = CARRY(B1_n[4] & (!B1L57));
+
+
+--A1L26 is rtl~857
+--operation mode is normal
+
+A1L26 = !B2_n[2] & !B2_n[1];
+
+
+--B2_n[31] is counter:inst1|n[31]
+--operation mode is normal
+
+B2_n[31]_lut_out = B2L9;
+B2_n[31] = DFFEAS(B2_n[31]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[30] is counter:inst1|n[30]
+--operation mode is normal
+
+B2_n[30]_lut_out = B2L10;
+B2_n[30] = DFFEAS(B2_n[30]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[29] is counter:inst1|n[29]
+--operation mode is normal
+
+B2_n[29]_lut_out = B2L12;
+B2_n[29] = DFFEAS(B2_n[29]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[28] is counter:inst1|n[28]
+--operation mode is normal
+
+B2_n[28]_lut_out = B2L14;
+B2_n[28] = DFFEAS(B2_n[28]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--A1L27 is rtl~858
+--operation mode is normal
+
+A1L27 = !B2_n[31] & !B2_n[30] & !B2_n[29] & !B2_n[28];
+
+
+--A1L28 is rtl~859
+--operation mode is normal
+
+A1L28 = B2_n[3] & A1L26 & B2_n[0] & A1L27;
+
+
+--B2_n[27] is counter:inst1|n[27]
+--operation mode is normal
+
+B2_n[27]_lut_out = B2L16;
+B2_n[27] = DFFEAS(B2_n[27]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[26] is counter:inst1|n[26]
+--operation mode is normal
+
+B2_n[26]_lut_out = B2L18;
+B2_n[26] = DFFEAS(B2_n[26]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[25] is counter:inst1|n[25]
+--operation mode is normal
+
+B2_n[25]_lut_out = B2L20;
+B2_n[25] = DFFEAS(B2_n[25]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[24] is counter:inst1|n[24]
+--operation mode is normal
+
+B2_n[24]_lut_out = B2L22;
+B2_n[24] = DFFEAS(B2_n[24]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--A1L29 is rtl~860
+--operation mode is normal
+
+A1L29 = !B2_n[27] & !B2_n[26] & !B2_n[25] & !B2_n[24];
+
+
+--B2_n[23] is counter:inst1|n[23]
+--operation mode is normal
+
+B2_n[23]_lut_out = B2L24;
+B2_n[23] = DFFEAS(B2_n[23]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[22] is counter:inst1|n[22]
+--operation mode is normal
+
+B2_n[22]_lut_out = B2L26;
+B2_n[22] = DFFEAS(B2_n[22]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[21] is counter:inst1|n[21]
+--operation mode is normal
+
+B2_n[21]_lut_out = B2L28;
+B2_n[21] = DFFEAS(B2_n[21]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[20] is counter:inst1|n[20]
+--operation mode is normal
+
+B2_n[20]_lut_out = B2L30;
+B2_n[20] = DFFEAS(B2_n[20]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--A1L30 is rtl~861
+--operation mode is normal
+
+A1L30 = !B2_n[23] & !B2_n[22] & !B2_n[21] & !B2_n[20];
+
+
+--B2_n[19] is counter:inst1|n[19]
+--operation mode is normal
+
+B2_n[19]_lut_out = B2L32;
+B2_n[19] = DFFEAS(B2_n[19]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[18] is counter:inst1|n[18]
+--operation mode is normal
+
+B2_n[18]_lut_out = B2L34;
+B2_n[18] = DFFEAS(B2_n[18]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[17] is counter:inst1|n[17]
+--operation mode is normal
+
+B2_n[17]_lut_out = B2L36;
+B2_n[17] = DFFEAS(B2_n[17]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[16] is counter:inst1|n[16]
+--operation mode is normal
+
+B2_n[16]_lut_out = B2L38;
+B2_n[16] = DFFEAS(B2_n[16]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--A1L31 is rtl~862
+--operation mode is normal
+
+A1L31 = !B2_n[19] & !B2_n[18] & !B2_n[17] & !B2_n[16];
+
+
+--B2_n[15] is counter:inst1|n[15]
+--operation mode is normal
+
+B2_n[15]_lut_out = B2L40;
+B2_n[15] = DFFEAS(B2_n[15]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[14] is counter:inst1|n[14]
+--operation mode is normal
+
+B2_n[14]_lut_out = B2L42;
+B2_n[14] = DFFEAS(B2_n[14]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[13] is counter:inst1|n[13]
+--operation mode is normal
+
+B2_n[13]_lut_out = B2L44;
+B2_n[13] = DFFEAS(B2_n[13]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[12] is counter:inst1|n[12]
+--operation mode is normal
+
+B2_n[12]_lut_out = B2L46;
+B2_n[12] = DFFEAS(B2_n[12]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--A1L32 is rtl~863
+--operation mode is normal
+
+A1L32 = !B2_n[15] & !B2_n[14] & !B2_n[13] & !B2_n[12];
+
+
+--B2_n[11] is counter:inst1|n[11]
+--operation mode is normal
+
+B2_n[11]_lut_out = B2L48;
+B2_n[11] = DFFEAS(B2_n[11]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[10] is counter:inst1|n[10]
+--operation mode is normal
+
+B2_n[10]_lut_out = B2L50;
+B2_n[10] = DFFEAS(B2_n[10]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[9] is counter:inst1|n[9]
+--operation mode is normal
+
+B2_n[9]_lut_out = B2L52;
+B2_n[9] = DFFEAS(B2_n[9]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[8] is counter:inst1|n[8]
+--operation mode is normal
+
+B2_n[8]_lut_out = B2L54;
+B2_n[8] = DFFEAS(B2_n[8]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--A1L33 is rtl~864
+--operation mode is normal
+
+A1L33 = !B2_n[11] & !B2_n[10] & !B2_n[9] & !B2_n[8];
+
+
+--B2_n[7] is counter:inst1|n[7]
+--operation mode is normal
+
+B2_n[7]_lut_out = B2L56;
+B2_n[7] = DFFEAS(B2_n[7]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[6] is counter:inst1|n[6]
+--operation mode is normal
+
+B2_n[6]_lut_out = B2L58;
+B2_n[6] = DFFEAS(B2_n[6]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[5] is counter:inst1|n[5]
+--operation mode is normal
+
+B2_n[5]_lut_out = B2L60;
+B2_n[5] = DFFEAS(B2_n[5]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--B2_n[4] is counter:inst1|n[4]
+--operation mode is normal
+
+B2_n[4]_lut_out = B2L62;
+B2_n[4] = DFFEAS(B2_n[4]_lut_out, B3_clk_jinwei, VCC, , , , , , );
+
+
+--A1L34 is rtl~865
+--operation mode is normal
+
+A1L34 = !B2_n[7] & !B2_n[6] & !B2_n[5] & !B2_n[4];
+
+
+--A1L35 is rtl~866
+--operation mode is normal
+
+A1L35 = A1L31 & A1L32 & A1L33 & A1L34;
+
+
+--A1L13 is rtl~1
+--operation mode is normal
+
+A1L13 = A1L28 & A1L29 & A1L30 & A1L35;
+
+
+--B3_clk_jinwei is counter:inst|clk_jinwei
+--operation mode is normal
+
+B3_clk_jinwei_lut_out = A1L14;
+B3_clk_jinwei = DFFEAS(B3_clk_jinwei_lut_out, clk, VCC, , , , , , );
+
+
+--B3L1 is counter:inst|add~481
+--operation mode is arithmetic
+
+B3L1_carry_eqn = B3L4;
+B3L1 = B3_n[3] $ (B3L1_carry_eqn);
+
+--B3L2 is counter:inst|add~483
+--operation mode is arithmetic
+
+B3L2 = CARRY(!B3L4 # !B3_n[3]);
+
+
+--B3_n[31] is counter:inst|n[31]
+--operation mode is normal
+
+B3_n[31]_lut_out = B3L9;
+B3_n[31] = DFFEAS(B3_n[31]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[30] is counter:inst|n[30]
+--operation mode is normal
+
+B3_n[30]_lut_out = B3L10;
+B3_n[30] = DFFEAS(B3_n[30]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[29] is counter:inst|n[29]
+--operation mode is normal
+
+B3_n[29]_lut_out = B3L12;
+B3_n[29] = DFFEAS(B3_n[29]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[28] is counter:inst|n[28]
+--operation mode is normal
+
+B3_n[28]_lut_out = B3L14;
+B3_n[28] = DFFEAS(B3_n[28]_lut_out, clk, VCC, , , , , , );
+
+
+--A1L36 is rtl~867
+--operation mode is normal
+
+A1L36 = !B3_n[31] & !B3_n[30] & !B3_n[29] & !B3_n[28];
+
+
+--A1L37 is rtl~868
+--operation mode is normal
+
+A1L37 = A1L25 & B3_n[3] & B3_n[0] & A1L36;
+
+
+--B3_n[27] is counter:inst|n[27]
+--operation mode is normal
+
+B3_n[27]_lut_out = B3L16;
+B3_n[27] = DFFEAS(B3_n[27]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[26] is counter:inst|n[26]
+--operation mode is normal
+
+B3_n[26]_lut_out = B3L18;
+B3_n[26] = DFFEAS(B3_n[26]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[25] is counter:inst|n[25]
+--operation mode is normal
+
+B3_n[25]_lut_out = B3L20;
+B3_n[25] = DFFEAS(B3_n[25]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[24] is counter:inst|n[24]
+--operation mode is normal
+
+B3_n[24]_lut_out = B3L22;
+B3_n[24] = DFFEAS(B3_n[24]_lut_out, clk, VCC, , , , , , );
+
+
+--A1L38 is rtl~869
+--operation mode is normal
+
+A1L38 = !B3_n[27] & !B3_n[26] & !B3_n[25] & !B3_n[24];
+
+
+--B3_n[23] is counter:inst|n[23]
+--operation mode is normal
+
+B3_n[23]_lut_out = B3L24;
+B3_n[23] = DFFEAS(B3_n[23]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[22] is counter:inst|n[22]
+--operation mode is normal
+
+B3_n[22]_lut_out = B3L26;
+B3_n[22] = DFFEAS(B3_n[22]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[21] is counter:inst|n[21]
+--operation mode is normal
+
+B3_n[21]_lut_out = B3L28;
+B3_n[21] = DFFEAS(B3_n[21]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[20] is counter:inst|n[20]
+--operation mode is normal
+
+B3_n[20]_lut_out = B3L30;
+B3_n[20] = DFFEAS(B3_n[20]_lut_out, clk, VCC, , , , , , );
+
+
+--A1L39 is rtl~870
+--operation mode is normal
+
+A1L39 = !B3_n[23] & !B3_n[22] & !B3_n[21] & !B3_n[20];
+
+
+--B3_n[19] is counter:inst|n[19]
+--operation mode is normal
+
+B3_n[19]_lut_out = B3L32;
+B3_n[19] = DFFEAS(B3_n[19]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[18] is counter:inst|n[18]
+--operation mode is normal
+
+B3_n[18]_lut_out = B3L34;
+B3_n[18] = DFFEAS(B3_n[18]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[17] is counter:inst|n[17]
+--operation mode is normal
+
+B3_n[17]_lut_out = B3L36;
+B3_n[17] = DFFEAS(B3_n[17]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[16] is counter:inst|n[16]
+--operation mode is normal
+
+B3_n[16]_lut_out = B3L38;
+B3_n[16] = DFFEAS(B3_n[16]_lut_out, clk, VCC, , , , , , );
+
+
+--A1L40 is rtl~871
+--operation mode is normal
+
+A1L40 = !B3_n[19] & !B3_n[18] & !B3_n[17] & !B3_n[16];
+
+
+--B3_n[15] is counter:inst|n[15]
+--operation mode is normal
+
+B3_n[15]_lut_out = B3L40;
+B3_n[15] = DFFEAS(B3_n[15]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[14] is counter:inst|n[14]
+--operation mode is normal
+
+B3_n[14]_lut_out = B3L42;
+B3_n[14] = DFFEAS(B3_n[14]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[13] is counter:inst|n[13]
+--operation mode is normal
+
+B3_n[13]_lut_out = B3L44;
+B3_n[13] = DFFEAS(B3_n[13]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[12] is counter:inst|n[12]
+--operation mode is normal
+
+B3_n[12]_lut_out = B3L46;
+B3_n[12] = DFFEAS(B3_n[12]_lut_out, clk, VCC, , , , , , );
+
+
+--A1L41 is rtl~872
+--operation mode is normal
+
+A1L41 = !B3_n[15] & !B3_n[14] & !B3_n[13] & !B3_n[12];
+
+
+--B3_n[11] is counter:inst|n[11]
+--operation mode is normal
+
+B3_n[11]_lut_out = B3L48;
+B3_n[11] = DFFEAS(B3_n[11]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[10] is counter:inst|n[10]
+--operation mode is normal
+
+B3_n[10]_lut_out = B3L50;
+B3_n[10] = DFFEAS(B3_n[10]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[9] is counter:inst|n[9]
+--operation mode is normal
+
+B3_n[9]_lut_out = B3L52;
+B3_n[9] = DFFEAS(B3_n[9]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[8] is counter:inst|n[8]
+--operation mode is normal
+
+B3_n[8]_lut_out = B3L54;
+B3_n[8] = DFFEAS(B3_n[8]_lut_out, clk, VCC, , , , , , );
+
+
+--A1L42 is rtl~873
+--operation mode is normal
+
+A1L42 = !B3_n[11] & !B3_n[10] & !B3_n[9] & !B3_n[8];
+
+
+--B3_n[7] is counter:inst|n[7]
+--operation mode is normal
+
+B3_n[7]_lut_out = B3L56;
+B3_n[7] = DFFEAS(B3_n[7]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[6] is counter:inst|n[6]
+--operation mode is normal
+
+B3_n[6]_lut_out = B3L58;
+B3_n[6] = DFFEAS(B3_n[6]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[5] is counter:inst|n[5]
+--operation mode is normal
+
+B3_n[5]_lut_out = B3L60;
+B3_n[5] = DFFEAS(B3_n[5]_lut_out, clk, VCC, , , , , , );
+
+
+--B3_n[4] is counter:inst|n[4]
+--operation mode is normal
+
+B3_n[4]_lut_out = B3L62;
+B3_n[4] = DFFEAS(B3_n[4]_lut_out, clk, VCC, , , , , , );
+
+
+--A1L43 is rtl~874
+--operation mode is normal
+
+A1L43 = !B3_n[7] & !B3_n[6] & !B3_n[5] & !B3_n[4];
+
+
+--A1L44 is rtl~875
+--operation mode is normal
+
+A1L44 = A1L40 & A1L41 & A1L42 & A1L43;
+
+
+--A1L14 is rtl~2
+--operation mode is normal
+
+A1L14 = A1L37 & A1L38 & A1L39 & A1L44;
+
+
+--B3L3 is counter:inst|add~486
+--operation mode is arithmetic
+
+B3L3_carry_eqn = B3L6;
+B3L3 = B3_n[2] $ (!B3L3_carry_eqn);
+
+--B3L4 is counter:inst|add~488
+--operation mode is arithmetic
+
+B3L4 = CARRY(B3_n[2] & (!B3L6));
+
+
+--B3L5 is counter:inst|add~491
+--operation mode is arithmetic
+
+B3L5_carry_eqn = B3L8;
+B3L5 = B3_n[1] $ (B3L5_carry_eqn);
+
+--B3L6 is counter:inst|add~493
+--operation mode is arithmetic
+
+B3L6 = CARRY(!B3L8 # !B3_n[1]);
+
+
+--B2L1 is counter:inst1|add~481
+--operation mode is arithmetic
+
+B2L1_carry_eqn = B2L4;
+B2L1 = B2_n[2] $ (!B2L1_carry_eqn);
+
+--B2L2 is counter:inst1|add~483
+--operation mode is arithmetic
+
+B2L2 = CARRY(B2_n[2] & (!B2L4));
+
+
+--B2L3 is counter:inst1|add~486
+--operation mode is arithmetic
+
+B2L3_carry_eqn = B2L8;
+B2L3 = B2_n[1] $ (B2L3_carry_eqn);
+
+--B2L4 is counter:inst1|add~488
+--operation mode is arithmetic
+
+B2L4 = CARRY(!B2L8 # !B2_n[1]);
+
+
+--B2L5 is counter:inst1|add~491
+--operation mode is arithmetic
+
+B2L5_carry_eqn = B2L2;
+B2L5 = B2_n[3] $ (B2L5_carry_eqn);
+
+--B2L6 is counter:inst1|add~493
+--operation mode is arithmetic
+
+B2L6 = CARRY(!B2L2 # !B2_n[3]);
+
+
+--B3L7 is counter:inst|add~496
+--operation mode is arithmetic
+
+B3L7 = !B3_n[0];
+
+--B3L8 is counter:inst|add~498
+--operation mode is arithmetic
+
+B3L8 = CARRY(B3_n[0]);
+
+
+--B2L7 is counter:inst1|add~496
+--operation mode is arithmetic
+
+B2L7 = !B2_n[0];
+
+--B2L8 is counter:inst1|add~498
+--operation mode is arithmetic
+
+B2L8 = CARRY(B2_n[0]);
+
+
+--B2L9 is counter:inst1|add~501
+--operation mode is normal
+
+B2L9_carry_eqn = B2L11;
+B2L9 = B2_n[31] $ (B2L9_carry_eqn);
+
+
+--B2L10 is counter:inst1|add~506
+--operation mode is arithmetic
+
+B2L10_carry_eqn = B2L13;
+B2L10 = B2_n[30] $ (!B2L10_carry_eqn);
+
+--B2L11 is counter:inst1|add~508
+--operation mode is arithmetic
+
+B2L11 = CARRY(B2_n[30] & (!B2L13));
+
+
+--B2L12 is counter:inst1|add~511
+--operation mode is arithmetic
+
+B2L12_carry_eqn = B2L15;
+B2L12 = B2_n[29] $ (B2L12_carry_eqn);
+
+--B2L13 is counter:inst1|add~513
+--operation mode is arithmetic
+
+B2L13 = CARRY(!B2L15 # !B2_n[29]);
+
+
+--B2L14 is counter:inst1|add~516
+--operation mode is arithmetic
+
+B2L14_carry_eqn = B2L17;
+B2L14 = B2_n[28] $ (!B2L14_carry_eqn);
+
+--B2L15 is counter:inst1|add~518
+--operation mode is arithmetic
+
+B2L15 = CARRY(B2_n[28] & (!B2L17));
+
+
+--B2L16 is counter:inst1|add~521
+--operation mode is arithmetic
+
+B2L16_carry_eqn = B2L19;
+B2L16 = B2_n[27] $ (B2L16_carry_eqn);
+
+--B2L17 is counter:inst1|add~523
+--operation mode is arithmetic
+
+B2L17 = CARRY(!B2L19 # !B2_n[27]);
+
+
+--B2L18 is counter:inst1|add~526
+--operation mode is arithmetic
+
+B2L18_carry_eqn = B2L21;
+B2L18 = B2_n[26] $ (!B2L18_carry_eqn);
+
+--B2L19 is counter:inst1|add~528
+--operation mode is arithmetic
+
+B2L19 = CARRY(B2_n[26] & (!B2L21));
+
+
+--B2L20 is counter:inst1|add~531
+--operation mode is arithmetic
+
+B2L20_carry_eqn = B2L23;
+B2L20 = B2_n[25] $ (B2L20_carry_eqn);
+
+--B2L21 is counter:inst1|add~533
+--operation mode is arithmetic
+
+B2L21 = CARRY(!B2L23 # !B2_n[25]);
+
+
+--B2L22 is counter:inst1|add~536
+--operation mode is arithmetic
+
+B2L22_carry_eqn = B2L25;
+B2L22 = B2_n[24] $ (!B2L22_carry_eqn);
+
+--B2L23 is counter:inst1|add~538
+--operation mode is arithmetic
+
+B2L23 = CARRY(B2_n[24] & (!B2L25));
+
+
+--B2L24 is counter:inst1|add~541
+--operation mode is arithmetic
+
+B2L24_carry_eqn = B2L27;
+B2L24 = B2_n[23] $ (B2L24_carry_eqn);
+
+--B2L25 is counter:inst1|add~543
+--operation mode is arithmetic
+
+B2L25 = CARRY(!B2L27 # !B2_n[23]);
+
+
+--B2L26 is counter:inst1|add~546
+--operation mode is arithmetic
+
+B2L26_carry_eqn = B2L29;
+B2L26 = B2_n[22] $ (!B2L26_carry_eqn);
+
+--B2L27 is counter:inst1|add~548
+--operation mode is arithmetic
+
+B2L27 = CARRY(B2_n[22] & (!B2L29));
+
+
+--B2L28 is counter:inst1|add~551
+--operation mode is arithmetic
+
+B2L28_carry_eqn = B2L31;
+B2L28 = B2_n[21] $ (B2L28_carry_eqn);
+
+--B2L29 is counter:inst1|add~553
+--operation mode is arithmetic
+
+B2L29 = CARRY(!B2L31 # !B2_n[21]);
+
+
+--B2L30 is counter:inst1|add~556
+--operation mode is arithmetic
+
+B2L30_carry_eqn = B2L33;
+B2L30 = B2_n[20] $ (!B2L30_carry_eqn);
+
+--B2L31 is counter:inst1|add~558
+--operation mode is arithmetic
+
+B2L31 = CARRY(B2_n[20] & (!B2L33));
+
+
+--B2L32 is counter:inst1|add~561
+--operation mode is arithmetic
+
+B2L32_carry_eqn = B2L35;
+B2L32 = B2_n[19] $ (B2L32_carry_eqn);
+
+--B2L33 is counter:inst1|add~563
+--operation mode is arithmetic
+
+B2L33 = CARRY(!B2L35 # !B2_n[19]);
+
+
+--B2L34 is counter:inst1|add~566
+--operation mode is arithmetic
+
+B2L34_carry_eqn = B2L37;
+B2L34 = B2_n[18] $ (!B2L34_carry_eqn);
+
+--B2L35 is counter:inst1|add~568
+--operation mode is arithmetic
+
+B2L35 = CARRY(B2_n[18] & (!B2L37));
+
+
+--B2L36 is counter:inst1|add~571
+--operation mode is arithmetic
+
+B2L36_carry_eqn = B2L39;
+B2L36 = B2_n[17] $ (B2L36_carry_eqn);
+
+--B2L37 is counter:inst1|add~573
+--operation mode is arithmetic
+
+B2L37 = CARRY(!B2L39 # !B2_n[17]);
+
+
+--B2L38 is counter:inst1|add~576
+--operation mode is arithmetic
+
+B2L38_carry_eqn = B2L41;
+B2L38 = B2_n[16] $ (!B2L38_carry_eqn);
+
+--B2L39 is counter:inst1|add~578
+--operation mode is arithmetic
+
+B2L39 = CARRY(B2_n[16] & (!B2L41));
+
+
+--B2L40 is counter:inst1|add~581
+--operation mode is arithmetic
+
+B2L40_carry_eqn = B2L43;
+B2L40 = B2_n[15] $ (B2L40_carry_eqn);
+
+--B2L41 is counter:inst1|add~583
+--operation mode is arithmetic
+
+B2L41 = CARRY(!B2L43 # !B2_n[15]);
+
+
+--B2L42 is counter:inst1|add~586
+--operation mode is arithmetic
+
+B2L42_carry_eqn = B2L45;
+B2L42 = B2_n[14] $ (!B2L42_carry_eqn);
+
+--B2L43 is counter:inst1|add~588
+--operation mode is arithmetic
+
+B2L43 = CARRY(B2_n[14] & (!B2L45));
+
+
+--B2L44 is counter:inst1|add~591
+--operation mode is arithmetic
+
+B2L44_carry_eqn = B2L47;
+B2L44 = B2_n[13] $ (B2L44_carry_eqn);
+
+--B2L45 is counter:inst1|add~593
+--operation mode is arithmetic
+
+B2L45 = CARRY(!B2L47 # !B2_n[13]);
+
+
+--B2L46 is counter:inst1|add~596
+--operation mode is arithmetic
+
+B2L46_carry_eqn = B2L49;
+B2L46 = B2_n[12] $ (!B2L46_carry_eqn);
+
+--B2L47 is counter:inst1|add~598
+--operation mode is arithmetic
+
+B2L47 = CARRY(B2_n[12] & (!B2L49));
+
+
+--B2L48 is counter:inst1|add~601
+--operation mode is arithmetic
+
+B2L48_carry_eqn = B2L51;
+B2L48 = B2_n[11] $ (B2L48_carry_eqn);
+
+--B2L49 is counter:inst1|add~603
+--operation mode is arithmetic
+
+B2L49 = CARRY(!B2L51 # !B2_n[11]);
+
+
+--B2L50 is counter:inst1|add~606
+--operation mode is arithmetic
+
+B2L50_carry_eqn = B2L53;
+B2L50 = B2_n[10] $ (!B2L50_carry_eqn);
+
+--B2L51 is counter:inst1|add~608
+--operation mode is arithmetic
+
+B2L51 = CARRY(B2_n[10] & (!B2L53));
+
+
+--B2L52 is counter:inst1|add~611
+--operation mode is arithmetic
+
+B2L52_carry_eqn = B2L55;
+B2L52 = B2_n[9] $ (B2L52_carry_eqn);
+
+--B2L53 is counter:inst1|add~613
+--operation mode is arithmetic
+
+B2L53 = CARRY(!B2L55 # !B2_n[9]);
+
+
+--B2L54 is counter:inst1|add~616
+--operation mode is arithmetic
+
+B2L54_carry_eqn = B2L57;
+B2L54 = B2_n[8] $ (!B2L54_carry_eqn);
+
+--B2L55 is counter:inst1|add~618
+--operation mode is arithmetic
+
+B2L55 = CARRY(B2_n[8] & (!B2L57));
+
+
+--B2L56 is counter:inst1|add~621
+--operation mode is arithmetic
+
+B2L56_carry_eqn = B2L59;
+B2L56 = B2_n[7] $ (B2L56_carry_eqn);
+
+--B2L57 is counter:inst1|add~623
+--operation mode is arithmetic
+
+B2L57 = CARRY(!B2L59 # !B2_n[7]);
+
+
+--B2L58 is counter:inst1|add~626
+--operation mode is arithmetic
+
+B2L58_carry_eqn = B2L61;
+B2L58 = B2_n[6] $ (!B2L58_carry_eqn);
+
+--B2L59 is counter:inst1|add~628
+--operation mode is arithmetic
+
+B2L59 = CARRY(B2_n[6] & (!B2L61));
+
+
+--B2L60 is counter:inst1|add~631
+--operation mode is arithmetic
+
+B2L60_carry_eqn = B2L63;
+B2L60 = B2_n[5] $ (B2L60_carry_eqn);
+
+--B2L61 is counter:inst1|add~633
+--operation mode is arithmetic
+
+B2L61 = CARRY(!B2L63 # !B2_n[5]);
+
+
+--B2L62 is counter:inst1|add~636
+--operation mode is arithmetic
+
+B2L62_carry_eqn = B2L6;
+B2L62 = B2_n[4] $ (!B2L62_carry_eqn);
+
+--B2L63 is counter:inst1|add~638
+--operation mode is arithmetic
+
+B2L63 = CARRY(B2_n[4] & (!B2L6));
+
+
+--B3L9 is counter:inst|add~501
+--operation mode is normal
+
+B3L9_carry_eqn = B3L11;
+B3L9 = B3_n[31] $ (B3L9_carry_eqn);
+
+
+--B3L10 is counter:inst|add~506
+--operation mode is arithmetic
+
+B3L10_carry_eqn = B3L13;
+B3L10 = B3_n[30] $ (!B3L10_carry_eqn);
+
+--B3L11 is counter:inst|add~508
+--operation mode is arithmetic
+
+B3L11 = CARRY(B3_n[30] & (!B3L13));
+
+
+--B3L12 is counter:inst|add~511
+--operation mode is arithmetic
+
+B3L12_carry_eqn = B3L15;
+B3L12 = B3_n[29] $ (B3L12_carry_eqn);
+
+--B3L13 is counter:inst|add~513
+--operation mode is arithmetic
+
+B3L13 = CARRY(!B3L15 # !B3_n[29]);
+
+
+--B3L14 is counter:inst|add~516
+--operation mode is arithmetic
+
+B3L14_carry_eqn = B3L17;
+B3L14 = B3_n[28] $ (!B3L14_carry_eqn);
+
+--B3L15 is counter:inst|add~518
+--operation mode is arithmetic
+
+B3L15 = CARRY(B3_n[28] & (!B3L17));
+
+
+--B3L16 is counter:inst|add~521
+--operation mode is arithmetic
+
+B3L16_carry_eqn = B3L19;
+B3L16 = B3_n[27] $ (B3L16_carry_eqn);
+
+--B3L17 is counter:inst|add~523
+--operation mode is arithmetic
+
+B3L17 = CARRY(!B3L19 # !B3_n[27]);
+
+
+--B3L18 is counter:inst|add~526
+--operation mode is arithmetic
+
+B3L18_carry_eqn = B3L21;
+B3L18 = B3_n[26] $ (!B3L18_carry_eqn);
+
+--B3L19 is counter:inst|add~528
+--operation mode is arithmetic
+
+B3L19 = CARRY(B3_n[26] & (!B3L21));
+
+
+--B3L20 is counter:inst|add~531
+--operation mode is arithmetic
+
+B3L20_carry_eqn = B3L23;
+B3L20 = B3_n[25] $ (B3L20_carry_eqn);
+
+--B3L21 is counter:inst|add~533
+--operation mode is arithmetic
+
+B3L21 = CARRY(!B3L23 # !B3_n[25]);
+
+
+--B3L22 is counter:inst|add~536
+--operation mode is arithmetic
+
+B3L22_carry_eqn = B3L25;
+B3L22 = B3_n[24] $ (!B3L22_carry_eqn);
+
+--B3L23 is counter:inst|add~538
+--operation mode is arithmetic
+
+B3L23 = CARRY(B3_n[24] & (!B3L25));
+
+
+--B3L24 is counter:inst|add~541
+--operation mode is arithmetic
+
+B3L24_carry_eqn = B3L27;
+B3L24 = B3_n[23] $ (B3L24_carry_eqn);
+
+--B3L25 is counter:inst|add~543
+--operation mode is arithmetic
+
+B3L25 = CARRY(!B3L27 # !B3_n[23]);
+
+
+--B3L26 is counter:inst|add~546
+--operation mode is arithmetic
+
+B3L26_carry_eqn = B3L29;
+B3L26 = B3_n[22] $ (!B3L26_carry_eqn);
+
+--B3L27 is counter:inst|add~548
+--operation mode is arithmetic
+
+B3L27 = CARRY(B3_n[22] & (!B3L29));
+
+
+--B3L28 is counter:inst|add~551
+--operation mode is arithmetic
+
+B3L28_carry_eqn = B3L31;
+B3L28 = B3_n[21] $ (B3L28_carry_eqn);
+
+--B3L29 is counter:inst|add~553
+--operation mode is arithmetic
+
+B3L29 = CARRY(!B3L31 # !B3_n[21]);
+
+
+--B3L30 is counter:inst|add~556
+--operation mode is arithmetic
+
+B3L30_carry_eqn = B3L33;
+B3L30 = B3_n[20] $ (!B3L30_carry_eqn);
+
+--B3L31 is counter:inst|add~558
+--operation mode is arithmetic
+
+B3L31 = CARRY(B3_n[20] & (!B3L33));
+
+
+--B3L32 is counter:inst|add~561
+--operation mode is arithmetic
+
+B3L32_carry_eqn = B3L35;
+B3L32 = B3_n[19] $ (B3L32_carry_eqn);
+
+--B3L33 is counter:inst|add~563
+--operation mode is arithmetic
+
+B3L33 = CARRY(!B3L35 # !B3_n[19]);
+
+
+--B3L34 is counter:inst|add~566
+--operation mode is arithmetic
+
+B3L34_carry_eqn = B3L37;
+B3L34 = B3_n[18] $ (!B3L34_carry_eqn);
+
+--B3L35 is counter:inst|add~568
+--operation mode is arithmetic
+
+B3L35 = CARRY(B3_n[18] & (!B3L37));
+
+
+--B3L36 is counter:inst|add~571
+--operation mode is arithmetic
+
+B3L36_carry_eqn = B3L39;
+B3L36 = B3_n[17] $ (B3L36_carry_eqn);
+
+--B3L37 is counter:inst|add~573
+--operation mode is arithmetic
+
+B3L37 = CARRY(!B3L39 # !B3_n[17]);
+
+
+--B3L38 is counter:inst|add~576
+--operation mode is arithmetic
+
+B3L38_carry_eqn = B3L41;
+B3L38 = B3_n[16] $ (!B3L38_carry_eqn);
+
+--B3L39 is counter:inst|add~578
+--operation mode is arithmetic
+
+B3L39 = CARRY(B3_n[16] & (!B3L41));
+
+
+--B3L40 is counter:inst|add~581
+--operation mode is arithmetic
+
+B3L40_carry_eqn = B3L43;
+B3L40 = B3_n[15] $ (B3L40_carry_eqn);
+
+--B3L41 is counter:inst|add~583
+--operation mode is arithmetic
+
+B3L41 = CARRY(!B3L43 # !B3_n[15]);
+
+
+--B3L42 is counter:inst|add~586
+--operation mode is arithmetic
+
+B3L42_carry_eqn = B3L45;
+B3L42 = B3_n[14] $ (!B3L42_carry_eqn);
+
+--B3L43 is counter:inst|add~588
+--operation mode is arithmetic
+
+B3L43 = CARRY(B3_n[14] & (!B3L45));
+
+
+--B3L44 is counter:inst|add~591
+--operation mode is arithmetic
+
+B3L44_carry_eqn = B3L47;
+B3L44 = B3_n[13] $ (B3L44_carry_eqn);
+
+--B3L45 is counter:inst|add~593
+--operation mode is arithmetic
+
+B3L45 = CARRY(!B3L47 # !B3_n[13]);
+
+
+--B3L46 is counter:inst|add~596
+--operation mode is arithmetic
+
+B3L46_carry_eqn = B3L49;
+B3L46 = B3_n[12] $ (!B3L46_carry_eqn);
+
+--B3L47 is counter:inst|add~598
+--operation mode is arithmetic
+
+B3L47 = CARRY(B3_n[12] & (!B3L49));
+
+
+--B3L48 is counter:inst|add~601
+--operation mode is arithmetic
+
+B3L48_carry_eqn = B3L51;
+B3L48 = B3_n[11] $ (B3L48_carry_eqn);
+
+--B3L49 is counter:inst|add~603
+--operation mode is arithmetic
+
+B3L49 = CARRY(!B3L51 # !B3_n[11]);
+
+
+--B3L50 is counter:inst|add~606
+--operation mode is arithmetic
+
+B3L50_carry_eqn = B3L53;
+B3L50 = B3_n[10] $ (!B3L50_carry_eqn);
+
+--B3L51 is counter:inst|add~608
+--operation mode is arithmetic
+
+B3L51 = CARRY(B3_n[10] & (!B3L53));
+
+
+--B3L52 is counter:inst|add~611
+--operation mode is arithmetic
+
+B3L52_carry_eqn = B3L55;
+B3L52 = B3_n[9] $ (B3L52_carry_eqn);
+
+--B3L53 is counter:inst|add~613
+--operation mode is arithmetic
+
+B3L53 = CARRY(!B3L55 # !B3_n[9]);
+
+
+--B3L54 is counter:inst|add~616
+--operation mode is arithmetic
+
+B3L54_carry_eqn = B3L57;
+B3L54 = B3_n[8] $ (!B3L54_carry_eqn);
+
+--B3L55 is counter:inst|add~618
+--operation mode is arithmetic
+
+B3L55 = CARRY(B3_n[8] & (!B3L57));
+
+
+--B3L56 is counter:inst|add~621
+--operation mode is arithmetic
+
+B3L56_carry_eqn = B3L59;
+B3L56 = B3_n[7] $ (B3L56_carry_eqn);
+
+--B3L57 is counter:inst|add~623
+--operation mode is arithmetic
+
+B3L57 = CARRY(!B3L59 # !B3_n[7]);
+
+
+--B3L58 is counter:inst|add~626
+--operation mode is arithmetic
+
+B3L58_carry_eqn = B3L61;
+B3L58 = B3_n[6] $ (!B3L58_carry_eqn);
+
+--B3L59 is counter:inst|add~628
+--operation mode is arithmetic
+
+B3L59 = CARRY(B3_n[6] & (!B3L61));
+
+
+--B3L60 is counter:inst|add~631
+--operation mode is arithmetic
+
+B3L60_carry_eqn = B3L63;
+B3L60 = B3_n[5] $ (B3L60_carry_eqn);
+
+--B3L61 is counter:inst|add~633
+--operation mode is arithmetic
+
+B3L61 = CARRY(!B3L63 # !B3_n[5]);
+
+
+--B3L62 is counter:inst|add~636
+--operation mode is arithmetic
+
+B3L62_carry_eqn = B3L2;
+B3L62 = B3_n[4] $ (!B3L62_carry_eqn);
+
+--B3L63 is counter:inst|add~638
+--operation mode is arithmetic
+
+B3L63 = CARRY(B3_n[4] & (!B3L2));
+
+
+--C1L18 is sel:inst3|Mux~749
+--operation mode is normal
+
+C1L18 = C1_s[1] & !B3_n[2] & !B3_n[1] # !C1_s[1] & (A1L15);
+
+
+--scan_clk is scan_clk
+--operation mode is input
+
+scan_clk = INPUT();
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
+--clk_jinwei is clk_jinwei
+--operation mode is output
+
+clk_jinwei = OUTPUT(B1_clk_jinwei);
+
+
+--led7[7] is led7[7]
+--operation mode is output
+
+led7[7] = OUTPUT(C1_LED[7]);
+
+
+--led7[6] is led7[6]
+--operation mode is output
+
+led7[6] = OUTPUT(C1_LED[6]);
+
+
+--led7[5] is led7[5]
+--operation mode is output
+
+led7[5] = OUTPUT(C1_LED[5]);
+
+
+--led7[4] is led7[4]
+--operation mode is output
+
+led7[4] = OUTPUT(C1_LED[4]);
+
+
+--led7[3] is led7[3]
+--operation mode is output
+
+led7[3] = OUTPUT(C1_LED[3]);
+
+
+--led7[2] is led7[2]
+--operation mode is output
+
+led7[2] = OUTPUT(C1_LED[2]);
+
+
+--led7[1] is led7[1]
+--operation mode is output
+
+led7[1] = OUTPUT(C1_LED[1]);
+
+
+--led7[0] is led7[0]
+--operation mode is output
+
+led7[0] = OUTPUT(C1_LED[0]);
+
+
+--s[2] is s[2]
+--operation mode is output
+
+s[2] = OUTPUT(C1_s[2]);
+
+
+--s[1] is s[1]
+--operation mode is output
+
+s[1] = OUTPUT(C1_s[1]);
+
+
+--s[0] is s[0]
+--operation mode is output
+
+s[0] = OUTPUT(C1_s[0]);
+
+

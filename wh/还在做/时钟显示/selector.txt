@@ -1,0 +1,44 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY selector IS
+	PORT
+	(
+		scan_clk		: IN	STD_LOGIC;
+        IN_1, IN_2,IN_3: in integer range 0 to 60;
+		LED		: out STD_LOGIC_VECTOR(7 downto 0);
+		sel		: out	STD_LOGIC_VECTOR(2 downto 0)
+	);
+END;
+
+ARCHITECTURE a OF selector IS
+BEGIN
+
+
+
+
+
+PROCESS (scan_clk)
+	VARIABLE n	: integer range 0 to 5;
+BEGIN
+IF rising_edge(scan_clk) THEN
+
+   CASE n IS
+	WHEN 0 => sel<="011111";n:=n+1;
+	WHEN 1 => sel<="101111";n:=n+1;
+	WHEN 2 => sel<="110111";n:=n+1;
+	WHEN 3 => sel<="111011";n:=n+1;
+	WHEN 4 => sel<="111101";n:=n+1;
+	WHEN 5 => sel<="111110";n:=0;
+   END CASE;
+    
+END IF;
+END PROCESS ;
+
+
+
+
+
+
+
+END a;

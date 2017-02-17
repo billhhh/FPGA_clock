@@ -1,0 +1,104 @@
+LIBRARY IEEE;
+USE IEEE.Std_Logic_1164.ALL;
+USE IEEE.Std_Logic_Arith.ALL;
+USE IEEE.Std_Logic_Unsigned.ALL;
+
+ENTITY xianshi IS
+	PORT
+	(
+		indata		: IN	integer range 0 to 999;
+		clk			: IN	STD_LOGIC;
+		led7: OUT	STD_LOGIC_vector(7 downto 0);
+		sel:  OUT	STD_LOGIC_vector(2 downto 0)
+		
+	);
+END ;
+
+
+
+
+ARCHITECTURE a OF xianshi IS
+	SIGNAL shi,ge,bai: integer range 0 to 9;
+	SIGNAL outdata : integer range 0 to 9;
+	signal tmpshi  : integer range 0 to 99;
+BEGIN
+
+bai <= 	9 WHEN	indata>899	ELSE
+		8 WHEN	indata>799	ELSE
+		7 WHEN	indata>699	ELSE
+		6 WHEN	indata>599	ELSE
+		5 WHEN	indata>499	ELSE
+		4 WHEN	indata>399	ELSE
+		3 WHEN	indata>299	ELSE
+		2 WHEN	indata>199	ELSE
+		1 WHEN	indata>99	ELSE
+		0 ;
+		
+		
+tmpshi <= 	indata-900 WHEN	indata>899	ELSE
+		indata-800 WHEN	indata>799	ELSE
+		indata-700 WHEN	indata>699	ELSE
+		indata-600 WHEN	indata>599	ELSE
+		indata-500 WHEN	indata>499	ELSE
+		indata-400 WHEN	indata>399	ELSE
+		indata-300 WHEN	indata>299	ELSE
+		indata-200 WHEN	indata>199	ELSE
+		indata-100 WHEN	indata>99	ELSE
+		indata ;
+		
+		
+shi <= 	9 WHEN	tmpshi>89	ELSE
+		8 WHEN	tmpshi>79	ELSE
+		7 WHEN	tmpshi>69	ELSE
+		6 WHEN	tmpshi>59	ELSE
+		5 WHEN	tmpshi>49	ELSE
+		4 WHEN	tmpshi>39	ELSE
+		3 WHEN	tmpshi>29	ELSE
+		2 WHEN	tmpshi>19	ELSE
+		1 WHEN	tmpshi>9	ELSE
+		0 ;
+
+ge<= tmpshi-90 WHEN	tmpshi>89	ELSE
+	 tmpshi-80 WHEN	tmpshi>79	ELSE
+	 tmpshi-70 WHEN	tmpshi>69	ELSE
+     tmpshi-60 WHEN	tmpshi>59	ELSE
+	 tmpshi-50 WHEN	tmpshi>49	ELSE
+	 tmpshi-40 WHEN	tmpshi>39	ELSE
+	 tmpshi-30 WHEN	tmpshi>29	ELSE
+	 tmpshi-20 WHEN	tmpshi>19	ELSE
+	 tmpshi-10 WHEN	tmpshi>9	ELSE
+	 tmpshi ;
+	
+	
+
+scan:
+PROCESS (clk)
+	VARIABLE count: integer range 0 to 2;
+BEGIN
+	if (rising_edge(clk)) then
+	   CASE count IS
+	     WHEN 0 => outdata<=bai; sel<="110"; count:=1;
+	     WHEN 1 => outdata<=shi; sel<="101"; count:=2;
+		 WHEN 2 => outdata<=ge;  sel<="011"; count:=0;
+       END CASE;
+    end if;
+END PROCESS scan;
+
+
+
+WITH  outdata  SELECT
+LED7  	<=  "00111111"	WHEN 0,
+"00000110"	WHEN 1,
+"01011011"	WHEN 2,
+"01001111"	WHEN 3,
+"01100110"	WHEN 4,
+"01101101"	WHEN 5,
+"01111101"	WHEN 6,
+"00000111"	WHEN 7,
+"01111111"	WHEN 8,
+"01101111"	WHEN 9,
+"10000000" 	WHEN OTHERS;
+
+
+END a;
+

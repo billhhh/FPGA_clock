@@ -1,0 +1,2947 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1_LED[7] is sel:inst3|LED[7] at LC_X8_Y7_N2
+--operation mode is normal
+
+C1_LED[7]_lut_out = !C1L10 & (C1_s[2] & !C1L18 # !C1_s[2] & (!C1L11));
+C1_LED[7] = DFFEAS(C1_LED[7]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1_LED[6] is sel:inst3|LED[6] at LC_X7_Y8_N0
+--operation mode is normal
+
+C1_LED[6]_lut_out = C1_s[1] & B3L95 # !C1_s[1] & (B1L95);
+C1_LED[6] = DFFEAS(C1_LED[6]_lut_out, GLOBAL(scan_clk), VCC, , , B2L95, , , !C1_s[2]);
+
+
+--C1_LED[5] is sel:inst3|LED[5] at LC_X7_Y8_N2
+--operation mode is normal
+
+C1_LED[5]_lut_out = !C1L12 & (C1_s[2] # !B2L94);
+C1_LED[5] = DFFEAS(C1_LED[5]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1_LED[4] is sel:inst3|LED[4] at LC_X7_Y8_N3
+--operation mode is normal
+
+C1_LED[4]_lut_out = !C1L13 & (C1_s[2] # !B2L93);
+C1_LED[4] = DFFEAS(C1_LED[4]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1_LED[3] is sel:inst3|LED[3] at LC_X11_Y8_N5
+--operation mode is normal
+
+C1_LED[3]_lut_out = !C1L14 & (C1_s[2] # !B2L92);
+C1_LED[3] = DFFEAS(C1_LED[3]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1_LED[2] is sel:inst3|LED[2] at LC_X7_Y8_N8
+--operation mode is normal
+
+C1_LED[2]_lut_out = !C1L15 & (C1_s[2] # !B2L91);
+C1_LED[2] = DFFEAS(C1_LED[2]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1_LED[1] is sel:inst3|LED[1] at LC_X6_Y8_N2
+--operation mode is normal
+
+C1_LED[1]_lut_out = !C1L16 & (C1_s[2] # !B2L90);
+C1_LED[1] = DFFEAS(C1_LED[1]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1_LED[0] is sel:inst3|LED[0] at LC_X8_Y8_N7
+--operation mode is normal
+
+C1_LED[0]_lut_out = !C1L17 & (C1_s[2] # !B2L89);
+C1_LED[0] = DFFEAS(C1_LED[0]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1_s[2] is sel:inst3|s[2] at LC_X7_Y8_N5
+--operation mode is normal
+
+C1_s[2]_lut_out = !C1_s[2] # !C1_s[1];
+C1_s[2] = DFFEAS(C1_s[2]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--C1_s[0] is sel:inst3|s[0] at LC_X8_Y8_N1
+--operation mode is normal
+
+C1_s[0]_lut_out = C1_s[1];
+C1_s[0] = DFFEAS(C1_s[0]_lut_out, GLOBAL(scan_clk), VCC, , , , , , );
+
+
+--B1_n[1] is counter:inst2|n[1] at LC_X19_Y11_N0
+--operation mode is normal
+
+B1_n[1]_lut_out = !A1L12 & (B1L4);
+B1_n[1] = DFFEAS(B1_n[1]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--A1L15 is rtl~846 at LC_X19_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[2]_qfbk = B1_n[2];
+A1L15 = !B1_n[2]_qfbk & !B1_n[1];
+
+--B1_n[2] is counter:inst2|n[2] at LC_X19_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[2] = DFFEAS(A1L15, GLOBAL(B2_clk_jinwei), VCC, , , B1L1, , , VCC);
+
+
+--B1_n[28] is counter:inst2|n[28] at LC_X19_Y8_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[28]_lut_out = GND;
+B1_n[28] = DFFEAS(B1_n[28]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L10, , , VCC);
+
+
+--B1_n[27] is counter:inst2|n[27] at LC_X19_Y8_N7
+--operation mode is normal
+
+B1_n[27]_lut_out = B1L13;
+B1_n[27] = DFFEAS(B1_n[27]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--B1_n[26] is counter:inst2|n[26] at LC_X21_Y8_N2
+--operation mode is normal
+
+B1_n[26]_lut_out = B1L16;
+B1_n[26] = DFFEAS(B1_n[26]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--A1L16 is rtl~847 at LC_X19_Y8_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[29]_qfbk = B1_n[29];
+A1L16 = !B1_n[27] & !B1_n[28] & !B1_n[29]_qfbk & !B1_n[26];
+
+--B1_n[29] is counter:inst2|n[29] at LC_X19_Y8_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[29] = DFFEAS(A1L16, GLOBAL(B2_clk_jinwei), VCC, , , B1L7, , , VCC);
+
+
+--B1_n[30] is counter:inst2|n[30] at LC_X20_Y8_N4
+--operation mode is normal
+
+B1_n[30]_lut_out = B1L20;
+B1_n[30] = DFFEAS(B1_n[30]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--A1L17 is rtl~848 at LC_X19_Y8_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[31]_qfbk = B1_n[31];
+A1L17 = A1L16 & !B1_n[30] & !B1_n[31]_qfbk & A1L15;
+
+--B1_n[31] is counter:inst2|n[31] at LC_X19_Y8_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[31] = DFFEAS(A1L17, GLOBAL(B2_clk_jinwei), VCC, , , B1L19, , , VCC);
+
+
+--B1_n[24] is counter:inst2|n[24] at LC_X16_Y9_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[24]_lut_out = GND;
+B1_n[24] = DFFEAS(B1_n[24]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L24, , , VCC);
+
+
+--B1_n[23] is counter:inst2|n[23] at LC_X16_Y9_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[23]_lut_out = GND;
+B1_n[23] = DFFEAS(B1_n[23]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L27, , , VCC);
+
+
+--B1_n[22] is counter:inst2|n[22] at LC_X16_Y9_N4
+--operation mode is normal
+
+B1_n[22]_lut_out = B1L30;
+B1_n[22] = DFFEAS(B1_n[22]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--A1L18 is rtl~849 at LC_X16_Y9_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[25]_qfbk = B1_n[25];
+A1L18 = !B1_n[24] & !B1_n[22] & !B1_n[25]_qfbk & !B1_n[23];
+
+--B1_n[25] is counter:inst2|n[25] at LC_X16_Y9_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[25] = DFFEAS(A1L18, GLOBAL(B2_clk_jinwei), VCC, , , B1L22, , , VCC);
+
+
+--B1_n[20] is counter:inst2|n[20] at LC_X20_Y9_N2
+--operation mode is normal
+
+B1_n[20]_lut_out = B1L36;
+B1_n[20] = DFFEAS(B1_n[20]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--B1_n[19] is counter:inst2|n[19] at LC_X20_Y9_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[19]_lut_out = GND;
+B1_n[19] = DFFEAS(B1_n[19]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L38, , , VCC);
+
+
+--B1_n[18] is counter:inst2|n[18] at LC_X20_Y9_N5
+--operation mode is normal
+
+B1_n[18]_lut_out = B1L41;
+B1_n[18] = DFFEAS(B1_n[18]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--A1L19 is rtl~850 at LC_X20_Y9_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[21]_qfbk = B1_n[21];
+A1L19 = !B1_n[19] & !B1_n[18] & !B1_n[21]_qfbk & !B1_n[20];
+
+--B1_n[21] is counter:inst2|n[21] at LC_X20_Y9_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[21] = DFFEAS(A1L19, GLOBAL(B2_clk_jinwei), VCC, , , B1L33, , , VCC);
+
+
+--B1_n[16] is counter:inst2|n[16] at LC_X20_Y10_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[16]_lut_out = GND;
+B1_n[16] = DFFEAS(B1_n[16]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L47, , , VCC);
+
+
+--B1_n[15] is counter:inst2|n[15] at LC_X20_Y10_N2
+--operation mode is normal
+
+B1_n[15]_lut_out = B1L50;
+B1_n[15] = DFFEAS(B1_n[15]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--B1_n[14] is counter:inst2|n[14] at LC_X20_Y10_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[14]_lut_out = GND;
+B1_n[14] = DFFEAS(B1_n[14]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L52, , , VCC);
+
+
+--A1L20 is rtl~851 at LC_X20_Y10_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[17]_qfbk = B1_n[17];
+A1L20 = !B1_n[15] & !B1_n[14] & !B1_n[17]_qfbk & !B1_n[16];
+
+--B1_n[17] is counter:inst2|n[17] at LC_X20_Y10_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[17] = DFFEAS(A1L20, GLOBAL(B2_clk_jinwei), VCC, , , B1L44, , , VCC);
+
+
+--B1_n[12] is counter:inst2|n[12] at LC_X22_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[12]_lut_out = GND;
+B1_n[12] = DFFEAS(B1_n[12]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L58, , , VCC);
+
+
+--B1_n[11] is counter:inst2|n[11] at LC_X23_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[11]_lut_out = GND;
+B1_n[11] = DFFEAS(B1_n[11]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L61, , , VCC);
+
+
+--B1_n[10] is counter:inst2|n[10] at LC_X21_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[10]_lut_out = GND;
+B1_n[10] = DFFEAS(B1_n[10]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L64, , , VCC);
+
+
+--A1L21 is rtl~852 at LC_X20_Y10_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[13]_qfbk = B1_n[13];
+A1L21 = !B1_n[10] & !B1_n[12] & !B1_n[13]_qfbk & !B1_n[11];
+
+--B1_n[13] is counter:inst2|n[13] at LC_X20_Y10_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[13] = DFFEAS(A1L21, GLOBAL(B2_clk_jinwei), VCC, , , B1L55, , , VCC);
+
+
+--B1_n[8] is counter:inst2|n[8] at LC_X16_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[8]_lut_out = GND;
+B1_n[8] = DFFEAS(B1_n[8]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L69, , , VCC);
+
+
+--B1_n[7] is counter:inst2|n[7] at LC_X20_Y10_N1
+--operation mode is normal
+
+B1_n[7]_lut_out = B1L72;
+B1_n[7] = DFFEAS(B1_n[7]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--B1_n[6] is counter:inst2|n[6] at LC_X20_Y10_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[6]_lut_out = GND;
+B1_n[6] = DFFEAS(B1_n[6]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L75, , , VCC);
+
+
+--A1L22 is rtl~853 at LC_X20_Y10_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[9]_qfbk = B1_n[9];
+A1L22 = !B1_n[7] & !B1_n[6] & !B1_n[9]_qfbk & !B1_n[8];
+
+--B1_n[9] is counter:inst2|n[9] at LC_X20_Y10_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[9] = DFFEAS(A1L22, GLOBAL(B2_clk_jinwei), VCC, , , B1L66, , , VCC);
+
+
+--B1_n[3] is counter:inst2|n[3] at LC_X19_Y11_N1
+--operation mode is normal
+
+B1_n[3]_lut_out = B1L78 & !A1L12;
+B1_n[3] = DFFEAS(B1_n[3]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--B1_n[5] is counter:inst2|n[5] at LC_X21_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[5]_lut_out = GND;
+B1_n[5] = DFFEAS(B1_n[5]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L83, , , VCC);
+
+
+--B1_n[4] is counter:inst2|n[4] at LC_X20_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[4]_lut_out = GND;
+B1_n[4] = DFFEAS(B1_n[4]_lut_out, GLOBAL(B2_clk_jinwei), VCC, , , B1L85, , , VCC);
+
+
+--A1L23 is rtl~854 at LC_X20_Y10_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[0]_qfbk = B1_n[0];
+A1L23 = !B1_n[4] & B1_n[3] & B1_n[0]_qfbk & !B1_n[5];
+
+--B1_n[0] is counter:inst2|n[0] at LC_X20_Y10_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B1_n[0] = DFFEAS(A1L23, GLOBAL(B2_clk_jinwei), VCC, , , B1L81, , , VCC);
+
+
+--A1L24 is rtl~855 at LC_X20_Y10_N9
+--operation mode is normal
+
+A1L24 = A1L21 & A1L22 & A1L23 & A1L20;
+
+
+--A1L12 is rtl~0 at LC_X19_Y11_N3
+--operation mode is normal
+
+A1L12 = A1L24 & A1L18 & A1L17 & A1L19;
+
+--B1_clk_jinwei is counter:inst2|clk_jinwei at LC_X19_Y11_N3
+--operation mode is normal
+
+B1_clk_jinwei = DFFEAS(A1L12, GLOBAL(B2_clk_jinwei), VCC, , , , , , );
+
+
+--B3_n[3] is counter:inst|n[3] at LC_X9_Y10_N0
+--operation mode is normal
+
+B3_n[3]_lut_out = B3L1 & (!A1L14);
+B3_n[3] = DFFEAS(B3_n[3]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--C1L10 is sel:inst3|Mux~733 at LC_X8_Y8_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_s[1]_qfbk = C1_s[1];
+C1L10 = C1_s[2] & (C1_s[1]_qfbk & !B3_n[3] # !C1_s[1]_qfbk & (!B1_n[3]));
+
+--C1_s[1] is sel:inst3|s[1] at LC_X8_Y8_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+C1_s[1] = DFFEAS(C1L10, GLOBAL(scan_clk), VCC, , , C1_s[2], , , VCC);
+
+
+--B3_n[1] is counter:inst|n[1] at LC_X9_Y10_N3
+--operation mode is normal
+
+B3_n[1]_lut_out = !A1L14 & B3L7;
+B3_n[1] = DFFEAS(B3_n[1]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--A1L25 is rtl~856 at LC_X9_Y10_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[2]_qfbk = B3_n[2];
+A1L25 = !B3_n[1] & !B3_n[2]_qfbk;
+
+--B3_n[2] is counter:inst|n[2] at LC_X9_Y10_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[2] = DFFEAS(A1L25, GLOBAL(clk), VCC, , , B3L4, , , VCC);
+
+
+--B2_n[1] is counter:inst1|n[1] at LC_X12_Y12_N1
+--operation mode is normal
+
+B2_n[1]_lut_out = !A1L13 & B2L4;
+B2_n[1] = DFFEAS(B2_n[1]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--B2_n[3] is counter:inst1|n[3] at LC_X12_Y12_N3
+--operation mode is normal
+
+B2_n[3]_lut_out = B2L7 & (!A1L13);
+B2_n[3] = DFFEAS(B2_n[3]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--C1L11 is sel:inst3|Mux~734 at LC_X11_Y8_N9
+--operation mode is normal
+
+C1L11 = !B2_n[1] & !B2_n[2] # !B2_n[3];
+
+
+--B1L95 is counter:inst2|LED7[6]~149 at LC_X8_Y8_N5
+--operation mode is normal
+
+B1L95 = B1_n[2] & !B1_n[3] & (!B1_n[1] # !B1_n[0]) # !B1_n[2] & (B1_n[3] $ (B1_n[1]));
+
+
+--B3L95 is counter:inst|LED7[6]~149 at LC_X8_Y7_N9
+--operation mode is normal
+
+B3L95 = B3_n[2] & !B3_n[3] & (!B3_n[0] # !B3_n[1]) # !B3_n[2] & (B3_n[1] $ (B3_n[3]));
+
+
+--B2L95 is counter:inst1|LED7[6]~155 at LC_X11_Y8_N4
+--operation mode is normal
+
+B2L95 = B2_n[1] & !B2_n[3] & (!B2_n[0] # !B2_n[2]) # !B2_n[1] & (B2_n[3] $ B2_n[2]);
+
+
+--B3L94 is counter:inst|LED7[5]~150 at LC_X8_Y7_N7
+--operation mode is normal
+
+B3L94 = B3_n[2] & (B3_n[3] # B3_n[1] & B3_n[0]) # !B3_n[2] & (B3_n[1] # B3_n[0] & !B3_n[3]);
+
+
+--B1L94 is counter:inst2|LED7[5]~150 at LC_X8_Y8_N8
+--operation mode is normal
+
+B1L94 = B1_n[2] & (B1_n[3] # B1_n[0] & B1_n[1]) # !B1_n[2] & (B1_n[1] # !B1_n[3] & B1_n[0]);
+
+
+--C1L12 is sel:inst3|Mux~736 at LC_X7_Y8_N1
+--operation mode is normal
+
+C1L12 = C1_s[2] & (C1_s[1] & (B3L94) # !C1_s[1] & B1L94);
+
+
+--B2L94 is counter:inst1|LED7[5]~156 at LC_X11_Y8_N0
+--operation mode is normal
+
+B2L94 = B2_n[2] & (B2_n[3] # B2_n[1] & B2_n[0]) # !B2_n[2] & (B2_n[1] # !B2_n[3] & B2_n[0]);
+
+
+--B3L93 is counter:inst|LED7[4]~151 at LC_X8_Y7_N6
+--operation mode is normal
+
+B3L93 = B3_n[0] # B3_n[1] & (B3_n[3]) # !B3_n[1] & B3_n[2];
+
+
+--B1L93 is counter:inst2|LED7[4]~151 at LC_X8_Y8_N6
+--operation mode is normal
+
+B1L93 = B1_n[0] # B1_n[1] & (B1_n[3]) # !B1_n[1] & B1_n[2];
+
+
+--C1L13 is sel:inst3|Mux~738 at LC_X7_Y8_N6
+--operation mode is normal
+
+C1L13 = C1_s[2] & (C1_s[1] & (B3L93) # !C1_s[1] & B1L93);
+
+
+--B2L93 is counter:inst1|LED7[4]~157 at LC_X11_Y8_N7
+--operation mode is normal
+
+B2L93 = B2_n[0] # B2_n[1] & B2_n[3] # !B2_n[1] & (B2_n[2]);
+
+
+--B3L92 is counter:inst|LED7[3]~152 at LC_X8_Y7_N3
+--operation mode is normal
+
+B3L92 = B3_n[1] & (B3_n[3] # B3_n[2] & B3_n[0]) # !B3_n[1] & (B3_n[2] $ (B3_n[0] & !B3_n[3]));
+
+
+--B1L92 is counter:inst2|LED7[3]~152 at LC_X8_Y8_N4
+--operation mode is normal
+
+B1L92 = B1_n[1] & (B1_n[3] # B1_n[2] & B1_n[0]) # !B1_n[1] & (B1_n[2] $ (!B1_n[3] & B1_n[0]));
+
+
+--C1L14 is sel:inst3|Mux~740 at LC_X7_Y8_N7
+--operation mode is normal
+
+C1L14 = C1_s[2] & (C1_s[1] & B3L92 # !C1_s[1] & (B1L92));
+
+
+--B2L92 is counter:inst1|LED7[3]~158 at LC_X11_Y8_N1
+--operation mode is normal
+
+B2L92 = B2_n[1] & (B2_n[3] # B2_n[2] & B2_n[0]) # !B2_n[1] & (B2_n[2] $ (!B2_n[3] & B2_n[0]));
+
+
+--B3L91 is counter:inst|LED7[2]~153 at LC_X8_Y7_N8
+--operation mode is normal
+
+B3L91 = B3_n[2] & (B3_n[3]) # !B3_n[2] & B3_n[1] & (B3_n[3] # !B3_n[0]);
+
+
+--B1L91 is counter:inst2|LED7[2]~153 at LC_X8_Y8_N9
+--operation mode is normal
+
+B1L91 = B1_n[2] & B1_n[3] # !B1_n[2] & B1_n[1] & (B1_n[3] # !B1_n[0]);
+
+
+--C1L15 is sel:inst3|Mux~742 at LC_X7_Y8_N4
+--operation mode is normal
+
+C1L15 = C1_s[2] & (C1_s[1] & B3L91 # !C1_s[1] & (B1L91));
+
+
+--B2L91 is counter:inst1|LED7[2]~159 at LC_X11_Y8_N2
+--operation mode is normal
+
+B2L91 = B2_n[2] & (B2_n[3]) # !B2_n[2] & B2_n[1] & (B2_n[3] # !B2_n[0]);
+
+
+--B3L90 is counter:inst|LED7[1]~154 at LC_X8_Y7_N5
+--operation mode is normal
+
+B3L90 = B3_n[2] & (B3_n[3] # B3_n[1] $ B3_n[0]) # !B3_n[2] & B3_n[1] & (B3_n[3]);
+
+
+--B1L90 is counter:inst2|LED7[1]~154 at LC_X13_Y8_N2
+--operation mode is normal
+
+B1L90 = B1_n[3] & (B1_n[1] # B1_n[2]) # !B1_n[3] & B1_n[2] & (B1_n[1] $ B1_n[0]);
+
+
+--C1L16 is sel:inst3|Mux~744 at LC_X7_Y8_N9
+--operation mode is normal
+
+C1L16 = C1_s[2] & (C1_s[1] & (B3L90) # !C1_s[1] & B1L90);
+
+
+--B2L90 is counter:inst1|LED7[1]~160 at LC_X11_Y8_N6
+--operation mode is normal
+
+B2L90 = B2_n[3] & (B2_n[1] # B2_n[2]) # !B2_n[3] & B2_n[2] & (B2_n[1] $ B2_n[0]);
+
+
+--B3L89 is counter:inst|LED7[0]~155 at LC_X8_Y7_N4
+--operation mode is normal
+
+B3L89 = B3_n[1] & (B3_n[3]) # !B3_n[1] & (B3_n[2] $ (B3_n[0] & !B3_n[3]));
+
+
+--B1L89 is counter:inst2|LED7[0]~155 at LC_X8_Y8_N2
+--operation mode is normal
+
+B1L89 = B1_n[1] & (B1_n[3]) # !B1_n[1] & (B1_n[2] $ (!B1_n[3] & B1_n[0]));
+
+
+--C1L17 is sel:inst3|Mux~746 at LC_X8_Y8_N3
+--operation mode is normal
+
+C1L17 = C1_s[2] & (C1_s[1] & B3L89 # !C1_s[1] & (B1L89));
+
+
+--B2L89 is counter:inst1|LED7[0]~161 at LC_X11_Y8_N8
+--operation mode is normal
+
+B2L89 = B2_n[1] & B2_n[3] # !B2_n[1] & (B2_n[2] $ (!B2_n[3] & B2_n[0]));
+
+
+--B1L1 is counter:inst2|add~481 at LC_X19_Y11_N6
+--operation mode is arithmetic
+
+B1L1_carry_eqn = (!B1L82 & B1L5) # (B1L82 & B1L6);
+B1L1 = B1_n[2] $ (!B1L1_carry_eqn);
+
+--B1L2 is counter:inst2|add~483 at LC_X19_Y11_N6
+--operation mode is arithmetic
+
+B1L2_cout_0 = B1_n[2] & (!B1L5);
+B1L2 = CARRY(B1L2_cout_0);
+
+--B1L3 is counter:inst2|add~483COUT1_643 at LC_X19_Y11_N6
+--operation mode is arithmetic
+
+B1L3_cout_1 = B1_n[2] & (!B1L6);
+B1L3 = CARRY(B1L3_cout_1);
+
+
+--B1L4 is counter:inst2|add~486 at LC_X19_Y11_N5
+--operation mode is arithmetic
+
+B1L4_carry_eqn = B1L82;
+B1L4 = B1_n[1] $ B1L4_carry_eqn;
+
+--B1L5 is counter:inst2|add~488 at LC_X19_Y11_N5
+--operation mode is arithmetic
+
+B1L5_cout_0 = !B1L82 # !B1_n[1];
+B1L5 = CARRY(B1L5_cout_0);
+
+--B1L6 is counter:inst2|add~488COUT1_642 at LC_X19_Y11_N5
+--operation mode is arithmetic
+
+B1L6_cout_1 = !B1L82 # !B1_n[1];
+B1L6 = CARRY(B1L6_cout_1);
+
+
+--B1L7 is counter:inst2|add~491 at LC_X19_Y8_N3
+--operation mode is arithmetic
+
+B1L7_carry_eqn = (!B1L23 & B1L11) # (B1L23 & B1L12);
+B1L7 = B1_n[29] $ B1L7_carry_eqn;
+
+--B1L8 is counter:inst2|add~493 at LC_X19_Y8_N3
+--operation mode is arithmetic
+
+B1L8_cout_0 = !B1L11 # !B1_n[29];
+B1L8 = CARRY(B1L8_cout_0);
+
+--B1L9 is counter:inst2|add~493COUT1_665 at LC_X19_Y8_N3
+--operation mode is arithmetic
+
+B1L9_cout_1 = !B1L12 # !B1_n[29];
+B1L9 = CARRY(B1L9_cout_1);
+
+
+--B1L10 is counter:inst2|add~496 at LC_X19_Y8_N2
+--operation mode is arithmetic
+
+B1L10_carry_eqn = (!B1L23 & B1L14) # (B1L23 & B1L15);
+B1L10 = B1_n[28] $ !B1L10_carry_eqn;
+
+--B1L11 is counter:inst2|add~498 at LC_X19_Y8_N2
+--operation mode is arithmetic
+
+B1L11_cout_0 = B1_n[28] & !B1L14;
+B1L11 = CARRY(B1L11_cout_0);
+
+--B1L12 is counter:inst2|add~498COUT1_664 at LC_X19_Y8_N2
+--operation mode is arithmetic
+
+B1L12_cout_1 = B1_n[28] & !B1L15;
+B1L12 = CARRY(B1L12_cout_1);
+
+
+--B1L13 is counter:inst2|add~501 at LC_X19_Y8_N1
+--operation mode is arithmetic
+
+B1L13_carry_eqn = (!B1L23 & B1L17) # (B1L23 & B1L18);
+B1L13 = B1_n[27] $ (B1L13_carry_eqn);
+
+--B1L14 is counter:inst2|add~503 at LC_X19_Y8_N1
+--operation mode is arithmetic
+
+B1L14_cout_0 = !B1L17 # !B1_n[27];
+B1L14 = CARRY(B1L14_cout_0);
+
+--B1L15 is counter:inst2|add~503COUT1_663 at LC_X19_Y8_N1
+--operation mode is arithmetic
+
+B1L15_cout_1 = !B1L18 # !B1_n[27];
+B1L15 = CARRY(B1L15_cout_1);
+
+
+--B1L16 is counter:inst2|add~506 at LC_X19_Y8_N0
+--operation mode is arithmetic
+
+B1L16_carry_eqn = B1L23;
+B1L16 = B1_n[26] $ (!B1L16_carry_eqn);
+
+--B1L17 is counter:inst2|add~508 at LC_X19_Y8_N0
+--operation mode is arithmetic
+
+B1L17_cout_0 = B1_n[26] & (!B1L23);
+B1L17 = CARRY(B1L17_cout_0);
+
+--B1L18 is counter:inst2|add~508COUT1_662 at LC_X19_Y8_N0
+--operation mode is arithmetic
+
+B1L18_cout_1 = B1_n[26] & (!B1L23);
+B1L18 = CARRY(B1L18_cout_1);
+
+
+--B1L19 is counter:inst2|add~511 at LC_X19_Y8_N5
+--operation mode is normal
+
+B1L19_carry_eqn = B1L21;
+B1L19 = B1_n[31] $ (B1L19_carry_eqn);
+
+
+--B1L20 is counter:inst2|add~516 at LC_X19_Y8_N4
+--operation mode is arithmetic
+
+B1L20_carry_eqn = (!B1L23 & B1L8) # (B1L23 & B1L9);
+B1L20 = B1_n[30] $ !B1L20_carry_eqn;
+
+--B1L21 is counter:inst2|add~518 at LC_X19_Y8_N4
+--operation mode is arithmetic
+
+B1L21 = CARRY(B1_n[30] & !B1L9);
+
+
+--B1L22 is counter:inst2|add~521 at LC_X19_Y9_N9
+--operation mode is arithmetic
+
+B1L22_carry_eqn = (!B1L37 & B1L25) # (B1L37 & B1L26);
+B1L22 = B1_n[25] $ (B1L22_carry_eqn);
+
+--B1L23 is counter:inst2|add~523 at LC_X19_Y9_N9
+--operation mode is arithmetic
+
+B1L23 = CARRY(!B1L26 # !B1_n[25]);
+
+
+--B1L24 is counter:inst2|add~526 at LC_X19_Y9_N8
+--operation mode is arithmetic
+
+B1L24_carry_eqn = (!B1L37 & B1L28) # (B1L37 & B1L29);
+B1L24 = B1_n[24] $ (!B1L24_carry_eqn);
+
+--B1L25 is counter:inst2|add~528 at LC_X19_Y9_N8
+--operation mode is arithmetic
+
+B1L25_cout_0 = B1_n[24] & (!B1L28);
+B1L25 = CARRY(B1L25_cout_0);
+
+--B1L26 is counter:inst2|add~528COUT1_661 at LC_X19_Y9_N8
+--operation mode is arithmetic
+
+B1L26_cout_1 = B1_n[24] & (!B1L29);
+B1L26 = CARRY(B1L26_cout_1);
+
+
+--B1L27 is counter:inst2|add~531 at LC_X19_Y9_N7
+--operation mode is arithmetic
+
+B1L27_carry_eqn = (!B1L37 & B1L31) # (B1L37 & B1L32);
+B1L27 = B1_n[23] $ B1L27_carry_eqn;
+
+--B1L28 is counter:inst2|add~533 at LC_X19_Y9_N7
+--operation mode is arithmetic
+
+B1L28_cout_0 = !B1L31 # !B1_n[23];
+B1L28 = CARRY(B1L28_cout_0);
+
+--B1L29 is counter:inst2|add~533COUT1_660 at LC_X19_Y9_N7
+--operation mode is arithmetic
+
+B1L29_cout_1 = !B1L32 # !B1_n[23];
+B1L29 = CARRY(B1L29_cout_1);
+
+
+--B1L30 is counter:inst2|add~536 at LC_X19_Y9_N6
+--operation mode is arithmetic
+
+B1L30_carry_eqn = (!B1L37 & B1L34) # (B1L37 & B1L35);
+B1L30 = B1_n[22] $ (!B1L30_carry_eqn);
+
+--B1L31 is counter:inst2|add~538 at LC_X19_Y9_N6
+--operation mode is arithmetic
+
+B1L31_cout_0 = B1_n[22] & (!B1L34);
+B1L31 = CARRY(B1L31_cout_0);
+
+--B1L32 is counter:inst2|add~538COUT1_659 at LC_X19_Y9_N6
+--operation mode is arithmetic
+
+B1L32_cout_1 = B1_n[22] & (!B1L35);
+B1L32 = CARRY(B1L32_cout_1);
+
+
+--B1L33 is counter:inst2|add~541 at LC_X19_Y9_N5
+--operation mode is arithmetic
+
+B1L33_carry_eqn = B1L37;
+B1L33 = B1_n[21] $ (B1L33_carry_eqn);
+
+--B1L34 is counter:inst2|add~543 at LC_X19_Y9_N5
+--operation mode is arithmetic
+
+B1L34_cout_0 = !B1L37 # !B1_n[21];
+B1L34 = CARRY(B1L34_cout_0);
+
+--B1L35 is counter:inst2|add~543COUT1_658 at LC_X19_Y9_N5
+--operation mode is arithmetic
+
+B1L35_cout_1 = !B1L37 # !B1_n[21];
+B1L35 = CARRY(B1L35_cout_1);
+
+
+--B1L36 is counter:inst2|add~546 at LC_X19_Y9_N4
+--operation mode is arithmetic
+
+B1L36_carry_eqn = (!B1L51 & B1L39) # (B1L51 & B1L40);
+B1L36 = B1_n[20] $ (!B1L36_carry_eqn);
+
+--B1L37 is counter:inst2|add~548 at LC_X19_Y9_N4
+--operation mode is arithmetic
+
+B1L37 = CARRY(B1_n[20] & (!B1L40));
+
+
+--B1L38 is counter:inst2|add~551 at LC_X19_Y9_N3
+--operation mode is arithmetic
+
+B1L38_carry_eqn = (!B1L51 & B1L42) # (B1L51 & B1L43);
+B1L38 = B1_n[19] $ (B1L38_carry_eqn);
+
+--B1L39 is counter:inst2|add~553 at LC_X19_Y9_N3
+--operation mode is arithmetic
+
+B1L39_cout_0 = !B1L42 # !B1_n[19];
+B1L39 = CARRY(B1L39_cout_0);
+
+--B1L40 is counter:inst2|add~553COUT1_657 at LC_X19_Y9_N3
+--operation mode is arithmetic
+
+B1L40_cout_1 = !B1L43 # !B1_n[19];
+B1L40 = CARRY(B1L40_cout_1);
+
+
+--B1L41 is counter:inst2|add~556 at LC_X19_Y9_N2
+--operation mode is arithmetic
+
+B1L41_carry_eqn = (!B1L51 & B1L45) # (B1L51 & B1L46);
+B1L41 = B1_n[18] $ !B1L41_carry_eqn;
+
+--B1L42 is counter:inst2|add~558 at LC_X19_Y9_N2
+--operation mode is arithmetic
+
+B1L42_cout_0 = B1_n[18] & !B1L45;
+B1L42 = CARRY(B1L42_cout_0);
+
+--B1L43 is counter:inst2|add~558COUT1_656 at LC_X19_Y9_N2
+--operation mode is arithmetic
+
+B1L43_cout_1 = B1_n[18] & !B1L46;
+B1L43 = CARRY(B1L43_cout_1);
+
+
+--B1L44 is counter:inst2|add~561 at LC_X19_Y9_N1
+--operation mode is arithmetic
+
+B1L44_carry_eqn = (!B1L51 & B1L48) # (B1L51 & B1L49);
+B1L44 = B1_n[17] $ (B1L44_carry_eqn);
+
+--B1L45 is counter:inst2|add~563 at LC_X19_Y9_N1
+--operation mode is arithmetic
+
+B1L45_cout_0 = !B1L48 # !B1_n[17];
+B1L45 = CARRY(B1L45_cout_0);
+
+--B1L46 is counter:inst2|add~563COUT1_655 at LC_X19_Y9_N1
+--operation mode is arithmetic
+
+B1L46_cout_1 = !B1L49 # !B1_n[17];
+B1L46 = CARRY(B1L46_cout_1);
+
+
+--B1L47 is counter:inst2|add~566 at LC_X19_Y9_N0
+--operation mode is arithmetic
+
+B1L47_carry_eqn = B1L51;
+B1L47 = B1_n[16] $ !B1L47_carry_eqn;
+
+--B1L48 is counter:inst2|add~568 at LC_X19_Y9_N0
+--operation mode is arithmetic
+
+B1L48_cout_0 = B1_n[16] & !B1L51;
+B1L48 = CARRY(B1L48_cout_0);
+
+--B1L49 is counter:inst2|add~568COUT1_654 at LC_X19_Y9_N0
+--operation mode is arithmetic
+
+B1L49_cout_1 = B1_n[16] & !B1L51;
+B1L49 = CARRY(B1L49_cout_1);
+
+
+--B1L50 is counter:inst2|add~571 at LC_X19_Y10_N9
+--operation mode is arithmetic
+
+B1L50_carry_eqn = (!B1L65 & B1L53) # (B1L65 & B1L54);
+B1L50 = B1_n[15] $ (B1L50_carry_eqn);
+
+--B1L51 is counter:inst2|add~573 at LC_X19_Y10_N9
+--operation mode is arithmetic
+
+B1L51 = CARRY(!B1L54 # !B1_n[15]);
+
+
+--B1L52 is counter:inst2|add~576 at LC_X19_Y10_N8
+--operation mode is arithmetic
+
+B1L52_carry_eqn = (!B1L65 & B1L56) # (B1L65 & B1L57);
+B1L52 = B1_n[14] $ (!B1L52_carry_eqn);
+
+--B1L53 is counter:inst2|add~578 at LC_X19_Y10_N8
+--operation mode is arithmetic
+
+B1L53_cout_0 = B1_n[14] & (!B1L56);
+B1L53 = CARRY(B1L53_cout_0);
+
+--B1L54 is counter:inst2|add~578COUT1_653 at LC_X19_Y10_N8
+--operation mode is arithmetic
+
+B1L54_cout_1 = B1_n[14] & (!B1L57);
+B1L54 = CARRY(B1L54_cout_1);
+
+
+--B1L55 is counter:inst2|add~581 at LC_X19_Y10_N7
+--operation mode is arithmetic
+
+B1L55_carry_eqn = (!B1L65 & B1L59) # (B1L65 & B1L60);
+B1L55 = B1_n[13] $ (B1L55_carry_eqn);
+
+--B1L56 is counter:inst2|add~583 at LC_X19_Y10_N7
+--operation mode is arithmetic
+
+B1L56_cout_0 = !B1L59 # !B1_n[13];
+B1L56 = CARRY(B1L56_cout_0);
+
+--B1L57 is counter:inst2|add~583COUT1_652 at LC_X19_Y10_N7
+--operation mode is arithmetic
+
+B1L57_cout_1 = !B1L60 # !B1_n[13];
+B1L57 = CARRY(B1L57_cout_1);
+
+
+--B1L58 is counter:inst2|add~586 at LC_X19_Y10_N6
+--operation mode is arithmetic
+
+B1L58_carry_eqn = (!B1L65 & B1L62) # (B1L65 & B1L63);
+B1L58 = B1_n[12] $ (!B1L58_carry_eqn);
+
+--B1L59 is counter:inst2|add~588 at LC_X19_Y10_N6
+--operation mode is arithmetic
+
+B1L59_cout_0 = B1_n[12] & (!B1L62);
+B1L59 = CARRY(B1L59_cout_0);
+
+--B1L60 is counter:inst2|add~588COUT1_651 at LC_X19_Y10_N6
+--operation mode is arithmetic
+
+B1L60_cout_1 = B1_n[12] & (!B1L63);
+B1L60 = CARRY(B1L60_cout_1);
+
+
+--B1L61 is counter:inst2|add~591 at LC_X19_Y10_N5
+--operation mode is arithmetic
+
+B1L61_carry_eqn = B1L65;
+B1L61 = B1_n[11] $ B1L61_carry_eqn;
+
+--B1L62 is counter:inst2|add~593 at LC_X19_Y10_N5
+--operation mode is arithmetic
+
+B1L62_cout_0 = !B1L65 # !B1_n[11];
+B1L62 = CARRY(B1L62_cout_0);
+
+--B1L63 is counter:inst2|add~593COUT1_650 at LC_X19_Y10_N5
+--operation mode is arithmetic
+
+B1L63_cout_1 = !B1L65 # !B1_n[11];
+B1L63 = CARRY(B1L63_cout_1);
+
+
+--B1L64 is counter:inst2|add~596 at LC_X19_Y10_N4
+--operation mode is arithmetic
+
+B1L64_carry_eqn = (!B1L84 & B1L67) # (B1L84 & B1L68);
+B1L64 = B1_n[10] $ (!B1L64_carry_eqn);
+
+--B1L65 is counter:inst2|add~598 at LC_X19_Y10_N4
+--operation mode is arithmetic
+
+B1L65 = CARRY(B1_n[10] & (!B1L68));
+
+
+--B1L66 is counter:inst2|add~601 at LC_X19_Y10_N3
+--operation mode is arithmetic
+
+B1L66_carry_eqn = (!B1L84 & B1L70) # (B1L84 & B1L71);
+B1L66 = B1_n[9] $ B1L66_carry_eqn;
+
+--B1L67 is counter:inst2|add~603 at LC_X19_Y10_N3
+--operation mode is arithmetic
+
+B1L67_cout_0 = !B1L70 # !B1_n[9];
+B1L67 = CARRY(B1L67_cout_0);
+
+--B1L68 is counter:inst2|add~603COUT1_649 at LC_X19_Y10_N3
+--operation mode is arithmetic
+
+B1L68_cout_1 = !B1L71 # !B1_n[9];
+B1L68 = CARRY(B1L68_cout_1);
+
+
+--B1L69 is counter:inst2|add~606 at LC_X19_Y10_N2
+--operation mode is arithmetic
+
+B1L69_carry_eqn = (!B1L84 & B1L73) # (B1L84 & B1L74);
+B1L69 = B1_n[8] $ !B1L69_carry_eqn;
+
+--B1L70 is counter:inst2|add~608 at LC_X19_Y10_N2
+--operation mode is arithmetic
+
+B1L70_cout_0 = B1_n[8] & !B1L73;
+B1L70 = CARRY(B1L70_cout_0);
+
+--B1L71 is counter:inst2|add~608COUT1_648 at LC_X19_Y10_N2
+--operation mode is arithmetic
+
+B1L71_cout_1 = B1_n[8] & !B1L74;
+B1L71 = CARRY(B1L71_cout_1);
+
+
+--B1L72 is counter:inst2|add~611 at LC_X19_Y10_N1
+--operation mode is arithmetic
+
+B1L72_carry_eqn = (!B1L84 & B1L76) # (B1L84 & B1L77);
+B1L72 = B1_n[7] $ (B1L72_carry_eqn);
+
+--B1L73 is counter:inst2|add~613 at LC_X19_Y10_N1
+--operation mode is arithmetic
+
+B1L73_cout_0 = !B1L76 # !B1_n[7];
+B1L73 = CARRY(B1L73_cout_0);
+
+--B1L74 is counter:inst2|add~613COUT1_647 at LC_X19_Y10_N1
+--operation mode is arithmetic
+
+B1L74_cout_1 = !B1L77 # !B1_n[7];
+B1L74 = CARRY(B1L74_cout_1);
+
+
+--B1L75 is counter:inst2|add~616 at LC_X19_Y10_N0
+--operation mode is arithmetic
+
+B1L75_carry_eqn = B1L84;
+B1L75 = B1_n[6] $ (!B1L75_carry_eqn);
+
+--B1L76 is counter:inst2|add~618 at LC_X19_Y10_N0
+--operation mode is arithmetic
+
+B1L76_cout_0 = B1_n[6] & (!B1L84);
+B1L76 = CARRY(B1L76_cout_0);
+
+--B1L77 is counter:inst2|add~618COUT1_646 at LC_X19_Y10_N0
+--operation mode is arithmetic
+
+B1L77_cout_1 = B1_n[6] & (!B1L84);
+B1L77 = CARRY(B1L77_cout_1);
+
+
+--B1L78 is counter:inst2|add~621 at LC_X19_Y11_N7
+--operation mode is arithmetic
+
+B1L78_carry_eqn = (!B1L82 & B1L2) # (B1L82 & B1L3);
+B1L78 = B1_n[3] $ (B1L78_carry_eqn);
+
+--B1L79 is counter:inst2|add~623 at LC_X19_Y11_N7
+--operation mode is arithmetic
+
+B1L79_cout_0 = !B1L2 # !B1_n[3];
+B1L79 = CARRY(B1L79_cout_0);
+
+--B1L80 is counter:inst2|add~623COUT1_644 at LC_X19_Y11_N7
+--operation mode is arithmetic
+
+B1L80_cout_1 = !B1L3 # !B1_n[3];
+B1L80 = CARRY(B1L80_cout_1);
+
+
+--B1L81 is counter:inst2|add~626 at LC_X19_Y11_N4
+--operation mode is arithmetic
+
+B1L81 = !B1_n[0];
+
+--B1L82 is counter:inst2|add~628 at LC_X19_Y11_N4
+--operation mode is arithmetic
+
+B1L82 = CARRY(B1_n[0]);
+
+
+--B1L83 is counter:inst2|add~631 at LC_X19_Y11_N9
+--operation mode is arithmetic
+
+B1L83_carry_eqn = (!B1L82 & B1L86) # (B1L82 & B1L87);
+B1L83 = B1_n[5] $ (B1L83_carry_eqn);
+
+--B1L84 is counter:inst2|add~633 at LC_X19_Y11_N9
+--operation mode is arithmetic
+
+B1L84 = CARRY(!B1L87 # !B1_n[5]);
+
+
+--B1L85 is counter:inst2|add~636 at LC_X19_Y11_N8
+--operation mode is arithmetic
+
+B1L85_carry_eqn = (!B1L82 & B1L79) # (B1L82 & B1L80);
+B1L85 = B1_n[4] $ (!B1L85_carry_eqn);
+
+--B1L86 is counter:inst2|add~638 at LC_X19_Y11_N8
+--operation mode is arithmetic
+
+B1L86_cout_0 = B1_n[4] & (!B1L79);
+B1L86 = CARRY(B1L86_cout_0);
+
+--B1L87 is counter:inst2|add~638COUT1_645 at LC_X19_Y11_N8
+--operation mode is arithmetic
+
+B1L87_cout_1 = B1_n[4] & (!B1L80);
+B1L87 = CARRY(B1L87_cout_1);
+
+
+--A1L26 is rtl~857 at LC_X12_Y12_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[2]_qfbk = B2_n[2];
+A1L26 = !B2_n[2]_qfbk & !B2_n[1];
+
+--B2_n[2] is counter:inst1|n[2] at LC_X12_Y12_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[2] = DFFEAS(A1L26, GLOBAL(B3_clk_jinwei), VCC, , , B2L1, , , VCC);
+
+
+--B2_n[30] is counter:inst1|n[30] at LC_X12_Y9_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[30]_lut_out = GND;
+B2_n[30] = DFFEAS(B2_n[30]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L13, , , VCC);
+
+
+--B2_n[29] is counter:inst1|n[29] at LC_X12_Y9_N9
+--operation mode is normal
+
+B2_n[29]_lut_out = B2L15;
+B2_n[29] = DFFEAS(B2_n[29]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--B2_n[28] is counter:inst1|n[28] at LC_X12_Y9_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[28]_lut_out = GND;
+B2_n[28] = DFFEAS(B2_n[28]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L18, , , VCC);
+
+
+--A1L27 is rtl~858 at LC_X12_Y9_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[31]_qfbk = B2_n[31];
+A1L27 = !B2_n[29] & !B2_n[30] & !B2_n[31]_qfbk & !B2_n[28];
+
+--B2_n[31] is counter:inst1|n[31] at LC_X12_Y9_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[31] = DFFEAS(A1L27, GLOBAL(B3_clk_jinwei), VCC, , , B2L12, , , VCC);
+
+
+--A1L28 is rtl~859 at LC_X11_Y8_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[0]_qfbk = B2_n[0];
+A1L28 = A1L26 & A1L27 & B2_n[0]_qfbk & B2_n[3];
+
+--B2_n[0] is counter:inst1|n[0] at LC_X11_Y8_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[0] = DFFEAS(A1L28, GLOBAL(B3_clk_jinwei), VCC, , , B2L10, , , VCC);
+
+
+--B2_n[26] is counter:inst1|n[26] at LC_X11_Y11_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[26]_lut_out = GND;
+B2_n[26] = DFFEAS(B2_n[26]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L24, , , VCC);
+
+
+--B2_n[25] is counter:inst1|n[25] at LC_X11_Y11_N6
+--operation mode is normal
+
+B2_n[25]_lut_out = B2L27;
+B2_n[25] = DFFEAS(B2_n[25]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--B2_n[24] is counter:inst1|n[24] at LC_X11_Y11_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[24]_lut_out = GND;
+B2_n[24] = DFFEAS(B2_n[24]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L29, , , VCC);
+
+
+--A1L29 is rtl~860 at LC_X11_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[27]_qfbk = B2_n[27];
+A1L29 = !B2_n[24] & !B2_n[26] & !B2_n[27]_qfbk & !B2_n[25];
+
+--B2_n[27] is counter:inst1|n[27] at LC_X11_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[27] = DFFEAS(A1L29, GLOBAL(B3_clk_jinwei), VCC, , , B2L21, , , VCC);
+
+
+--B2_n[22] is counter:inst1|n[22] at LC_X13_Y10_N4
+--operation mode is normal
+
+B2_n[22]_lut_out = B2L35;
+B2_n[22] = DFFEAS(B2_n[22]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--B2_n[21] is counter:inst1|n[21] at LC_X13_Y10_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[21]_lut_out = GND;
+B2_n[21] = DFFEAS(B2_n[21]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L38, , , VCC);
+
+
+--B2_n[20] is counter:inst1|n[20] at LC_X13_Y10_N2
+--operation mode is normal
+
+B2_n[20]_lut_out = B2L41;
+B2_n[20] = DFFEAS(B2_n[20]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--A1L30 is rtl~861 at LC_X13_Y10_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[23]_qfbk = B2_n[23];
+A1L30 = !B2_n[20] & !B2_n[22] & !B2_n[23]_qfbk & !B2_n[21];
+
+--B2_n[23] is counter:inst1|n[23] at LC_X13_Y10_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[23] = DFFEAS(A1L30, GLOBAL(B3_clk_jinwei), VCC, , , B2L32, , , VCC);
+
+
+--B2_n[18] is counter:inst1|n[18] at LC_X11_Y10_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[18]_lut_out = GND;
+B2_n[18] = DFFEAS(B2_n[18]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L46, , , VCC);
+
+
+--B2_n[17] is counter:inst1|n[17] at LC_X11_Y10_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[17]_lut_out = GND;
+B2_n[17] = DFFEAS(B2_n[17]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L49, , , VCC);
+
+
+--B2_n[16] is counter:inst1|n[16] at LC_X11_Y10_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[16]_lut_out = GND;
+B2_n[16] = DFFEAS(B2_n[16]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L52, , , VCC);
+
+
+--A1L31 is rtl~862 at LC_X11_Y10_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[19]_qfbk = B2_n[19];
+A1L31 = !B2_n[18] & !B2_n[17] & !B2_n[19]_qfbk & !B2_n[16];
+
+--B2_n[19] is counter:inst1|n[19] at LC_X11_Y10_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[19] = DFFEAS(A1L31, GLOBAL(B3_clk_jinwei), VCC, , , B2L43, , , VCC);
+
+
+--B2_n[14] is counter:inst1|n[14] at LC_X10_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[14]_lut_out = GND;
+B2_n[14] = DFFEAS(B2_n[14]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L57, , , VCC);
+
+
+--B2_n[13] is counter:inst1|n[13] at LC_X15_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[13]_lut_out = GND;
+B2_n[13] = DFFEAS(B2_n[13]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L60, , , VCC);
+
+
+--B2_n[12] is counter:inst1|n[12] at LC_X13_Y12_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[12]_lut_out = GND;
+B2_n[12] = DFFEAS(B2_n[12]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L63, , , VCC);
+
+
+--A1L32 is rtl~863 at LC_X11_Y10_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[15]_qfbk = B2_n[15];
+A1L32 = !B2_n[13] & !B2_n[12] & !B2_n[15]_qfbk & !B2_n[14];
+
+--B2_n[15] is counter:inst1|n[15] at LC_X11_Y10_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[15] = DFFEAS(A1L32, GLOBAL(B3_clk_jinwei), VCC, , , B2L55, , , VCC);
+
+
+--B2_n[10] is counter:inst1|n[10] at LC_X10_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[10]_lut_out = GND;
+B2_n[10] = DFFEAS(B2_n[10]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L69, , , VCC);
+
+
+--B2_n[9] is counter:inst1|n[9] at LC_X13_Y11_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[9]_lut_out = GND;
+B2_n[9] = DFFEAS(B2_n[9]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L71, , , VCC);
+
+
+--B2_n[8] is counter:inst1|n[8] at LC_X10_Y12_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[8]_lut_out = GND;
+B2_n[8] = DFFEAS(B2_n[8]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , B2L74, , , VCC);
+
+
+--A1L33 is rtl~864 at LC_X11_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[11]_qfbk = B2_n[11];
+A1L33 = !B2_n[9] & !B2_n[10] & !B2_n[11]_qfbk & !B2_n[8];
+
+--B2_n[11] is counter:inst1|n[11] at LC_X11_Y10_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[11] = DFFEAS(A1L33, GLOBAL(B3_clk_jinwei), VCC, , , B2L66, , , VCC);
+
+
+--B2_n[6] is counter:inst1|n[6] at LC_X11_Y10_N0
+--operation mode is normal
+
+B2_n[6]_lut_out = B2L80;
+B2_n[6] = DFFEAS(B2_n[6]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--B2_n[5] is counter:inst1|n[5] at LC_X11_Y12_N2
+--operation mode is normal
+
+B2_n[5]_lut_out = B2L83;
+B2_n[5] = DFFEAS(B2_n[5]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--B2_n[4] is counter:inst1|n[4] at LC_X11_Y10_N8
+--operation mode is normal
+
+B2_n[4]_lut_out = B2L85;
+B2_n[4] = DFFEAS(B2_n[4]_lut_out, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--A1L34 is rtl~865 at LC_X11_Y10_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[7]_qfbk = B2_n[7];
+A1L34 = !B2_n[5] & !B2_n[4] & !B2_n[7]_qfbk & !B2_n[6];
+
+--B2_n[7] is counter:inst1|n[7] at LC_X11_Y10_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B2_n[7] = DFFEAS(A1L34, GLOBAL(B3_clk_jinwei), VCC, , , B2L77, , , VCC);
+
+
+--A1L35 is rtl~866 at LC_X11_Y10_N5
+--operation mode is normal
+
+A1L35 = A1L33 & A1L32 & A1L31 & A1L34;
+
+
+--A1L13 is rtl~1 at LC_X12_Y12_N2
+--operation mode is normal
+
+A1L13 = A1L30 & A1L29 & A1L35 & A1L28;
+
+--B2_clk_jinwei is counter:inst1|clk_jinwei at LC_X12_Y12_N2
+--operation mode is normal
+
+B2_clk_jinwei = DFFEAS(A1L13, GLOBAL(B3_clk_jinwei), VCC, , , , , , );
+
+
+--B3L1 is counter:inst|add~481 at LC_X9_Y10_N7
+--operation mode is arithmetic
+
+B3L1_carry_eqn = (!B3L11 & B3L5) # (B3L11 & B3L6);
+B3L1 = B3_n[3] $ (B3L1_carry_eqn);
+
+--B3L2 is counter:inst|add~483 at LC_X9_Y10_N7
+--operation mode is arithmetic
+
+B3L2_cout_0 = !B3L5 # !B3_n[3];
+B3L2 = CARRY(B3L2_cout_0);
+
+--B3L3 is counter:inst|add~483COUT1_644 at LC_X9_Y10_N7
+--operation mode is arithmetic
+
+B3L3_cout_1 = !B3L6 # !B3_n[3];
+B3L3 = CARRY(B3L3_cout_1);
+
+
+--B3_n[30] is counter:inst|n[30] at LC_X9_Y7_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[30]_lut_out = GND;
+B3_n[30] = DFFEAS(B3_n[30]_lut_out, GLOBAL(clk), VCC, , , B3L13, , , VCC);
+
+
+--B3_n[29] is counter:inst|n[29] at LC_X9_Y7_N7
+--operation mode is normal
+
+B3_n[29]_lut_out = B3L15;
+B3_n[29] = DFFEAS(B3_n[29]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B3_n[28] is counter:inst|n[28] at LC_X9_Y7_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[28]_lut_out = GND;
+B3_n[28] = DFFEAS(B3_n[28]_lut_out, GLOBAL(clk), VCC, , , B3L18, , , VCC);
+
+
+--A1L36 is rtl~867 at LC_X9_Y7_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[31]_qfbk = B3_n[31];
+A1L36 = !B3_n[29] & !B3_n[30] & !B3_n[31]_qfbk & !B3_n[28];
+
+--B3_n[31] is counter:inst|n[31] at LC_X9_Y7_N9
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[31] = DFFEAS(A1L36, GLOBAL(clk), VCC, , , B3L12, , , VCC);
+
+
+--A1L37 is rtl~868 at LC_X8_Y7_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[0]_qfbk = B3_n[0];
+A1L37 = A1L25 & B3_n[3] & B3_n[0]_qfbk & A1L36;
+
+--B3_n[0] is counter:inst|n[0] at LC_X8_Y7_N0
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[0] = DFFEAS(A1L37, GLOBAL(clk), VCC, , , B3L10, , , VCC);
+
+
+--B3_n[26] is counter:inst|n[26] at LC_X10_Y7_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[26]_lut_out = GND;
+B3_n[26] = DFFEAS(B3_n[26]_lut_out, GLOBAL(clk), VCC, , , B3L24, , , VCC);
+
+
+--B3_n[25] is counter:inst|n[25] at LC_X10_Y7_N8
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[25]_lut_out = GND;
+B3_n[25] = DFFEAS(B3_n[25]_lut_out, GLOBAL(clk), VCC, , , B3L27, , , VCC);
+
+
+--B3_n[24] is counter:inst|n[24] at LC_X10_Y7_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[24]_lut_out = GND;
+B3_n[24] = DFFEAS(B3_n[24]_lut_out, GLOBAL(clk), VCC, , , B3L29, , , VCC);
+
+
+--A1L38 is rtl~869 at LC_X10_Y7_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[27]_qfbk = B3_n[27];
+A1L38 = !B3_n[25] & !B3_n[26] & !B3_n[27]_qfbk & !B3_n[24];
+
+--B3_n[27] is counter:inst|n[27] at LC_X10_Y7_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[27] = DFFEAS(A1L38, GLOBAL(clk), VCC, , , B3L21, , , VCC);
+
+
+--B3_n[22] is counter:inst|n[22] at LC_X9_Y6_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[22]_lut_out = GND;
+B3_n[22] = DFFEAS(B3_n[22]_lut_out, GLOBAL(clk), VCC, , , B3L35, , , VCC);
+
+
+--B3_n[21] is counter:inst|n[21] at LC_X9_Y6_N5
+--operation mode is normal
+
+B3_n[21]_lut_out = B3L38;
+B3_n[21] = DFFEAS(B3_n[21]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B3_n[20] is counter:inst|n[20] at LC_X9_Y6_N4
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[20]_lut_out = GND;
+B3_n[20] = DFFEAS(B3_n[20]_lut_out, GLOBAL(clk), VCC, , , B3L41, , , VCC);
+
+
+--A1L39 is rtl~870 at LC_X9_Y6_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[23]_qfbk = B3_n[23];
+A1L39 = !B3_n[22] & !B3_n[20] & !B3_n[23]_qfbk & !B3_n[21];
+
+--B3_n[23] is counter:inst|n[23] at LC_X9_Y6_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[23] = DFFEAS(A1L39, GLOBAL(clk), VCC, , , B3L32, , , VCC);
+
+
+--B3_n[18] is counter:inst|n[18] at LC_X10_Y8_N4
+--operation mode is normal
+
+B3_n[18]_lut_out = B3L46;
+B3_n[18] = DFFEAS(B3_n[18]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B3_n[17] is counter:inst|n[17] at LC_X10_Y8_N8
+--operation mode is normal
+
+B3_n[17]_lut_out = B3L49;
+B3_n[17] = DFFEAS(B3_n[17]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B3_n[16] is counter:inst|n[16] at LC_X10_Y8_N1
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[16]_lut_out = GND;
+B3_n[16] = DFFEAS(B3_n[16]_lut_out, GLOBAL(clk), VCC, , , B3L52, , , VCC);
+
+
+--A1L40 is rtl~871 at LC_X10_Y8_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[19]_qfbk = B3_n[19];
+A1L40 = !B3_n[18] & !B3_n[17] & !B3_n[19]_qfbk & !B3_n[16];
+
+--B3_n[19] is counter:inst|n[19] at LC_X10_Y8_N5
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[19] = DFFEAS(A1L40, GLOBAL(clk), VCC, , , B3L43, , , VCC);
+
+
+--B3_n[14] is counter:inst|n[14] at LC_X13_Y9_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[14]_lut_out = GND;
+B3_n[14] = DFFEAS(B3_n[14]_lut_out, GLOBAL(clk), VCC, , , B3L57, , , VCC);
+
+
+--B3_n[13] is counter:inst|n[13] at LC_X12_Y7_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[13]_lut_out = GND;
+B3_n[13] = DFFEAS(B3_n[13]_lut_out, GLOBAL(clk), VCC, , , B3L60, , , VCC);
+
+
+--B3_n[12] is counter:inst|n[12] at LC_X11_Y9_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[12]_lut_out = GND;
+B3_n[12] = DFFEAS(B3_n[12]_lut_out, GLOBAL(clk), VCC, , , B3L63, , , VCC);
+
+
+--A1L41 is rtl~872 at LC_X10_Y8_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[15]_qfbk = B3_n[15];
+A1L41 = !B3_n[13] & !B3_n[14] & !B3_n[15]_qfbk & !B3_n[12];
+
+--B3_n[15] is counter:inst|n[15] at LC_X10_Y8_N7
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[15] = DFFEAS(A1L41, GLOBAL(clk), VCC, , , B3L55, , , VCC);
+
+
+--B3_n[10] is counter:inst|n[10] at LC_X10_Y9_N9
+--operation mode is normal
+
+B3_n[10]_lut_out = B3L69;
+B3_n[10] = DFFEAS(B3_n[10]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B3_n[9] is counter:inst|n[9] at LC_X10_Y8_N2
+--operation mode is normal
+
+B3_n[9]_lut_out = B3L71;
+B3_n[9] = DFFEAS(B3_n[9]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--B3_n[8] is counter:inst|n[8] at LC_X10_Y8_N0
+--operation mode is normal
+
+B3_n[8]_lut_out = B3L74;
+B3_n[8] = DFFEAS(B3_n[8]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--A1L42 is rtl~873 at LC_X10_Y8_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[11]_qfbk = B3_n[11];
+A1L42 = !B3_n[9] & !B3_n[10] & !B3_n[11]_qfbk & !B3_n[8];
+
+--B3_n[11] is counter:inst|n[11] at LC_X10_Y8_N6
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[11] = DFFEAS(A1L42, GLOBAL(clk), VCC, , , B3L66, , , VCC);
+
+
+--B3_n[6] is counter:inst|n[6] at LC_X8_Y9_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[6]_lut_out = GND;
+B3_n[6] = DFFEAS(B3_n[6]_lut_out, GLOBAL(clk), VCC, , , B3L80, , , VCC);
+
+
+--B3_n[5] is counter:inst|n[5] at LC_X12_Y8_N2
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[5]_lut_out = GND;
+B3_n[5] = DFFEAS(B3_n[5]_lut_out, GLOBAL(clk), VCC, , , B3L83, , , VCC);
+
+
+--B3_n[4] is counter:inst|n[4] at LC_X8_Y10_N2
+--operation mode is normal
+
+B3_n[4]_lut_out = B3L85;
+B3_n[4] = DFFEAS(B3_n[4]_lut_out, GLOBAL(clk), VCC, , , , , , );
+
+
+--A1L43 is rtl~874 at LC_X10_Y8_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[7]_qfbk = B3_n[7];
+A1L43 = !B3_n[4] & !B3_n[5] & !B3_n[7]_qfbk & !B3_n[6];
+
+--B3_n[7] is counter:inst|n[7] at LC_X10_Y8_N3
+--operation mode is normal
+--sload is tied to vcc, which is functionally the same as treating the sdata port as the data input.
+
+B3_n[7] = DFFEAS(A1L43, GLOBAL(clk), VCC, , , B3L77, , , VCC);
+
+
+--A1L44 is rtl~875 at LC_X10_Y8_N9
+--operation mode is normal
+
+A1L44 = A1L42 & A1L40 & A1L41 & A1L43;
+
+
+--A1L14 is rtl~2 at LC_X9_Y10_N2
+--operation mode is normal
+
+A1L14 = A1L37 & A1L44 & A1L38 & A1L39;
+
+--B3_clk_jinwei is counter:inst|clk_jinwei at LC_X9_Y10_N2
+--operation mode is normal
+
+B3_clk_jinwei = DFFEAS(A1L14, GLOBAL(clk), VCC, , , , , , );
+
+
+--B3L4 is counter:inst|add~486 at LC_X9_Y10_N6
+--operation mode is arithmetic
+
+B3L4_carry_eqn = (!B3L11 & B3L8) # (B3L11 & B3L9);
+B3L4 = B3_n[2] $ (!B3L4_carry_eqn);
+
+--B3L5 is counter:inst|add~488 at LC_X9_Y10_N6
+--operation mode is arithmetic
+
+B3L5_cout_0 = B3_n[2] & (!B3L8);
+B3L5 = CARRY(B3L5_cout_0);
+
+--B3L6 is counter:inst|add~488COUT1_643 at LC_X9_Y10_N6
+--operation mode is arithmetic
+
+B3L6_cout_1 = B3_n[2] & (!B3L9);
+B3L6 = CARRY(B3L6_cout_1);
+
+
+--B3L7 is counter:inst|add~491 at LC_X9_Y10_N5
+--operation mode is arithmetic
+
+B3L7_carry_eqn = B3L11;
+B3L7 = B3_n[1] $ B3L7_carry_eqn;
+
+--B3L8 is counter:inst|add~493 at LC_X9_Y10_N5
+--operation mode is arithmetic
+
+B3L8_cout_0 = !B3L11 # !B3_n[1];
+B3L8 = CARRY(B3L8_cout_0);
+
+--B3L9 is counter:inst|add~493COUT1_642 at LC_X9_Y10_N5
+--operation mode is arithmetic
+
+B3L9_cout_1 = !B3L11 # !B3_n[1];
+B3L9 = CARRY(B3L9_cout_1);
+
+
+--B2L1 is counter:inst1|add~481 at LC_X12_Y12_N6
+--operation mode is arithmetic
+
+B2L1_carry_eqn = (!B2L11 & B2L5) # (B2L11 & B2L6);
+B2L1 = B2_n[2] $ !B2L1_carry_eqn;
+
+--B2L2 is counter:inst1|add~483 at LC_X12_Y12_N6
+--operation mode is arithmetic
+
+B2L2_cout_0 = B2_n[2] & !B2L5;
+B2L2 = CARRY(B2L2_cout_0);
+
+--B2L3 is counter:inst1|add~483COUT1_643 at LC_X12_Y12_N6
+--operation mode is arithmetic
+
+B2L3_cout_1 = B2_n[2] & !B2L6;
+B2L3 = CARRY(B2L3_cout_1);
+
+
+--B2L4 is counter:inst1|add~486 at LC_X12_Y12_N5
+--operation mode is arithmetic
+
+B2L4_carry_eqn = B2L11;
+B2L4 = B2_n[1] $ (B2L4_carry_eqn);
+
+--B2L5 is counter:inst1|add~488 at LC_X12_Y12_N5
+--operation mode is arithmetic
+
+B2L5_cout_0 = !B2L11 # !B2_n[1];
+B2L5 = CARRY(B2L5_cout_0);
+
+--B2L6 is counter:inst1|add~488COUT1_642 at LC_X12_Y12_N5
+--operation mode is arithmetic
+
+B2L6_cout_1 = !B2L11 # !B2_n[1];
+B2L6 = CARRY(B2L6_cout_1);
+
+
+--B2L7 is counter:inst1|add~491 at LC_X12_Y12_N7
+--operation mode is arithmetic
+
+B2L7_carry_eqn = (!B2L11 & B2L2) # (B2L11 & B2L3);
+B2L7 = B2_n[3] $ B2L7_carry_eqn;
+
+--B2L8 is counter:inst1|add~493 at LC_X12_Y12_N7
+--operation mode is arithmetic
+
+B2L8_cout_0 = !B2L2 # !B2_n[3];
+B2L8 = CARRY(B2L8_cout_0);
+
+--B2L9 is counter:inst1|add~493COUT1_644 at LC_X12_Y12_N7
+--operation mode is arithmetic
+
+B2L9_cout_1 = !B2L3 # !B2_n[3];
+B2L9 = CARRY(B2L9_cout_1);
+
+
+--B3L10 is counter:inst|add~496 at LC_X9_Y10_N4
+--operation mode is arithmetic
+
+B3L10 = !B3_n[0];
+
+--B3L11 is counter:inst|add~498 at LC_X9_Y10_N4
+--operation mode is arithmetic
+
+B3L11 = CARRY(B3_n[0]);
+
+
+--B2L10 is counter:inst1|add~496 at LC_X12_Y12_N4
+--operation mode is arithmetic
+
+B2L10 = !B2_n[0];
+
+--B2L11 is counter:inst1|add~498 at LC_X12_Y12_N4
+--operation mode is arithmetic
+
+B2L11 = CARRY(B2_n[0]);
+
+
+--B2L12 is counter:inst1|add~501 at LC_X12_Y9_N5
+--operation mode is normal
+
+B2L12_carry_eqn = B2L14;
+B2L12 = B2_n[31] $ (B2L12_carry_eqn);
+
+
+--B2L13 is counter:inst1|add~506 at LC_X12_Y9_N4
+--operation mode is arithmetic
+
+B2L13_carry_eqn = (!B2L28 & B2L16) # (B2L28 & B2L17);
+B2L13 = B2_n[30] $ !B2L13_carry_eqn;
+
+--B2L14 is counter:inst1|add~508 at LC_X12_Y9_N4
+--operation mode is arithmetic
+
+B2L14 = CARRY(B2_n[30] & !B2L17);
+
+
+--B2L15 is counter:inst1|add~511 at LC_X12_Y9_N3
+--operation mode is arithmetic
+
+B2L15_carry_eqn = (!B2L28 & B2L19) # (B2L28 & B2L20);
+B2L15 = B2_n[29] $ (B2L15_carry_eqn);
+
+--B2L16 is counter:inst1|add~513 at LC_X12_Y9_N3
+--operation mode is arithmetic
+
+B2L16_cout_0 = !B2L19 # !B2_n[29];
+B2L16 = CARRY(B2L16_cout_0);
+
+--B2L17 is counter:inst1|add~513COUT1_665 at LC_X12_Y9_N3
+--operation mode is arithmetic
+
+B2L17_cout_1 = !B2L20 # !B2_n[29];
+B2L17 = CARRY(B2L17_cout_1);
+
+
+--B2L18 is counter:inst1|add~516 at LC_X12_Y9_N2
+--operation mode is arithmetic
+
+B2L18_carry_eqn = (!B2L28 & B2L22) # (B2L28 & B2L23);
+B2L18 = B2_n[28] $ (!B2L18_carry_eqn);
+
+--B2L19 is counter:inst1|add~518 at LC_X12_Y9_N2
+--operation mode is arithmetic
+
+B2L19_cout_0 = B2_n[28] & (!B2L22);
+B2L19 = CARRY(B2L19_cout_0);
+
+--B2L20 is counter:inst1|add~518COUT1_664 at LC_X12_Y9_N2
+--operation mode is arithmetic
+
+B2L20_cout_1 = B2_n[28] & (!B2L23);
+B2L20 = CARRY(B2L20_cout_1);
+
+
+--B2L21 is counter:inst1|add~521 at LC_X12_Y9_N1
+--operation mode is arithmetic
+
+B2L21_carry_eqn = (!B2L28 & B2L25) # (B2L28 & B2L26);
+B2L21 = B2_n[27] $ B2L21_carry_eqn;
+
+--B2L22 is counter:inst1|add~523 at LC_X12_Y9_N1
+--operation mode is arithmetic
+
+B2L22_cout_0 = !B2L25 # !B2_n[27];
+B2L22 = CARRY(B2L22_cout_0);
+
+--B2L23 is counter:inst1|add~523COUT1_663 at LC_X12_Y9_N1
+--operation mode is arithmetic
+
+B2L23_cout_1 = !B2L26 # !B2_n[27];
+B2L23 = CARRY(B2L23_cout_1);
+
+
+--B2L24 is counter:inst1|add~526 at LC_X12_Y9_N0
+--operation mode is arithmetic
+
+B2L24_carry_eqn = B2L28;
+B2L24 = B2_n[26] $ (!B2L24_carry_eqn);
+
+--B2L25 is counter:inst1|add~528 at LC_X12_Y9_N0
+--operation mode is arithmetic
+
+B2L25_cout_0 = B2_n[26] & (!B2L28);
+B2L25 = CARRY(B2L25_cout_0);
+
+--B2L26 is counter:inst1|add~528COUT1_662 at LC_X12_Y9_N0
+--operation mode is arithmetic
+
+B2L26_cout_1 = B2_n[26] & (!B2L28);
+B2L26 = CARRY(B2L26_cout_1);
+
+
+--B2L27 is counter:inst1|add~531 at LC_X12_Y10_N9
+--operation mode is arithmetic
+
+B2L27_carry_eqn = (!B2L42 & B2L30) # (B2L42 & B2L31);
+B2L27 = B2_n[25] $ B2L27_carry_eqn;
+
+--B2L28 is counter:inst1|add~533 at LC_X12_Y10_N9
+--operation mode is arithmetic
+
+B2L28 = CARRY(!B2L31 # !B2_n[25]);
+
+
+--B2L29 is counter:inst1|add~536 at LC_X12_Y10_N8
+--operation mode is arithmetic
+
+B2L29_carry_eqn = (!B2L42 & B2L33) # (B2L42 & B2L34);
+B2L29 = B2_n[24] $ (!B2L29_carry_eqn);
+
+--B2L30 is counter:inst1|add~538 at LC_X12_Y10_N8
+--operation mode is arithmetic
+
+B2L30_cout_0 = B2_n[24] & (!B2L33);
+B2L30 = CARRY(B2L30_cout_0);
+
+--B2L31 is counter:inst1|add~538COUT1_661 at LC_X12_Y10_N8
+--operation mode is arithmetic
+
+B2L31_cout_1 = B2_n[24] & (!B2L34);
+B2L31 = CARRY(B2L31_cout_1);
+
+
+--B2L32 is counter:inst1|add~541 at LC_X12_Y10_N7
+--operation mode is arithmetic
+
+B2L32_carry_eqn = (!B2L42 & B2L36) # (B2L42 & B2L37);
+B2L32 = B2_n[23] $ B2L32_carry_eqn;
+
+--B2L33 is counter:inst1|add~543 at LC_X12_Y10_N7
+--operation mode is arithmetic
+
+B2L33_cout_0 = !B2L36 # !B2_n[23];
+B2L33 = CARRY(B2L33_cout_0);
+
+--B2L34 is counter:inst1|add~543COUT1_660 at LC_X12_Y10_N7
+--operation mode is arithmetic
+
+B2L34_cout_1 = !B2L37 # !B2_n[23];
+B2L34 = CARRY(B2L34_cout_1);
+
+
+--B2L35 is counter:inst1|add~546 at LC_X12_Y10_N6
+--operation mode is arithmetic
+
+B2L35_carry_eqn = (!B2L42 & B2L39) # (B2L42 & B2L40);
+B2L35 = B2_n[22] $ !B2L35_carry_eqn;
+
+--B2L36 is counter:inst1|add~548 at LC_X12_Y10_N6
+--operation mode is arithmetic
+
+B2L36_cout_0 = B2_n[22] & !B2L39;
+B2L36 = CARRY(B2L36_cout_0);
+
+--B2L37 is counter:inst1|add~548COUT1_659 at LC_X12_Y10_N6
+--operation mode is arithmetic
+
+B2L37_cout_1 = B2_n[22] & !B2L40;
+B2L37 = CARRY(B2L37_cout_1);
+
+
+--B2L38 is counter:inst1|add~551 at LC_X12_Y10_N5
+--operation mode is arithmetic
+
+B2L38_carry_eqn = B2L42;
+B2L38 = B2_n[21] $ (B2L38_carry_eqn);
+
+--B2L39 is counter:inst1|add~553 at LC_X12_Y10_N5
+--operation mode is arithmetic
+
+B2L39_cout_0 = !B2L42 # !B2_n[21];
+B2L39 = CARRY(B2L39_cout_0);
+
+--B2L40 is counter:inst1|add~553COUT1_658 at LC_X12_Y10_N5
+--operation mode is arithmetic
+
+B2L40_cout_1 = !B2L42 # !B2_n[21];
+B2L40 = CARRY(B2L40_cout_1);
+
+
+--B2L41 is counter:inst1|add~556 at LC_X12_Y10_N4
+--operation mode is arithmetic
+
+B2L41_carry_eqn = (!B2L56 & B2L44) # (B2L56 & B2L45);
+B2L41 = B2_n[20] $ (!B2L41_carry_eqn);
+
+--B2L42 is counter:inst1|add~558 at LC_X12_Y10_N4
+--operation mode is arithmetic
+
+B2L42 = CARRY(B2_n[20] & (!B2L45));
+
+
+--B2L43 is counter:inst1|add~561 at LC_X12_Y10_N3
+--operation mode is arithmetic
+
+B2L43_carry_eqn = (!B2L56 & B2L47) # (B2L56 & B2L48);
+B2L43 = B2_n[19] $ B2L43_carry_eqn;
+
+--B2L44 is counter:inst1|add~563 at LC_X12_Y10_N3
+--operation mode is arithmetic
+
+B2L44_cout_0 = !B2L47 # !B2_n[19];
+B2L44 = CARRY(B2L44_cout_0);
+
+--B2L45 is counter:inst1|add~563COUT1_657 at LC_X12_Y10_N3
+--operation mode is arithmetic
+
+B2L45_cout_1 = !B2L48 # !B2_n[19];
+B2L45 = CARRY(B2L45_cout_1);
+
+
+--B2L46 is counter:inst1|add~566 at LC_X12_Y10_N2
+--operation mode is arithmetic
+
+B2L46_carry_eqn = (!B2L56 & B2L50) # (B2L56 & B2L51);
+B2L46 = B2_n[18] $ !B2L46_carry_eqn;
+
+--B2L47 is counter:inst1|add~568 at LC_X12_Y10_N2
+--operation mode is arithmetic
+
+B2L47_cout_0 = B2_n[18] & !B2L50;
+B2L47 = CARRY(B2L47_cout_0);
+
+--B2L48 is counter:inst1|add~568COUT1_656 at LC_X12_Y10_N2
+--operation mode is arithmetic
+
+B2L48_cout_1 = B2_n[18] & !B2L51;
+B2L48 = CARRY(B2L48_cout_1);
+
+
+--B2L49 is counter:inst1|add~571 at LC_X12_Y10_N1
+--operation mode is arithmetic
+
+B2L49_carry_eqn = (!B2L56 & B2L53) # (B2L56 & B2L54);
+B2L49 = B2_n[17] $ (B2L49_carry_eqn);
+
+--B2L50 is counter:inst1|add~573 at LC_X12_Y10_N1
+--operation mode is arithmetic
+
+B2L50_cout_0 = !B2L53 # !B2_n[17];
+B2L50 = CARRY(B2L50_cout_0);
+
+--B2L51 is counter:inst1|add~573COUT1_655 at LC_X12_Y10_N1
+--operation mode is arithmetic
+
+B2L51_cout_1 = !B2L54 # !B2_n[17];
+B2L51 = CARRY(B2L51_cout_1);
+
+
+--B2L52 is counter:inst1|add~576 at LC_X12_Y10_N0
+--operation mode is arithmetic
+
+B2L52_carry_eqn = B2L56;
+B2L52 = B2_n[16] $ (!B2L52_carry_eqn);
+
+--B2L53 is counter:inst1|add~578 at LC_X12_Y10_N0
+--operation mode is arithmetic
+
+B2L53_cout_0 = B2_n[16] & (!B2L56);
+B2L53 = CARRY(B2L53_cout_0);
+
+--B2L54 is counter:inst1|add~578COUT1_654 at LC_X12_Y10_N0
+--operation mode is arithmetic
+
+B2L54_cout_1 = B2_n[16] & (!B2L56);
+B2L54 = CARRY(B2L54_cout_1);
+
+
+--B2L55 is counter:inst1|add~581 at LC_X12_Y11_N9
+--operation mode is arithmetic
+
+B2L55_carry_eqn = (!B2L70 & B2L58) # (B2L70 & B2L59);
+B2L55 = B2_n[15] $ B2L55_carry_eqn;
+
+--B2L56 is counter:inst1|add~583 at LC_X12_Y11_N9
+--operation mode is arithmetic
+
+B2L56 = CARRY(!B2L59 # !B2_n[15]);
+
+
+--B2L57 is counter:inst1|add~586 at LC_X12_Y11_N8
+--operation mode is arithmetic
+
+B2L57_carry_eqn = (!B2L70 & B2L61) # (B2L70 & B2L62);
+B2L57 = B2_n[14] $ !B2L57_carry_eqn;
+
+--B2L58 is counter:inst1|add~588 at LC_X12_Y11_N8
+--operation mode is arithmetic
+
+B2L58_cout_0 = B2_n[14] & !B2L61;
+B2L58 = CARRY(B2L58_cout_0);
+
+--B2L59 is counter:inst1|add~588COUT1_653 at LC_X12_Y11_N8
+--operation mode is arithmetic
+
+B2L59_cout_1 = B2_n[14] & !B2L62;
+B2L59 = CARRY(B2L59_cout_1);
+
+
+--B2L60 is counter:inst1|add~591 at LC_X12_Y11_N7
+--operation mode is arithmetic
+
+B2L60_carry_eqn = (!B2L70 & B2L64) # (B2L70 & B2L65);
+B2L60 = B2_n[13] $ B2L60_carry_eqn;
+
+--B2L61 is counter:inst1|add~593 at LC_X12_Y11_N7
+--operation mode is arithmetic
+
+B2L61_cout_0 = !B2L64 # !B2_n[13];
+B2L61 = CARRY(B2L61_cout_0);
+
+--B2L62 is counter:inst1|add~593COUT1_652 at LC_X12_Y11_N7
+--operation mode is arithmetic
+
+B2L62_cout_1 = !B2L65 # !B2_n[13];
+B2L62 = CARRY(B2L62_cout_1);
+
+
+--B2L63 is counter:inst1|add~596 at LC_X12_Y11_N6
+--operation mode is arithmetic
+
+B2L63_carry_eqn = (!B2L70 & B2L67) # (B2L70 & B2L68);
+B2L63 = B2_n[12] $ (!B2L63_carry_eqn);
+
+--B2L64 is counter:inst1|add~598 at LC_X12_Y11_N6
+--operation mode is arithmetic
+
+B2L64_cout_0 = B2_n[12] & (!B2L67);
+B2L64 = CARRY(B2L64_cout_0);
+
+--B2L65 is counter:inst1|add~598COUT1_651 at LC_X12_Y11_N6
+--operation mode is arithmetic
+
+B2L65_cout_1 = B2_n[12] & (!B2L68);
+B2L65 = CARRY(B2L65_cout_1);
+
+
+--B2L66 is counter:inst1|add~601 at LC_X12_Y11_N5
+--operation mode is arithmetic
+
+B2L66_carry_eqn = B2L70;
+B2L66 = B2_n[11] $ B2L66_carry_eqn;
+
+--B2L67 is counter:inst1|add~603 at LC_X12_Y11_N5
+--operation mode is arithmetic
+
+B2L67_cout_0 = !B2L70 # !B2_n[11];
+B2L67 = CARRY(B2L67_cout_0);
+
+--B2L68 is counter:inst1|add~603COUT1_650 at LC_X12_Y11_N5
+--operation mode is arithmetic
+
+B2L68_cout_1 = !B2L70 # !B2_n[11];
+B2L68 = CARRY(B2L68_cout_1);
+
+
+--B2L69 is counter:inst1|add~606 at LC_X12_Y11_N4
+--operation mode is arithmetic
+
+B2L69_carry_eqn = (!B2L84 & B2L72) # (B2L84 & B2L73);
+B2L69 = B2_n[10] $ (!B2L69_carry_eqn);
+
+--B2L70 is counter:inst1|add~608 at LC_X12_Y11_N4
+--operation mode is arithmetic
+
+B2L70 = CARRY(B2_n[10] & (!B2L73));
+
+
+--B2L71 is counter:inst1|add~611 at LC_X12_Y11_N3
+--operation mode is arithmetic
+
+B2L71_carry_eqn = (!B2L84 & B2L75) # (B2L84 & B2L76);
+B2L71 = B2_n[9] $ (B2L71_carry_eqn);
+
+--B2L72 is counter:inst1|add~613 at LC_X12_Y11_N3
+--operation mode is arithmetic
+
+B2L72_cout_0 = !B2L75 # !B2_n[9];
+B2L72 = CARRY(B2L72_cout_0);
+
+--B2L73 is counter:inst1|add~613COUT1_649 at LC_X12_Y11_N3
+--operation mode is arithmetic
+
+B2L73_cout_1 = !B2L76 # !B2_n[9];
+B2L73 = CARRY(B2L73_cout_1);
+
+
+--B2L74 is counter:inst1|add~616 at LC_X12_Y11_N2
+--operation mode is arithmetic
+
+B2L74_carry_eqn = (!B2L84 & B2L78) # (B2L84 & B2L79);
+B2L74 = B2_n[8] $ (!B2L74_carry_eqn);
+
+--B2L75 is counter:inst1|add~618 at LC_X12_Y11_N2
+--operation mode is arithmetic
+
+B2L75_cout_0 = B2_n[8] & (!B2L78);
+B2L75 = CARRY(B2L75_cout_0);
+
+--B2L76 is counter:inst1|add~618COUT1_648 at LC_X12_Y11_N2
+--operation mode is arithmetic
+
+B2L76_cout_1 = B2_n[8] & (!B2L79);
+B2L76 = CARRY(B2L76_cout_1);
+
+
+--B2L77 is counter:inst1|add~621 at LC_X12_Y11_N1
+--operation mode is arithmetic
+
+B2L77_carry_eqn = (!B2L84 & B2L81) # (B2L84 & B2L82);
+B2L77 = B2_n[7] $ (B2L77_carry_eqn);
+
+--B2L78 is counter:inst1|add~623 at LC_X12_Y11_N1
+--operation mode is arithmetic
+
+B2L78_cout_0 = !B2L81 # !B2_n[7];
+B2L78 = CARRY(B2L78_cout_0);
+
+--B2L79 is counter:inst1|add~623COUT1_647 at LC_X12_Y11_N1
+--operation mode is arithmetic
+
+B2L79_cout_1 = !B2L82 # !B2_n[7];
+B2L79 = CARRY(B2L79_cout_1);
+
+
+--B2L80 is counter:inst1|add~626 at LC_X12_Y11_N0
+--operation mode is arithmetic
+
+B2L80_carry_eqn = B2L84;
+B2L80 = B2_n[6] $ (!B2L80_carry_eqn);
+
+--B2L81 is counter:inst1|add~628 at LC_X12_Y11_N0
+--operation mode is arithmetic
+
+B2L81_cout_0 = B2_n[6] & (!B2L84);
+B2L81 = CARRY(B2L81_cout_0);
+
+--B2L82 is counter:inst1|add~628COUT1_646 at LC_X12_Y11_N0
+--operation mode is arithmetic
+
+B2L82_cout_1 = B2_n[6] & (!B2L84);
+B2L82 = CARRY(B2L82_cout_1);
+
+
+--B2L83 is counter:inst1|add~631 at LC_X12_Y12_N9
+--operation mode is arithmetic
+
+B2L83_carry_eqn = (!B2L11 & B2L86) # (B2L11 & B2L87);
+B2L83 = B2_n[5] $ B2L83_carry_eqn;
+
+--B2L84 is counter:inst1|add~633 at LC_X12_Y12_N9
+--operation mode is arithmetic
+
+B2L84 = CARRY(!B2L87 # !B2_n[5]);
+
+
+--B2L85 is counter:inst1|add~636 at LC_X12_Y12_N8
+--operation mode is arithmetic
+
+B2L85_carry_eqn = (!B2L11 & B2L8) # (B2L11 & B2L9);
+B2L85 = B2_n[4] $ (!B2L85_carry_eqn);
+
+--B2L86 is counter:inst1|add~638 at LC_X12_Y12_N8
+--operation mode is arithmetic
+
+B2L86_cout_0 = B2_n[4] & (!B2L8);
+B2L86 = CARRY(B2L86_cout_0);
+
+--B2L87 is counter:inst1|add~638COUT1_645 at LC_X12_Y12_N8
+--operation mode is arithmetic
+
+B2L87_cout_1 = B2_n[4] & (!B2L9);
+B2L87 = CARRY(B2L87_cout_1);
+
+
+--B3L12 is counter:inst|add~501 at LC_X9_Y7_N5
+--operation mode is normal
+
+B3L12_carry_eqn = B3L14;
+B3L12 = B3_n[31] $ (B3L12_carry_eqn);
+
+
+--B3L13 is counter:inst|add~506 at LC_X9_Y7_N4
+--operation mode is arithmetic
+
+B3L13_carry_eqn = (!B3L28 & B3L16) # (B3L28 & B3L17);
+B3L13 = B3_n[30] $ !B3L13_carry_eqn;
+
+--B3L14 is counter:inst|add~508 at LC_X9_Y7_N4
+--operation mode is arithmetic
+
+B3L14 = CARRY(B3_n[30] & !B3L17);
+
+
+--B3L15 is counter:inst|add~511 at LC_X9_Y7_N3
+--operation mode is arithmetic
+
+B3L15_carry_eqn = (!B3L28 & B3L19) # (B3L28 & B3L20);
+B3L15 = B3_n[29] $ (B3L15_carry_eqn);
+
+--B3L16 is counter:inst|add~513 at LC_X9_Y7_N3
+--operation mode is arithmetic
+
+B3L16_cout_0 = !B3L19 # !B3_n[29];
+B3L16 = CARRY(B3L16_cout_0);
+
+--B3L17 is counter:inst|add~513COUT1_665 at LC_X9_Y7_N3
+--operation mode is arithmetic
+
+B3L17_cout_1 = !B3L20 # !B3_n[29];
+B3L17 = CARRY(B3L17_cout_1);
+
+
+--B3L18 is counter:inst|add~516 at LC_X9_Y7_N2
+--operation mode is arithmetic
+
+B3L18_carry_eqn = (!B3L28 & B3L22) # (B3L28 & B3L23);
+B3L18 = B3_n[28] $ (!B3L18_carry_eqn);
+
+--B3L19 is counter:inst|add~518 at LC_X9_Y7_N2
+--operation mode is arithmetic
+
+B3L19_cout_0 = B3_n[28] & (!B3L22);
+B3L19 = CARRY(B3L19_cout_0);
+
+--B3L20 is counter:inst|add~518COUT1_664 at LC_X9_Y7_N2
+--operation mode is arithmetic
+
+B3L20_cout_1 = B3_n[28] & (!B3L23);
+B3L20 = CARRY(B3L20_cout_1);
+
+
+--B3L21 is counter:inst|add~521 at LC_X9_Y7_N1
+--operation mode is arithmetic
+
+B3L21_carry_eqn = (!B3L28 & B3L25) # (B3L28 & B3L26);
+B3L21 = B3_n[27] $ (B3L21_carry_eqn);
+
+--B3L22 is counter:inst|add~523 at LC_X9_Y7_N1
+--operation mode is arithmetic
+
+B3L22_cout_0 = !B3L25 # !B3_n[27];
+B3L22 = CARRY(B3L22_cout_0);
+
+--B3L23 is counter:inst|add~523COUT1_663 at LC_X9_Y7_N1
+--operation mode is arithmetic
+
+B3L23_cout_1 = !B3L26 # !B3_n[27];
+B3L23 = CARRY(B3L23_cout_1);
+
+
+--B3L24 is counter:inst|add~526 at LC_X9_Y7_N0
+--operation mode is arithmetic
+
+B3L24_carry_eqn = B3L28;
+B3L24 = B3_n[26] $ !B3L24_carry_eqn;
+
+--B3L25 is counter:inst|add~528 at LC_X9_Y7_N0
+--operation mode is arithmetic
+
+B3L25_cout_0 = B3_n[26] & !B3L28;
+B3L25 = CARRY(B3L25_cout_0);
+
+--B3L26 is counter:inst|add~528COUT1_662 at LC_X9_Y7_N0
+--operation mode is arithmetic
+
+B3L26_cout_1 = B3_n[26] & !B3L28;
+B3L26 = CARRY(B3L26_cout_1);
+
+
+--B3L27 is counter:inst|add~531 at LC_X9_Y8_N9
+--operation mode is arithmetic
+
+B3L27_carry_eqn = (!B3L42 & B3L30) # (B3L42 & B3L31);
+B3L27 = B3_n[25] $ (B3L27_carry_eqn);
+
+--B3L28 is counter:inst|add~533 at LC_X9_Y8_N9
+--operation mode is arithmetic
+
+B3L28 = CARRY(!B3L31 # !B3_n[25]);
+
+
+--B3L29 is counter:inst|add~536 at LC_X9_Y8_N8
+--operation mode is arithmetic
+
+B3L29_carry_eqn = (!B3L42 & B3L33) # (B3L42 & B3L34);
+B3L29 = B3_n[24] $ !B3L29_carry_eqn;
+
+--B3L30 is counter:inst|add~538 at LC_X9_Y8_N8
+--operation mode is arithmetic
+
+B3L30_cout_0 = B3_n[24] & !B3L33;
+B3L30 = CARRY(B3L30_cout_0);
+
+--B3L31 is counter:inst|add~538COUT1_661 at LC_X9_Y8_N8
+--operation mode is arithmetic
+
+B3L31_cout_1 = B3_n[24] & !B3L34;
+B3L31 = CARRY(B3L31_cout_1);
+
+
+--B3L32 is counter:inst|add~541 at LC_X9_Y8_N7
+--operation mode is arithmetic
+
+B3L32_carry_eqn = (!B3L42 & B3L36) # (B3L42 & B3L37);
+B3L32 = B3_n[23] $ B3L32_carry_eqn;
+
+--B3L33 is counter:inst|add~543 at LC_X9_Y8_N7
+--operation mode is arithmetic
+
+B3L33_cout_0 = !B3L36 # !B3_n[23];
+B3L33 = CARRY(B3L33_cout_0);
+
+--B3L34 is counter:inst|add~543COUT1_660 at LC_X9_Y8_N7
+--operation mode is arithmetic
+
+B3L34_cout_1 = !B3L37 # !B3_n[23];
+B3L34 = CARRY(B3L34_cout_1);
+
+
+--B3L35 is counter:inst|add~546 at LC_X9_Y8_N6
+--operation mode is arithmetic
+
+B3L35_carry_eqn = (!B3L42 & B3L39) # (B3L42 & B3L40);
+B3L35 = B3_n[22] $ (!B3L35_carry_eqn);
+
+--B3L36 is counter:inst|add~548 at LC_X9_Y8_N6
+--operation mode is arithmetic
+
+B3L36_cout_0 = B3_n[22] & (!B3L39);
+B3L36 = CARRY(B3L36_cout_0);
+
+--B3L37 is counter:inst|add~548COUT1_659 at LC_X9_Y8_N6
+--operation mode is arithmetic
+
+B3L37_cout_1 = B3_n[22] & (!B3L40);
+B3L37 = CARRY(B3L37_cout_1);
+
+
+--B3L38 is counter:inst|add~551 at LC_X9_Y8_N5
+--operation mode is arithmetic
+
+B3L38_carry_eqn = B3L42;
+B3L38 = B3_n[21] $ (B3L38_carry_eqn);
+
+--B3L39 is counter:inst|add~553 at LC_X9_Y8_N5
+--operation mode is arithmetic
+
+B3L39_cout_0 = !B3L42 # !B3_n[21];
+B3L39 = CARRY(B3L39_cout_0);
+
+--B3L40 is counter:inst|add~553COUT1_658 at LC_X9_Y8_N5
+--operation mode is arithmetic
+
+B3L40_cout_1 = !B3L42 # !B3_n[21];
+B3L40 = CARRY(B3L40_cout_1);
+
+
+--B3L41 is counter:inst|add~556 at LC_X9_Y8_N4
+--operation mode is arithmetic
+
+B3L41_carry_eqn = (!B3L56 & B3L44) # (B3L56 & B3L45);
+B3L41 = B3_n[20] $ (!B3L41_carry_eqn);
+
+--B3L42 is counter:inst|add~558 at LC_X9_Y8_N4
+--operation mode is arithmetic
+
+B3L42 = CARRY(B3_n[20] & (!B3L45));
+
+
+--B3L43 is counter:inst|add~561 at LC_X9_Y8_N3
+--operation mode is arithmetic
+
+B3L43_carry_eqn = (!B3L56 & B3L47) # (B3L56 & B3L48);
+B3L43 = B3_n[19] $ B3L43_carry_eqn;
+
+--B3L44 is counter:inst|add~563 at LC_X9_Y8_N3
+--operation mode is arithmetic
+
+B3L44_cout_0 = !B3L47 # !B3_n[19];
+B3L44 = CARRY(B3L44_cout_0);
+
+--B3L45 is counter:inst|add~563COUT1_657 at LC_X9_Y8_N3
+--operation mode is arithmetic
+
+B3L45_cout_1 = !B3L48 # !B3_n[19];
+B3L45 = CARRY(B3L45_cout_1);
+
+
+--B3L46 is counter:inst|add~566 at LC_X9_Y8_N2
+--operation mode is arithmetic
+
+B3L46_carry_eqn = (!B3L56 & B3L50) # (B3L56 & B3L51);
+B3L46 = B3_n[18] $ !B3L46_carry_eqn;
+
+--B3L47 is counter:inst|add~568 at LC_X9_Y8_N2
+--operation mode is arithmetic
+
+B3L47_cout_0 = B3_n[18] & !B3L50;
+B3L47 = CARRY(B3L47_cout_0);
+
+--B3L48 is counter:inst|add~568COUT1_656 at LC_X9_Y8_N2
+--operation mode is arithmetic
+
+B3L48_cout_1 = B3_n[18] & !B3L51;
+B3L48 = CARRY(B3L48_cout_1);
+
+
+--B3L49 is counter:inst|add~571 at LC_X9_Y8_N1
+--operation mode is arithmetic
+
+B3L49_carry_eqn = (!B3L56 & B3L53) # (B3L56 & B3L54);
+B3L49 = B3_n[17] $ (B3L49_carry_eqn);
+
+--B3L50 is counter:inst|add~573 at LC_X9_Y8_N1
+--operation mode is arithmetic
+
+B3L50_cout_0 = !B3L53 # !B3_n[17];
+B3L50 = CARRY(B3L50_cout_0);
+
+--B3L51 is counter:inst|add~573COUT1_655 at LC_X9_Y8_N1
+--operation mode is arithmetic
+
+B3L51_cout_1 = !B3L54 # !B3_n[17];
+B3L51 = CARRY(B3L51_cout_1);
+
+
+--B3L52 is counter:inst|add~576 at LC_X9_Y8_N0
+--operation mode is arithmetic
+
+B3L52_carry_eqn = B3L56;
+B3L52 = B3_n[16] $ (!B3L52_carry_eqn);
+
+--B3L53 is counter:inst|add~578 at LC_X9_Y8_N0
+--operation mode is arithmetic
+
+B3L53_cout_0 = B3_n[16] & (!B3L56);
+B3L53 = CARRY(B3L53_cout_0);
+
+--B3L54 is counter:inst|add~578COUT1_654 at LC_X9_Y8_N0
+--operation mode is arithmetic
+
+B3L54_cout_1 = B3_n[16] & (!B3L56);
+B3L54 = CARRY(B3L54_cout_1);
+
+
+--B3L55 is counter:inst|add~581 at LC_X9_Y9_N9
+--operation mode is arithmetic
+
+B3L55_carry_eqn = (!B3L70 & B3L58) # (B3L70 & B3L59);
+B3L55 = B3_n[15] $ B3L55_carry_eqn;
+
+--B3L56 is counter:inst|add~583 at LC_X9_Y9_N9
+--operation mode is arithmetic
+
+B3L56 = CARRY(!B3L59 # !B3_n[15]);
+
+
+--B3L57 is counter:inst|add~586 at LC_X9_Y9_N8
+--operation mode is arithmetic
+
+B3L57_carry_eqn = (!B3L70 & B3L61) # (B3L70 & B3L62);
+B3L57 = B3_n[14] $ !B3L57_carry_eqn;
+
+--B3L58 is counter:inst|add~588 at LC_X9_Y9_N8
+--operation mode is arithmetic
+
+B3L58_cout_0 = B3_n[14] & !B3L61;
+B3L58 = CARRY(B3L58_cout_0);
+
+--B3L59 is counter:inst|add~588COUT1_653 at LC_X9_Y9_N8
+--operation mode is arithmetic
+
+B3L59_cout_1 = B3_n[14] & !B3L62;
+B3L59 = CARRY(B3L59_cout_1);
+
+
+--B3L60 is counter:inst|add~591 at LC_X9_Y9_N7
+--operation mode is arithmetic
+
+B3L60_carry_eqn = (!B3L70 & B3L64) # (B3L70 & B3L65);
+B3L60 = B3_n[13] $ (B3L60_carry_eqn);
+
+--B3L61 is counter:inst|add~593 at LC_X9_Y9_N7
+--operation mode is arithmetic
+
+B3L61_cout_0 = !B3L64 # !B3_n[13];
+B3L61 = CARRY(B3L61_cout_0);
+
+--B3L62 is counter:inst|add~593COUT1_652 at LC_X9_Y9_N7
+--operation mode is arithmetic
+
+B3L62_cout_1 = !B3L65 # !B3_n[13];
+B3L62 = CARRY(B3L62_cout_1);
+
+
+--B3L63 is counter:inst|add~596 at LC_X9_Y9_N6
+--operation mode is arithmetic
+
+B3L63_carry_eqn = (!B3L70 & B3L67) # (B3L70 & B3L68);
+B3L63 = B3_n[12] $ !B3L63_carry_eqn;
+
+--B3L64 is counter:inst|add~598 at LC_X9_Y9_N6
+--operation mode is arithmetic
+
+B3L64_cout_0 = B3_n[12] & !B3L67;
+B3L64 = CARRY(B3L64_cout_0);
+
+--B3L65 is counter:inst|add~598COUT1_651 at LC_X9_Y9_N6
+--operation mode is arithmetic
+
+B3L65_cout_1 = B3_n[12] & !B3L68;
+B3L65 = CARRY(B3L65_cout_1);
+
+
+--B3L66 is counter:inst|add~601 at LC_X9_Y9_N5
+--operation mode is arithmetic
+
+B3L66_carry_eqn = B3L70;
+B3L66 = B3_n[11] $ B3L66_carry_eqn;
+
+--B3L67 is counter:inst|add~603 at LC_X9_Y9_N5
+--operation mode is arithmetic
+
+B3L67_cout_0 = !B3L70 # !B3_n[11];
+B3L67 = CARRY(B3L67_cout_0);
+
+--B3L68 is counter:inst|add~603COUT1_650 at LC_X9_Y9_N5
+--operation mode is arithmetic
+
+B3L68_cout_1 = !B3L70 # !B3_n[11];
+B3L68 = CARRY(B3L68_cout_1);
+
+
+--B3L69 is counter:inst|add~606 at LC_X9_Y9_N4
+--operation mode is arithmetic
+
+B3L69_carry_eqn = (!B3L84 & B3L72) # (B3L84 & B3L73);
+B3L69 = B3_n[10] $ !B3L69_carry_eqn;
+
+--B3L70 is counter:inst|add~608 at LC_X9_Y9_N4
+--operation mode is arithmetic
+
+B3L70 = CARRY(B3_n[10] & !B3L73);
+
+
+--B3L71 is counter:inst|add~611 at LC_X9_Y9_N3
+--operation mode is arithmetic
+
+B3L71_carry_eqn = (!B3L84 & B3L75) # (B3L84 & B3L76);
+B3L71 = B3_n[9] $ (B3L71_carry_eqn);
+
+--B3L72 is counter:inst|add~613 at LC_X9_Y9_N3
+--operation mode is arithmetic
+
+B3L72_cout_0 = !B3L75 # !B3_n[9];
+B3L72 = CARRY(B3L72_cout_0);
+
+--B3L73 is counter:inst|add~613COUT1_649 at LC_X9_Y9_N3
+--operation mode is arithmetic
+
+B3L73_cout_1 = !B3L76 # !B3_n[9];
+B3L73 = CARRY(B3L73_cout_1);
+
+
+--B3L74 is counter:inst|add~616 at LC_X9_Y9_N2
+--operation mode is arithmetic
+
+B3L74_carry_eqn = (!B3L84 & B3L78) # (B3L84 & B3L79);
+B3L74 = B3_n[8] $ (!B3L74_carry_eqn);
+
+--B3L75 is counter:inst|add~618 at LC_X9_Y9_N2
+--operation mode is arithmetic
+
+B3L75_cout_0 = B3_n[8] & (!B3L78);
+B3L75 = CARRY(B3L75_cout_0);
+
+--B3L76 is counter:inst|add~618COUT1_648 at LC_X9_Y9_N2
+--operation mode is arithmetic
+
+B3L76_cout_1 = B3_n[8] & (!B3L79);
+B3L76 = CARRY(B3L76_cout_1);
+
+
+--B3L77 is counter:inst|add~621 at LC_X9_Y9_N1
+--operation mode is arithmetic
+
+B3L77_carry_eqn = (!B3L84 & B3L81) # (B3L84 & B3L82);
+B3L77 = B3_n[7] $ (B3L77_carry_eqn);
+
+--B3L78 is counter:inst|add~623 at LC_X9_Y9_N1
+--operation mode is arithmetic
+
+B3L78_cout_0 = !B3L81 # !B3_n[7];
+B3L78 = CARRY(B3L78_cout_0);
+
+--B3L79 is counter:inst|add~623COUT1_647 at LC_X9_Y9_N1
+--operation mode is arithmetic
+
+B3L79_cout_1 = !B3L82 # !B3_n[7];
+B3L79 = CARRY(B3L79_cout_1);
+
+
+--B3L80 is counter:inst|add~626 at LC_X9_Y9_N0
+--operation mode is arithmetic
+
+B3L80_carry_eqn = B3L84;
+B3L80 = B3_n[6] $ !B3L80_carry_eqn;
+
+--B3L81 is counter:inst|add~628 at LC_X9_Y9_N0
+--operation mode is arithmetic
+
+B3L81_cout_0 = B3_n[6] & !B3L84;
+B3L81 = CARRY(B3L81_cout_0);
+
+--B3L82 is counter:inst|add~628COUT1_646 at LC_X9_Y9_N0
+--operation mode is arithmetic
+
+B3L82_cout_1 = B3_n[6] & !B3L84;
+B3L82 = CARRY(B3L82_cout_1);
+
+
+--B3L83 is counter:inst|add~631 at LC_X9_Y10_N9
+--operation mode is arithmetic
+
+B3L83_carry_eqn = (!B3L11 & B3L86) # (B3L11 & B3L87);
+B3L83 = B3_n[5] $ (B3L83_carry_eqn);
+
+--B3L84 is counter:inst|add~633 at LC_X9_Y10_N9
+--operation mode is arithmetic
+
+B3L84 = CARRY(!B3L87 # !B3_n[5]);
+
+
+--B3L85 is counter:inst|add~636 at LC_X9_Y10_N8
+--operation mode is arithmetic
+
+B3L85_carry_eqn = (!B3L11 & B3L2) # (B3L11 & B3L3);
+B3L85 = B3_n[4] $ !B3L85_carry_eqn;
+
+--B3L86 is counter:inst|add~638 at LC_X9_Y10_N8
+--operation mode is arithmetic
+
+B3L86_cout_0 = B3_n[4] & !B3L2;
+B3L86 = CARRY(B3L86_cout_0);
+
+--B3L87 is counter:inst|add~638COUT1_645 at LC_X9_Y10_N8
+--operation mode is arithmetic
+
+B3L87_cout_1 = B3_n[4] & !B3L3;
+B3L87 = CARRY(B3L87_cout_1);
+
+
+--C1L18 is sel:inst3|Mux~749 at LC_X8_Y7_N1
+--operation mode is normal
+
+C1L18 = C1_s[1] & !B3_n[2] & !B3_n[1] # !C1_s[1] & (A1L15);
+
+
+--scan_clk is scan_clk at PIN_29
+--operation mode is input
+
+scan_clk = INPUT();
+
+
+--clk is clk at PIN_28
+--operation mode is input
+
+clk = INPUT();
+
+
+--clk_jinwei is clk_jinwei at PIN_19
+--operation mode is output
+
+clk_jinwei = OUTPUT(B1_clk_jinwei);
+
+
+--led7[7] is led7[7] at PIN_11
+--operation mode is output
+
+led7[7] = OUTPUT(C1_LED[7]);
+
+
+--led7[6] is led7[6] at PIN_8
+--operation mode is output
+
+led7[6] = OUTPUT(C1_LED[6]);
+
+
+--led7[5] is led7[5] at PIN_7
+--operation mode is output
+
+led7[5] = OUTPUT(C1_LED[5]);
+
+
+--led7[4] is led7[4] at PIN_6
+--operation mode is output
+
+led7[4] = OUTPUT(C1_LED[4]);
+
+
+--led7[3] is led7[3] at PIN_5
+--operation mode is output
+
+led7[3] = OUTPUT(C1_LED[3]);
+
+
+--led7[2] is led7[2] at PIN_4
+--operation mode is output
+
+led7[2] = OUTPUT(C1_LED[2]);
+
+
+--led7[1] is led7[1] at PIN_3
+--operation mode is output
+
+led7[1] = OUTPUT(C1_LED[1]);
+
+
+--led7[0] is led7[0] at PIN_2
+--operation mode is output
+
+led7[0] = OUTPUT(C1_LED[0]);
+
+
+--s[2] is s[2] at PIN_14
+--operation mode is output
+
+s[2] = OUTPUT(C1_s[2]);
+
+
+--s[1] is s[1] at PIN_13
+--operation mode is output
+
+s[1] = OUTPUT(C1_s[1]);
+
+
+--s[0] is s[0] at PIN_12
+--operation mode is output
+
+s[0] = OUTPUT(C1_s[0]);
+
+
+
+

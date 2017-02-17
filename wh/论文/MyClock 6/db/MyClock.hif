@@ -1,0 +1,106 @@
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+33
+1707
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+# entity
+Hour
+# storage
+db|MyClock.(1).cnf
+db|MyClock.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Hour.vhd
+d26db7a467e465e88c2aafc9299532c
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+Hour:inst2
+}
+# end
+# entity
+clock
+# storage
+db|MyClock.(2).cnf
+db|MyClock.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clock.vhd
+3b1ada95b49794d969bc3c2fe6a3f2f
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+clock:inst1
+clock:inst
+}
+# end
+# entity
+selector
+# storage
+db|MyClock.(3).cnf
+db|MyClock.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+selector.vhd
+e485c4cc8680112c95348b37a1ff662
+4
+# internal_option {
+ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS
+ON
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+selector:inst4
+}
+# end
+# entity
+MyClock
+# storage
+db|MyClock.(0).cnf
+db|MyClock.(0).cnf
+# case_insensitive
+# source_file
+MyClock.bdf
+96835c77398b65ff1c92bed49b8cbf84
+23
+# hierarchies {
+|
+}
+# end
+# complete
+
